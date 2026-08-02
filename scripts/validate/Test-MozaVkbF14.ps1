@@ -11,10 +11,14 @@ function Assert-NotMatch([string] $Text, [string] $Pattern, [string] $Message) {
     if ($Text -match $Pattern) { throw $Message }
 }
 
-$MozaPath = Join-Path $Joystick 'MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua'
-$VkbPath = Join-Path $Joystick ' VKBSim Gunfighter F14   {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua'
-if (-not (Test-Path -LiteralPath $MozaPath -PathType Leaf)) { throw 'Missing exact MOZA AB9 profile.' }
-if (-not (Test-Path -LiteralPath $VkbPath -PathType Leaf)) { throw 'Missing exact VKB F-14 grip profile.' }
+$MozaName = 'MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua'
+$VkbName = ' VKBSim Gunfighter F14   {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua'
+$MozaFiles = @(Get-ChildItem -LiteralPath $Joystick -File | Where-Object Name -EQ $MozaName)
+$VkbFiles = @(Get-ChildItem -LiteralPath $Joystick -File | Where-Object Name -EQ $VkbName)
+if ($MozaFiles.Count -ne 1) { throw 'Missing or ambiguous exact MOZA AB9 profile.' }
+if ($VkbFiles.Count -ne 1) { throw 'Missing or ambiguous exact VKB F-14 grip profile.' }
+$MozaPath = $MozaFiles[0].FullName
+$VkbPath = $VkbFiles[0].FullName
 
 $Moza = Get-Content -LiteralPath $MozaPath -Raw
 $Vkb = Get-Content -LiteralPath $VkbPath -Raw
