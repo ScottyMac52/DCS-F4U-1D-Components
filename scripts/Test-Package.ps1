@@ -12,7 +12,8 @@ $VerifyRoot = Join-Path $RepoRoot '.build/verify'
 
 if (-not (Test-Path $Archive -PathType Leaf)) { throw "Missing package: $Archive" }
 Remove-Item $VerifyRoot -Recurse -Force -ErrorAction SilentlyContinue
-Expand-Archive $Archive $VerifyRoot
+New-Item $VerifyRoot -ItemType Directory -Force | Out-Null
+[IO.Compression.ZipFile]::ExtractToDirectory($Archive, $VerifyRoot)
 
 $Container = Join-Path $VerifyRoot $PackageName
 $Joystick = Join-Path $Container 'Config/Input/F4U-1D/joystick'
