@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 env:
-  PACKAGE_VERSION: 0.0.0-ci.\${{ github.run_number }}
+  PACKAGE_VERSION: 0.0.0-ci.${{ github.run_number }}
 
 jobs:
   build:

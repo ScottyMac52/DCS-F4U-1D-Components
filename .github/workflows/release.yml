@@ -24,7 +24,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      BUMP: \${{ inputs.bump }}
+      BUMP: ${{ inputs.bump }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -88,14 +88,14 @@ jobs:
           ./scripts/Test-Package.ps1 -Version $env:PACKAGE_VERSION
       - uses: actions/upload-artifact@v4
         with:
-          name: F4U-1D-OvGME-package-\${{ steps.version.outputs.tag }}
+          name: F4U-1D-OvGME-package-${{ steps.version.outputs.tag }}
           path: |
             dist/*.zip
             dist/SHA256SUMS.txt
       - name: Create tagged release
         shell: pwsh
         env:
-          GH_TOKEN: \${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           $Title = "DCS F4U-1D Corsair Components $env:PACKAGE_VERSION"
           $Assets = Get-ChildItem dist/*.zip, dist/SHA256SUMS.txt | ForEach-Object FullName
