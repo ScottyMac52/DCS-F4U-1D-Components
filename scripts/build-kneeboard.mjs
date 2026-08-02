@@ -116,6 +116,12 @@ const pages = [
     title: 'DUAL LOGITECH THROTTLE QUADRANTS',
     kicker: 'F4U-1D ENGINE, POWER AND SUPERCHARGER CONTROLS',
   },
+  {
+    file: '04-VKB-F14-GRIP',
+    kind: 'vkb-f14',
+    title: 'VKB GUNFIGHTER • F-14 GRIP',
+    kicker: 'F4U-1D TRIM AND WEAPONS CONTROLS',
+  },
 ];
 
 function markerGroups(callouts) {
@@ -274,8 +280,81 @@ function renderQuadrantPage(page, index) {
     '</svg>';
 }
 
+function renderVkbF14Page(page, index) {
+  const grip = imageDataUri(join(assetDir, 'vkb-f14-grip-photo-clean.png'));
+  const text = (x, y, value, size = 18, color = '#f2f7ff', weight = 650, anchor = 'start') =>
+    '<text x="' + x + '" y="' + y + '" text-anchor="' + anchor + '" font-size="' + size + '" font-weight="' + weight + '" fill="' + color + '">' + esc(value) + '</text>';
+  const card = (x, y, width, height, color, heading, lines) => {
+    let body = '<rect x="' + x + '" y="' + y + '" width="' + width + '" height="' + height + '" rx="14" fill="#101f33" stroke="' + color + '" stroke-width="2"/>';
+    body += text(x + 20, y + 34, heading, 18, color, 800);
+    lines.forEach((line, lineIndex) => {
+      body += text(x + 20, y + 68 + lineIndex * 29, line, 16, '#f2f7ff', 650);
+    });
+    return body;
+  };
+
+  let body = '';
+  body += '<rect width="1200" height="1600" fill="#071220"/>';
+  body += '<rect width="1200" height="16" fill="#46d8ff"/>';
+  body += text(54, 82, page.title, 42, '#f5f9ff', 800);
+  body += text(56, 126, page.kicker, 20, '#ffc95c', 700);
+  body += '<line x1="54" y1="156" x2="1146" y2="156" stroke="#263a52" stroke-width="3"/>';
+  body += '<g font-family="DejaVu Sans,Arial,sans-serif">';
+
+  body += '<rect x="54" y="190" width="470" height="965" rx="22" fill="#0a1726" stroke="#46d8ff" stroke-width="3"/>';
+  body += text(289, 238, 'SEPARATE VKB BLACKBOX DEVICE', 19, '#46d8ff', 800, 'middle');
+  body += '<image x="92" y="270" width="394" height="786" href="' + grip + '" preserveAspectRatio="xMidYMid meet"/>';
+  body += text(289, 1105, 'MOZA AB9 owns X / Y axes and FFB', 17, '#8ea5bd', 700, 'middle');
+
+  body += card(558, 190, 588, 132, '#ff6b76', 'BTN 1', [
+    'Guns fire',
+  ]);
+  body += card(558, 342, 588, 132, '#ffc95c', 'BTN 3', [
+    'Bomb release',
+  ]);
+  body += card(558, 494, 588, 158, '#ff8f66', 'BTN 7 + BTN 3', [
+    'Rockets fire',
+    'Hold the existing global DCS modifier',
+  ]);
+  body += card(558, 672, 278, 156, '#6ce5a3', 'BTN 9', [
+    'Trim nose up',
+  ]);
+  body += card(868, 672, 278, 156, '#6ce5a3', 'BTN 12', [
+    'Trim nose down',
+  ]);
+  body += card(558, 848, 278, 156, '#46d8ff', 'BTN 10', [
+    'Trim left bank',
+  ]);
+  body += card(868, 848, 278, 156, '#46d8ff', 'BTN 11', [
+    'Trim right bank',
+  ]);
+  body += card(558, 1024, 588, 131, '#8ea5bd', 'DLC / SURPLUS INPUTS', [
+    'Intentionally unbound for the Corsair',
+  ]);
+
+  body += '<rect x="54" y="1192" width="1092" height="243" rx="16" fill="#101f33" stroke="#ff6b76" stroke-width="2"/>';
+  body += text(78, 1238, 'BTN 13–16', 20, '#ff6b76', 800);
+  body += text(78, 1281, 'Weapon selector intentionally unbound', 19, '#f2f7ff', 700);
+  body += text(78, 1322, 'No verified reliable direct F4U-1D selector commands are available.', 17, '#f2f7ff', 650);
+  body += text(78, 1363, 'Use the cockpit armament controls; do not map maintained positions to momentary commands.', 17, '#f2f7ff', 650);
+  body += text(78, 1404, 'BTN 5, BTN 6 and JOY_RX also remain unused.', 17, '#8ea5bd', 650);
+  body += '</g>';
+  body += '<line x1="54" y1="1518" x2="1146" y2="1518" stroke="#263a52" stroke-width="2"/>';
+  body += text(54, 1560, 'F4U-1D Corsair • Scott\'s cockpit • Package ' + version, 18, '#8ea5bd', 400);
+  body += text(1146, 1560, (index + 1) + ' / ' + pages.length, 18, '#8ea5bd', 400, 'end');
+
+  return '<?xml version="1.0" encoding="UTF-8"?>' +
+    '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">' +
+    body +
+    '</svg>';
+}
+
 for (const [index, page] of pages.entries()) {
-  const svg = page.kind === 'quadrants' ? renderQuadrantPage(page, index) : renderPage(page, index);
+  const svg = page.kind === 'quadrants'
+    ? renderQuadrantPage(page, index)
+    : page.kind === 'vkb-f14'
+      ? renderVkbF14Page(page, index)
+      : renderPage(page, index);
   const svgPath = join(svgDir, page.file + '.svg');
   const pngPath = join(pngDir, page.file + '.png');
   writeFileSync(svgPath, svg, 'utf8');

@@ -11,7 +11,7 @@ const pngDir = join(root, 'kneeboard', 'F4U-1D');
 const svgDir = join(root, 'kneeboard', 'source');
 const assetDir = join(root, 'kneeboard', 'assets', 'source');
 const profileDir = join(root, 'src', 'Config', 'Input', 'F4U-1D', 'joystick');
-const pages = ['01-WINCTRL-PTO2-AIRFRAME', '02-WINCTRL-PTO2-STORES', '03-LOGITECH-DUAL-QUADRANTS'];
+const pages = ['01-WINCTRL-PTO2-AIRFRAME', '02-WINCTRL-PTO2-STORES', '03-LOGITECH-DUAL-QUADRANTS', '04-VKB-F14-GRIP'];
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -74,12 +74,25 @@ for (const required of [
   'Fuel pump OFF',
   'Water injection ENABLE',
   'Water injection DISABLE',
+  'VKB GUNFIGHTER • F-14 GRIP',
+  'BTN 1',
+  'Guns fire',
+  'BTN 3',
+  'Bomb release',
+  'BTN 7 + BTN 3',
+  'Rockets fire',
+  'BTN 9',
+  'Trim nose up',
+  'BTN 12',
+  'Trim nose down',
+  'BTN 13–16',
+  'Weapon selector intentionally unbound',
 ]) {
   assert(visibleText.includes(required), 'The PTO2 kneeboard is missing required text: ' + required);
 }
 
 const profileNames = readdirSync(profileDir).filter((name) => name.endsWith('.diff.lua'));
-assert(profileNames.length === 3, 'Expected PTO2 and two Logitech quadrant profiles.');
+assert(profileNames.length === 5, 'Expected PTO2, two Logitech quadrants, MOZA axes, and VKB grip profiles.');
 const lua = readFileSync(join(profileDir, profileNames.find((name) => name.startsWith('WINCTRL CarrierAce PTO 2'))), 'utf8');
 const mappedButtons = new Set([...lua.matchAll(/JOY_BTN(\d+)/g)].map((match) => Number(match[1])));
 const labelledButtons = [...sources.slice(0, 2).join(' ').matchAll(/BTN (\d+)/g)].map((match) => Number(match[1]));
@@ -89,7 +102,7 @@ for (const button of mappedButtons) {
   assert(labelledButtons.includes(button), 'The PTO2 kneeboard is missing mapped BTN ' + button + '.');
 }
 
-for (const asset of ['pto2-clean.png', 'pto2-template.svg', 'logitech-flight-throttle-quadrant.png']) {
+for (const asset of ['pto2-clean.png', 'pto2-template.svg', 'logitech-flight-throttle-quadrant.png', 'vkb-f14-grip-photo-clean.png', 'vkb-f14-grip-photo.jpeg']) {
   assert(readdirSync(assetDir).includes(asset), 'Missing source asset: ' + asset);
 }
 assert(
@@ -104,6 +117,14 @@ assert(
   hashFile(join(assetDir, 'logitech-flight-throttle-quadrant.png')) === '053b84c9192c60189fccfc4a87d5b9d6fbe92caf71f8189a775d4953772bed3d',
   'The verified Logitech product image asset changed unexpectedly.',
 );
+assert(
+  hashFile(join(assetDir, 'vkb-f14-grip-photo-clean.png')) === '32850cb9e877b24d3c3ba97b789fa7666f2281dcd221354e956b59260955b4bd',
+  'The verified VKB cleaned photograph changed unexpectedly.',
+);
+assert(
+  hashFile(join(assetDir, 'vkb-f14-grip-photo.jpeg')) === '79f18abe2b07a2bcfdc3c8163e4af9e0752f7d22ae03e0bb6eacefd349ecac77',
+  'The verified VKB source photograph changed unexpectedly.',
+);
 
 const before = generatedHashes();
 const build = spawnSync(process.execPath, [join(scriptDir, 'build-kneeboard.mjs')], {
@@ -115,4 +136,4 @@ assert(build.status === 0, 'Deterministic rebuild failed:\n' + build.stdout + '\
 const after = generatedHashes();
 assert(JSON.stringify(after) === JSON.stringify(before), 'Kneeboard output changed across identical builds.');
 
-console.log('Kneeboard validation passed: three deterministic pages cover the PTO2 and dual Logitech quadrants.');
+console.log('Kneeboard validation passed: four deterministic pages cover the PTO2, quadrants, and VKB F-14 grip.');

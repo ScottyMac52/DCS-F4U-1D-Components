@@ -76,3 +76,46 @@ Device filename: `Logitech Flight Quadrant {1C8A8840-5386-11F1-8001-444553540000
 All secondary-quadrant rocker switches remain intentionally unbound. Both quadrant
 profiles also remove accidental rudder bindings and other conflicting DCS defaults
 recorded in Scott's export.
+
+## MOZA AB9 FFB base — VKB F-14 configuration
+
+Device filename: `MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua`
+
+The F4U-1D module's native MOZA `JOY_X` roll and `JOY_Y` pitch assignments remain
+unchanged so DCS force feedback continues to own both flight-control axes. The profile
+adds no curve, saturation, deadzone, inversion, or force-feedback setting.
+
+| HID input | DCS default removed | Exported command identifier |
+|---|---|---|
+| JOY_RZ | Rudder | a2003cdnil |
+| JOY_SLIDER1 | Propeller governor handle | a3224cd3 |
+| JOY_Z | Throttle Lever | a3236cd3 |
+
+Grip buttons are not exposed through the MOZA device in this configuration.
+
+## VKB Gunfighter F-14 grip
+
+Device filename: ` VKBSim Gunfighter F14   {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua`
+
+| Physical control | HID input/state | DCS command | Exported command identifier |
+|---|---|---|---|
+| Trigger | JOY_BTN1 | Guns fire button | d3918pnilu3918cd13vd1vpnilvu0 |
+| Store-release button | JOY_BTN3 | Weapons release button | d3958pnilu3958cd13vd1vpnilvu0 |
+| Store-release button with global grip modifier | JOY_BTN7 + JOY_BTN3 | Rockets fire button | d3919pnilu3919cd13vd1vpnilvu0 |
+| Trim HAT aft | JOY_BTN9 | Trim, nose up | dnilp3519unilcd7vdnilvp-0.002vunil |
+| Trim HAT left | JOY_BTN10 | Trim, left bank | dnilp3520unilcd7vdnilvp-0.002vunil |
+| Trim HAT right | JOY_BTN11 | Trim, right bank | dnilp3520unilcd7vdnilvp0.002vunil |
+| Trim HAT forward | JOY_BTN12 | Trim, nose down | dnilp3519unilcd7vdnilvp0.002vunil |
+
+The VKB HID numbers and device GUID are verified by Scott's working F-14B(U) profile
+for this same physical grip and BlackBox. Every DCS command identifier and command
+name comes from Scott's current F4U-1D exports.
+
+The existing global `JOY_BTN7` modifier makes the store-release button operate bombs
+normally and rockets while held. This is a native DCS modifier, not a keyboard macro.
+
+The maintained weapon-selector positions (`JOY_BTN13`–`JOY_BTN16`), DLC control
+(`JOY_BTN5`/`JOY_RX`), catapult-salute button (`JOY_BTN6`), and other surplus controls
+remain intentionally unbound. The current F4U-1D export does not provide a verified,
+reliable direct armament-selector mapping, so assigning maintained selector positions
+would risk stale or continuous commands.

@@ -9,7 +9,9 @@ const controlMappings = readFileSync(join(root, 'docs', 'CONTROL-MAPPINGS.md'), 
 const pto2File = 'WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua';
 const primaryFile = 'Logitech Flight Quadrant {840BBBD0-2139-11f1-8001-444553540000}.diff.lua';
 const secondaryFile = 'Logitech Flight Quadrant {1C8A8840-5386-11F1-8001-444553540000}.diff.lua';
-const expectedFiles = [primaryFile, secondaryFile, pto2File].sort();
+const mozaFile = 'MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua';
+const vkbFile = ' VKBSim Gunfighter F14   {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua';
+const expectedFiles = [primaryFile, secondaryFile, pto2File, mozaFile, vkbFile].sort();
 const files = readdirSync(profileDir).filter((name) => name.endsWith('.diff.lua')).sort();
 
 function assert(condition, message) {
@@ -100,4 +102,45 @@ for (const [command, axis, name] of [
   assert(removal.test(secondary), 'Secondary ' + axis + ' must explicitly remove the accidental ' + name + ' auto-binding.');
 }
 
-console.log('Profile validation passed: PTO2 plus both GUID-qualified Logitech quadrant exports are complete and isolated.');
+const moza = readFileSync(join(profileDir, mozaFile), 'utf8');
+assert(!moza.includes('["keyDiffs"]'), 'The VKB configuration must keep grip buttons out of the MOZA axes profile.');
+assert(!moza.includes('["a2001cdnil"]') && !moza.includes('["a2002cdnil"]'), 'The MOZA profile must leave native pitch/roll and FFB behavior unchanged.');
+for (const [command, axis, name] of [
+  ['a2003cdnil', 'JOY_RZ', 'Rudder'],
+  ['a3224cd3', 'JOY_SLIDER1', 'Propeller governor handle'],
+  ['a3236cd3', 'JOY_Z', 'Throttle Lever'],
+]) {
+  const removal = new RegExp(
+    '\\\["' + command + '"\\\][\\s\\S]*?\\\["name"\\\]\\s*=\\s*"' + escapeRegex(name) + '"[\\s\\S]*?' +
+    '\\\["removed"\\\][\\s\\S]*?\\\["key"\\\]\\s*=\\s*"' + axis + '"',
+  );
+  assert(removal.test(moza), 'MOZA must remove the accidental ' + name + ' auto-binding.');
+}
+
+const vkb = readFileSync(join(profileDir, vkbFile), 'utf8');
+const expectedVkb = [
+  ['d3918pnilu3918cd13vd1vpnilvu0', 'JOY_BTN1', 'Guns fire button'],
+  ['d3958pnilu3958cd13vd1vpnilvu0', 'JOY_BTN3', 'Weapons release button'],
+  ['d3919pnilu3919cd13vd1vpnilvu0', 'JOY_BTN3', 'Rockets fire button'],
+  ['dnilp3519unilcd7vdnilvp-0.002vunil', 'JOY_BTN9', 'Trim, nose up'],
+  ['dnilp3520unilcd7vdnilvp-0.002vunil', 'JOY_BTN10', 'Trim, left bank'],
+  ['dnilp3520unilcd7vdnilvp0.002vunil', 'JOY_BTN11', 'Trim, right bank'],
+  ['dnilp3519unilcd7vdnilvp0.002vunil', 'JOY_BTN12', 'Trim, nose down'],
+];
+for (const binding of expectedVkb) assertBinding(vkb, ...binding, 'VKB F-14 grip');
+const rocketsBlock = /\["d3919pnilu3919cd13vd1vpnilvu0"\][\s\S]*?\n\s*},/.exec(vkb)?.[0] ?? '';
+assert(rocketsBlock.includes('["reformers"]'), 'Rocket fire must use Scott\'s existing DCS modifier.');
+assert(rocketsBlock.includes('[1] = "JOY_BTN7"'), 'Rocket fire must use the exact global VKB JOY_BTN7 modifier name.');
+
+const addedVkbButtons = [...vkb.matchAll(/\["key"\]\s*=\s*"(JOY_BTN\d+)"/g)].map((match) => match[1]);
+assert(addedVkbButtons.length === 7, 'The VKB profile must contain exactly seven F4U command assignments.');
+assert(
+  addedVkbButtons.every((button) => ['JOY_BTN1', 'JOY_BTN3', 'JOY_BTN9', 'JOY_BTN10', 'JOY_BTN11', 'JOY_BTN12'].includes(button)),
+  'A surplus VKB grip button was assigned unexpectedly.',
+);
+for (const button of ['JOY_BTN5', 'JOY_BTN6', 'JOY_BTN13', 'JOY_BTN14', 'JOY_BTN15', 'JOY_BTN16']) {
+  assert(!vkb.includes('["key"] = "' + button + '"'), button + ' must remain intentionally unbound for the F4U-1D.');
+}
+assert(!/\["added"\][\s\S]*?\["key"\]\s*=\s*"JOY_(?!BTN)/.test(vkb), 'The VKB grip profile must not add any axes.');
+
+console.log('Profile validation passed: PTO2, dual Logitech quadrants, MOZA axes, and the separate VKB F-14 grip are complete and isolated.');

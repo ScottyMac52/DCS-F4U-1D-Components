@@ -2,6 +2,10 @@
 
 Initial installable component release:
 
+- separate MOZA AB9 axes/FFB and VKB BlackBox F-14 grip profiles;
+- guns, bomb release, native-modifier rocket fire, and four-way trim on the VKB grip;
+- unsupported maintained weapon-selector positions intentionally left unbound;
+- a photo-backed VKB F-14 grip OpenKneeboard reference page and device-isolation validation;
 - two GUID-qualified Logitech Flight Throttle Quadrant profiles;
 - primary mixture, propeller RPM, throttle, battery, fuel-pump, and water-injection
   assignments from Scott's current export;
@@ -16,7 +20,7 @@ Initial installable component release:
 - native arresting-hook UP/PARK/DOWN commands;
 - native wing-fold FOLD/HOLD/SPREAD commands;
 - independent wing hinge-pin lock toggle;
-- three photo-backed OpenKneeboard reference pages covering every mapped control;
+- four photo-backed OpenKneeboard reference pages covering every mapped control;
 - OvGME-ready Saved Games directory layout;
 - tag-authoritative semantic versioning; and
 - automated Lua, mapping, archive, path, deterministic-image, and offline-asset validation.
