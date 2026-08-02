@@ -18,7 +18,16 @@ New-Item (Join-Path $Container 'Config/Input/F4U-1D') -ItemType Directory -Force
 New-Item (Join-Path $Container 'KNEEBOARD/F4U-1D') -ItemType Directory -Force | Out-Null
 New-Item $Dist -ItemType Directory -Force | Out-Null
 
-Copy-Item (Join-Path $RepoRoot 'src/Config/Input/F4U-1D/joystick') (Join-Path $Container 'Config/Input/F4U-1D/joystick') -Recurse
+$SourceJoystick = Join-Path $RepoRoot 'src/Config/Input/F4U-1D/joystick'
+$TargetJoystick = Join-Path $Container 'Config/Input/F4U-1D/joystick'
+New-Item $TargetJoystick -ItemType Directory -Force | Out-Null
+foreach ($Profile in Get-ChildItem -LiteralPath $SourceJoystick -File) {
+    [IO.File]::Copy($Profile.FullName, [IO.Path]::Combine($TargetJoystick, $Profile.Name), $true)
+}
+$ExpectedVkbName = ' VKBSim Gunfighter F14   {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua'
+if (-not [IO.File]::Exists([IO.Path]::Combine($TargetJoystick, $ExpectedVkbName))) {
+    throw 'The exact leading-space VKB device filename was not preserved during staging.'
+}
 Copy-Item (Join-Path $RepoRoot 'kneeboard/F4U-1D/*') (Join-Path $Container 'KNEEBOARD/F4U-1D')
 
 $ReadmeTemplate = Get-Content (Join-Path $RepoRoot 'packaging/ovgme/README.TXT') -Raw
