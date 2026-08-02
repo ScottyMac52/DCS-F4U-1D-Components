@@ -86,15 +86,11 @@ const pages = [
       callout(38, 'Parking brake OFF', 'right', [680, 720], 'gold'),
       callout(39, 'Parking brake ON', 'right', [680, 720], 'gold'),
     ],
-    notes: [
-      'Wing movement and hinge-pin locking remain independent.',
-      'The hook center position uses the native DCS PARKING command.',
-    ],
   },
   {
     file: '02-WINCTRL-PTO2-STORES',
     title: 'WINCTRL CARRIERACE PTO2',
-    kicker: 'F4U-1D STORES SELECTION AND EMERGENCY RELEASE',
+    kicker: 'F4U-1D STORES, EMERGENCY AND LIGHTING CONTROLS',
     callouts: [
       callout(17, 'Drop-tank lock ATTACH', 'left', [625, 620], 'green'),
       callout(19, 'Drop-tank lock LOCK', 'left', [625, 620], 'green'),
@@ -104,10 +100,6 @@ const pages = [
       callout(25, 'Right-wing selector ON', 'left', [720, 700], 'cyan'),
       callout(26, 'Left-wing EMERGENCY RELEASE', 'right', [615, 705], 'red'),
       callout(27, 'Right-wing EMERGENCY RELEASE', 'right', [615, 705], 'red'),
-    ],
-    notes: [
-      'These are the native stores commands in Scott\'s current export.',
-      'Use emergency release deliberately and verify with a safe training loadout.',
     ],
   },
   {
@@ -168,31 +160,22 @@ function renderPage(page, index) {
   body += '<rect width="1200" height="1600" fill="#071220"/>';
   body += '<rect width="1200" height="16" fill="#46d8ff"/>';
   body += '<text x="54" y="82" font-family="DejaVu Sans,Arial,sans-serif" font-size="43" font-weight="800" fill="#f5f9ff">' + esc(page.title) + '</text>';
-  body += '<text x="56" y="126" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="1.2" fill="#ffc95c">' + esc(page.kicker) + '</text>';
+  body += '<text x="56" y="126" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700" fill="#ffc95c">' + esc(page.kicker) + '</text>';
   body += '<line x1="54" y1="156" x2="1146" y2="156" stroke="#263a52" stroke-width="3"/>';
   body += '<g font-family="DejaVu Sans,Arial,sans-serif">';
-  body += '<rect x="225" y="360" width="750" height="610" rx="28" fill="#0a1726" stroke="#1b334a" stroke-width="3"/>';
-  body += '<image x="255" y="420" width="690" height="482" href="' + image + '" preserveAspectRatio="xMidYMid meet" opacity="0.82"/>';
-  body += calloutCards(page, 'left');
-  body += calloutCards(page, 'right');
-
+  body += '<image x="320" y="200" width="560" height="980" href="' + image + '" preserveAspectRatio="xMidYMid meet"/>';
   for (const marker of markerGroups(page.callouts)) {
     const label = marker.buttons.join('/');
     const width = Math.max(48, label.length * 9 + 18);
     body += '<rect x="' + (marker.anchor[0] - width / 2) + '" y="' + (marker.anchor[1] - 17) + '" width="' + width + '" height="34" rx="9" fill="#06101d" stroke="' + marker.color + '" stroke-width="2"/>';
     body += '<text x="' + marker.anchor[0] + '" y="' + marker.anchor[1] + '" text-anchor="middle" dominant-baseline="middle" font-size="12" font-weight="800" fill="' + marker.color + '">' + label + '</text>';
   }
-
-  body += '<rect x="54" y="1230" width="1092" height="205" rx="16" fill="#101f33" stroke="#ff6b76" stroke-width="2"/>';
-  body += '<text x="78" y="1276" font-size="20" font-weight="800" fill="#ff6b76">OPERATIONAL NOTES</text>';
-  page.notes.forEach((note, noteIndex) => {
-    body += '<text x="78" y="' + (1320 + noteIndex * 42) + '" font-size="18" font-weight="600" fill="#f2f7ff">' + esc(note) + '</text>';
-  });
+  body += calloutCards(page, 'left');
+  body += calloutCards(page, 'right');
   body += '</g>';
   body += '<line x1="54" y1="1518" x2="1146" y2="1518" stroke="#263a52" stroke-width="2"/>';
-  body += '<text x="54" y="1560" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#8ea5bd">F4U-1D Corsair • Scott&#39;s cockpit • Package ' + esc(version) + '</text>';
+  body += '<text x="54" y="1560" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#8ea5bd">F4U-1D Corsair • Scott\'s cockpit • Package ' + version + '</text>';
   body += '<text x="1146" y="1560" text-anchor="end" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" fill="#8ea5bd">' + (index + 1) + ' / ' + pages.length + '</text>';
-
   return '<?xml version="1.0" encoding="UTF-8"?>' +
     '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">' +
     body +
@@ -292,10 +275,8 @@ function renderVkbF14Page(page, index) {
     });
     return body;
   };
-  // Leader lines from label cards to physical controls on the grip photo
-  // (same convention as PTO2 pages: path from card edge to anchor on the image).
   const pointer = (fromX, fromY, toX, toY, color) =>
-    '<path d="M ' + fromX + ' ' + fromY + ' L ' + toX + ' ' + toY + '" fill="none" stroke="' + color + '" stroke-width="2.2" opacity="0.68"/>';
+    '<path d="M ' + fromX + ' ' + fromY + ' L ' + toX + ' ' + toY + '" fill="none" stroke="' + color + '" stroke-width="2.5" opacity="0.9"/>';
   const marker = (ax, ay, label, color) => {
     const width = Math.max(48, label.length * 9 + 18);
     let body = '<rect x="' + (ax - width / 2) + '" y="' + (ay - 17) + '" width="' + width + '" height="34" rx="9" fill="#06101d" stroke="' + color + '" stroke-width="2"/>';
@@ -303,14 +284,16 @@ function renderVkbF14Page(page, index) {
     return body;
   };
 
-  // Approximate physical control locations on the upright F-14 grip photo
-  // (image box: x=92..486, y=270..1056). Anchors target trigger, store-release,
-  // modifier, and the four-way trim HAT region.
+  // Physical control locations on the upright F-14 grip photo
+  // (image box: x=92..486, y=270..1056). Calibrated against the cleaned
+  // product photo so leader lines hit the trigger, store-release (red),
+  // modifier region, and four-way trim HAT — matching the F-14B(U)
+  // kneeboard convention.
   const anchors = {
-    trigger: [280, 720],
-    store: [305, 560],
-    modifier: [330, 640],
-    trimHat: [290, 430],
+    trigger: [268, 760],   // main trigger face, lower grip
+    store: [402, 348],     // red store-release button, top-right of head
+    modifier: [195, 395],  // BTN 7 region on left side of head
+    trimHat: [295, 332],   // four-way trim HAT, top center of head
   };
 
   let body = '';
