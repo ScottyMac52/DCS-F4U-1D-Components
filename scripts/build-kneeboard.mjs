@@ -233,20 +233,25 @@ function renderQuadrantPage(page, index) {
     'T2 / BTN 2',
     'Battery OFF',
   ]);
-  body += card(440, 946, 320, 250, '#ffc95c', 'CENTER ROCKER', [
+  body += card(440, 946, 320, 250, '#6ce5a3', 'MIDDLE ROCKER', [
     'T3 / BTN 3',
     'Fuel pump ON',
     '',
     'T4 / BTN 4',
     'Fuel pump OFF',
   ]);
-  body += card(798, 946, 320, 250, '#6ce5a3', 'RIGHT ROCKER', [
+  body += card(798, 946, 320, 250, '#ffc95c', 'RIGHT ROCKER', [
     'T5 / BTN 5',
-    'Water injection ON',
+    'Water injection ENABLE',
     '',
     'T6 / BTN 6',
-    'Water injection OFF',
+    'Water injection DISABLE',
   ]);
+
+  body += '<rect x="54" y="1290" width="1092" height="145" rx="16" fill="#101f33" stroke="#ff6b76" stroke-width="2"/>';
+  body += text(78, 1334, 'IDENTITY CHECK', 20, '#ff6b76', 800);
+  body += text(78, 1374, 'Verify both GUID-qualified Logitech columns before flight; never duplicate one profile onto both devices.', 17, '#f2f7ff', 650);
+  body += text(78, 1406, 'The legacy Saitek alias for GUID …840BBBD0 is intentionally not packaged.', 17, '#f2f7ff', 650);
   body += '</g>';
   body += '<line x1="54" y1="1518" x2="1146" y2="1518" stroke="#263a52" stroke-width="2"/>';
   body += text(54, 1560, 'F4U-1D Corsair • Scott\'s cockpit • Package ' + version, 18, '#8ea5bd', 400);
