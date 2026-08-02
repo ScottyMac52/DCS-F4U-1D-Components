@@ -24,6 +24,9 @@ to match that device filename.
 - Move the hook lever through UP, PARK, and DOWN.
 - Move the wing-fold lever through FOLD, HOLD, and SPREAD.
 - Push the wing-fold control separately to toggle the wing hinge-pin lock.
-- Confirm no other PTO2 control received an assignment from this package.
+- Verify flaps, approach lights, airbrake, and parking brake in both directions.
+- Verify the drop-tank lock positions and the three stores release selectors.
+- Test left/right emergency release only with a safe training loadout and deliberate
+  switch handling.
 
 Disable the component in OvGME to remove the managed files.

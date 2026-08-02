@@ -22,9 +22,13 @@ if (-not (Test-Path $Kneeboard -PathType Container)) { throw 'Missing F4U-1D kne
 
 $Profiles = @(Get-ChildItem $Joystick -Filter '*.diff.lua')
 if ($Profiles.Count -ne 1) { throw "Expected exactly one joystick profile, found $($Profiles.Count)." }
-$Pages = @(Get-ChildItem $Kneeboard -Filter '*.png')
-if ($Pages.Count -ne 1 -or $Pages[0].Name -ne '01-WINCTRL-PTO2.png') {
-    throw 'Expected only 01-WINCTRL-PTO2.png in the package kneeboard.'
+$Pages = @(Get-ChildItem $Kneeboard -Filter '*.png' | Sort-Object Name)
+$ExpectedPages = @('01-WINCTRL-PTO2-AIRFRAME.png', '02-WINCTRL-PTO2-STORES.png')
+if ($Pages.Count -ne $ExpectedPages.Count) {
+    throw "Expected exactly $($ExpectedPages.Count) kneeboard pages, found $($Pages.Count)."
+}
+if (Compare-Object $Pages.Name $ExpectedPages) {
+    throw 'The package contains an unexpected or missing PTO2 kneeboard page.'
 }
 
 if ((Get-Content (Join-Path $VerifyRoot 'VERSION.TXT') -Raw).Trim() -ne $Version) {

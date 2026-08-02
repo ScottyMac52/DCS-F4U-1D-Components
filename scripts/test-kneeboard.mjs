@@ -11,7 +11,7 @@ const pngDir = join(root, 'kneeboard', 'F4U-1D');
 const svgDir = join(root, 'kneeboard', 'source');
 const assetDir = join(root, 'kneeboard', 'assets', 'source');
 const profileDir = join(root, 'src', 'Config', 'Input', 'F4U-1D', 'joystick');
-const page = '01-WINCTRL-PTO2';
+const pages = ['01-WINCTRL-PTO2-AIRFRAME', '02-WINCTRL-PTO2-STORES'];
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -21,41 +21,59 @@ function hashFile(path) {
   return createHash('sha256').update(readFileSync(path)).digest('hex');
 }
 
+function generatedHashes() {
+  return Object.fromEntries(pages.flatMap((page) => [
+    [page + '.svg', hashFile(join(svgDir, page + '.svg'))],
+    [page + '.png', hashFile(join(pngDir, page + '.png'))],
+  ]));
+}
+
 const pngNames = readdirSync(pngDir).filter((name) => name.endsWith('.png')).sort();
 const svgNames = readdirSync(svgDir).filter((name) => name.endsWith('.svg')).sort();
-assert(JSON.stringify(pngNames) === JSON.stringify([page + '.png']), 'Unexpected kneeboard PNG filename or page count.');
-assert(JSON.stringify(svgNames) === JSON.stringify([page + '.svg']), 'Unexpected kneeboard SVG filename or page count.');
+assert(JSON.stringify(pngNames) === JSON.stringify(pages.map((page) => page + '.png')), 'Unexpected kneeboard PNG filenames or page count.');
+assert(JSON.stringify(svgNames) === JSON.stringify(pages.map((page) => page + '.svg')), 'Unexpected kneeboard SVG filenames or page count.');
 
-const pngPath = join(pngDir, page + '.png');
-const svgPath = join(svgDir, page + '.svg');
-const metadata = await sharp(pngPath).metadata();
-assert(metadata.width === 1200 && metadata.height === 1600, page + '.png must be 1200 x 1600.');
+const sources = [];
+for (const [index, page] of pages.entries()) {
+  const pngPath = join(pngDir, page + '.png');
+  const svgPath = join(svgDir, page + '.svg');
+  const metadata = await sharp(pngPath).metadata();
+  assert(metadata.width === 1200 && metadata.height === 1600, page + '.png must be 1200 x 1600.');
 
-const source = readFileSync(svgPath, 'utf8');
-const externalResourceCheck = source.replaceAll('http://www.w3.org/2000/svg', '');
-assert(!/https?:\/\//i.test(externalResourceCheck), page + '.svg contains a network dependency.');
-assert(source.includes('data:image/png;base64,'), page + '.svg does not embed the PTO2 image.');
-assert(source.includes('1 / 1'), page + '.svg has the wrong page number.');
-const visibleText = source.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
+  const source = readFileSync(svgPath, 'utf8');
+  const externalResourceCheck = source.replaceAll('http://www.w3.org/2000/svg', '');
+  assert(!/https?:\/\//i.test(externalResourceCheck), page + '.svg contains a network dependency.');
+  assert(source.includes('data:image/png;base64,'), page + '.svg does not embed the PTO2 image.');
+  assert(source.includes((index + 1) + ' / ' + pages.length), page + '.svg has the wrong page number.');
+  sources.push(source);
+}
 
+const visibleText = sources.join(' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
 for (const required of [
-  'Wings FOLD',
+  'Flaps increase',
+  'Approach light ON',
+  'Airbrake DOWN',
   'Wings HOLD / stop',
-  'Wings SPREAD',
-  'Wing hinge-pin LOCK toggle',
+  'Wing hinge-pin lock toggle',
   'Arresting hook PARKING',
-  'All other PTO2 controls are intentionally unbound',
+  'Parking brake ON',
+  'Drop-tank lock RELEASE',
+  'Pylon release selector ON',
+  'Left-wing EMERGENCY RELEASE',
+  'Right-wing EMERGENCY RELEASE',
 ]) {
-  assert(visibleText.includes(required), page + '.svg is missing required text: ' + required);
+  assert(visibleText.includes(required), 'The PTO2 kneeboard is missing required text: ' + required);
 }
 
 const profileNames = readdirSync(profileDir).filter((name) => name.endsWith('.diff.lua'));
 assert(profileNames.length === 1, 'Expected exactly one F4U-1D joystick profile.');
 const lua = readFileSync(join(profileDir, profileNames[0]), 'utf8');
 const mappedButtons = new Set([...lua.matchAll(/JOY_BTN(\d+)/g)].map((match) => Number(match[1])));
-const labelledButtons = new Set([...source.matchAll(/BTN (\d+)/g)].map((match) => Number(match[1])));
+const labelledButtons = [...sources.join(' ').matchAll(/BTN (\d+)/g)].map((match) => Number(match[1]));
+assert(labelledButtons.length === mappedButtons.size, 'Each mapped PTO2 button must appear exactly once across the kneeboard pages.');
+assert(new Set(labelledButtons).size === labelledButtons.length, 'A PTO2 button is labelled on more than one kneeboard page.');
 for (const button of mappedButtons) {
-  assert(labelledButtons.has(button), page + ' is missing its mapped BTN ' + button + ' label.');
+  assert(labelledButtons.includes(button), 'The PTO2 kneeboard is missing mapped BTN ' + button + '.');
 }
 
 for (const asset of ['pto2-clean.png', 'pto2-template.svg']) {
@@ -70,14 +88,14 @@ assert(
   'The verified PTO2 image asset changed unexpectedly.',
 );
 
-const before = { svg: hashFile(svgPath), png: hashFile(pngPath) };
+const before = generatedHashes();
 const build = spawnSync(process.execPath, [join(scriptDir, 'build-kneeboard.mjs')], {
   cwd: root,
   encoding: 'utf8',
   env: process.env,
 });
 assert(build.status === 0, 'Deterministic rebuild failed:\n' + build.stdout + '\n' + build.stderr);
-const after = { svg: hashFile(svgPath), png: hashFile(pngPath) };
+const after = generatedHashes();
 assert(JSON.stringify(after) === JSON.stringify(before), 'Kneeboard output changed across identical builds.');
 
-console.log('Kneeboard validation passed: deterministic page, mapping labels, dimensions, and offline PTO2 asset verified.');
+console.log('Kneeboard validation passed: two deterministic pages cover all 25 exported PTO2 assignments.');

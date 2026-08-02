@@ -12,9 +12,10 @@ It also installs the photo-backed reference page to:
 
   KNEEBOARD\F4U-1D
 
-The PTO2 controls landing gear, the three-position arresting hook, the
-three-position wing-fold lever, and the independent wing-lock toggle. All other
-PTO2 controls are intentionally unbound.
+The PTO2 profile preserves all 25 assignments in Scott's current F4U-1D export:
+flaps, approach lights, airbrake, drop-tank lock, stores release selectors,
+emergency releases, wing fold and lock, arresting hook, landing gear, and
+parking brake.
 
 Before enabling the package, back up:
 
@@ -24,5 +25,7 @@ If your Saved Games installation uses DCS instead of DCS.openbeta, use that root
 
 Disable the package in OvGME to remove the managed files.
 
-OpenKneeboard should discover KNEEBOARD\F4U-1D through its DCS Aircraft tab.
+The two photo-backed OpenKneeboard pages divide airframe/carrier controls from
+stores/emergency-release controls. OpenKneeboard should discover
+KNEEBOARD\F4U-1D through its DCS Aircraft tab.
 If not, add that directory as a Folder tab.

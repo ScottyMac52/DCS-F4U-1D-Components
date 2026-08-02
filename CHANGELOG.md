@@ -6,8 +6,9 @@ All notable changes to this project are documented here.
 
 ### Added
 
-- Initial WINCTRL CarrierAce PTO2 profile for the DCS F4U-1D.
-- Native three-position wing-fold and hook mappings.
-- Independent wing-lock toggle and landing-gear UP/DOWN mappings.
-- Photo-backed OpenKneeboard page and device documentation.
+- Initial WINCTRL CarrierAce PTO2 profile preserving all 25 assignments from
+  Scott's current DCS F4U-1D export.
+- Native flaps, approach-light, airbrake, wing-fold, wing-lock, hook, landing-gear,
+  parking-brake, stores-selector, drop-tank-lock, and emergency-release mappings.
+- Two photo-backed OpenKneeboard pages and complete device documentation.
 - Deterministic OvGME packaging and automated validation.

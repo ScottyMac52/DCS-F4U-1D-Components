@@ -5,14 +5,16 @@ OvGME packaging for Scott's F4U-1D Corsair cockpit.
 
 ## Included in this release
 
-- WINCTRL CarrierAce PTO2 profile using the current DCS F4U-1D command export.
-- Independent landing-gear, arresting-hook, wing-fold, and wing-lock controls.
-- A photo-backed 1200 x 1600 OpenKneeboard page with the mapped PTO2 controls.
+- WINCTRL CarrierAce PTO2 profile preserving all 25 assignments in the current
+  DCS F4U-1D export.
+- Airframe, carrier, lighting, parking-brake, stores-selector, and emergency-release
+  controls on their analogous physical PTO2 controls.
+- Two photo-backed 1200 x 1600 OpenKneeboard pages with every mapped PTO2 control.
 - Deterministic build, mapping, Lua, version, kneeboard, and package validation.
 - Tag-authoritative semantic versioning for release archives.
 
-The profile intentionally contains only the controls approved for issue #1. Unrelated
-PTO2 controls from the source export are not shipped.
+The exported command identifiers, device GUID, button numbers, and mappings are
+preserved without substituting commands from another DCS module.
 
 ## Install
 
