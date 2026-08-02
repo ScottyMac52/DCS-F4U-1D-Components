@@ -110,6 +110,12 @@ const pages = [
       'Use emergency release deliberately and verify with a safe training loadout.',
     ],
   },
+  {
+    file: '03-LOGITECH-DUAL-QUADRANTS',
+    kind: 'quadrants',
+    title: 'DUAL LOGITECH THROTTLE QUADRANTS',
+    kicker: 'F4U-1D ENGINE, POWER AND SUPERCHARGER CONTROLS',
+  },
 ];
 
 function markerGroups(callouts) {
@@ -187,12 +193,93 @@ function renderPage(page, index) {
     '</svg>';
 }
 
+function renderQuadrantPage(page, index) {
+  const quadrant = imageDataUri(join(assetDir, 'logitech-flight-throttle-quadrant.png'));
+  const text = (x, y, value, size = 18, color = '#f2f7ff', weight = 650, anchor = 'start') =>
+    '<text x="' + x + '" y="' + y + '" text-anchor="' + anchor + '" font-size="' + size + '" font-weight="' + weight + '" fill="' + color + '">' + esc(value) + '</text>';
+  const card = (x, y, width, height, color, heading, lines) => {
+    let body = '<rect x="' + x + '" y="' + y + '" width="' + width + '" height="' + height + '" rx="14" fill="#101f33" stroke="' + color + '" stroke-width="2"/>';
+    body += text(x + 20, y + 34, heading, 18, color, 800);
+    lines.forEach((line, lineIndex) => {
+      body += text(x + 20, y + 70 + lineIndex * 30, line, 16, '#f2f7ff', 650);
+    });
+    return body;
+  };
+
+  let body = '';
+  body += '<rect width="1200" height="1600" fill="#071220"/>';
+  body += '<rect width="1200" height="16" fill="#46d8ff"/>';
+  body += text(54, 82, page.title, 39, '#f5f9ff', 800);
+  body += text(56, 126, page.kicker, 20, '#ffc95c', 700);
+  body += '<line x1="54" y1="156" x2="1146" y2="156" stroke="#263a52" stroke-width="3"/>';
+  body += '<g font-family="DejaVu Sans,Arial,sans-serif">';
+
+  body += '<rect x="40" y="182" width="545" height="615" rx="22" fill="#0a1726" stroke="#46d8ff" stroke-width="3"/>';
+  body += text(68, 225, 'PRIMARY QUADRANT', 24, '#46d8ff', 800);
+  body += text(557, 225, 'GUID …840BBBD0', 14, '#8ea5bd', 700, 'end');
+  body += '<image x="86" y="242" width="455" height="335" href="' + quadrant + '" preserveAspectRatio="xMidYMid meet"/>';
+  body += card(68, 585, 489, 188, '#6ce5a3', 'AXES — INBOARD TO OUTBOARD', [
+    'Mixture • JOY_Z',
+    'Propeller RPM • JOY_Y • INVERTED',
+    'Throttle • JOY_X',
+  ]);
+
+  body += '<rect x="615" y="182" width="545" height="615" rx="22" fill="#0a1726" stroke="#ffc95c" stroke-width="3"/>';
+  body += text(643, 225, 'SECONDARY QUADRANT', 24, '#ffc95c', 800);
+  body += text(1132, 225, 'GUID …1C8A8840', 14, '#8ea5bd', 700, 'end');
+  body += '<image x="661" y="242" width="455" height="335" href="' + quadrant + '" preserveAspectRatio="xMidYMid meet"/>';
+  body += card(643, 585, 489, 188, '#ffc95c', 'AXES — INBOARD TO OUTBOARD', [
+    'Supercharger • JOY_Z',
+    'JOY_X / JOY_Y intentionally unbound',
+    'All six rocker inputs intentionally unbound',
+  ]);
+
+  body += '<rect x="54" y="833" width="1092" height="420" rx="18" fill="#101f33" stroke="#ff8f66" stroke-width="2"/>';
+  body += text(82, 878, 'PRIMARY ROCKER SWITCHES', 23, '#ff8f66', 800);
+  body += text(82, 912, 'Native discrete commands from Scott\'s current export — no macros', 16, '#8ea5bd', 650);
+  body += card(82, 946, 320, 250, '#46d8ff', 'LEFT ROCKER', [
+    'T1 / BTN 1',
+    'Battery ON',
+    '',
+    'T2 / BTN 2',
+    'Battery OFF',
+  ]);
+  body += card(440, 946, 320, 250, '#6ce5a3', 'MIDDLE ROCKER', [
+    'T3 / BTN 3',
+    'Fuel pump ON',
+    '',
+    'T4 / BTN 4',
+    'Fuel pump OFF',
+  ]);
+  body += card(798, 946, 320, 250, '#ffc95c', 'RIGHT ROCKER', [
+    'T5 / BTN 5',
+    'Water injection ENABLE',
+    '',
+    'T6 / BTN 6',
+    'Water injection DISABLE',
+  ]);
+
+  body += '<rect x="54" y="1290" width="1092" height="145" rx="16" fill="#101f33" stroke="#ff6b76" stroke-width="2"/>';
+  body += text(78, 1334, 'IDENTITY CHECK', 20, '#ff6b76', 800);
+  body += text(78, 1374, 'Verify both GUID-qualified Logitech columns before flight; never duplicate one profile onto both devices.', 17, '#f2f7ff', 650);
+  body += text(78, 1406, 'The legacy Saitek alias for GUID …840BBBD0 is intentionally not packaged.', 17, '#f2f7ff', 650);
+  body += '</g>';
+  body += '<line x1="54" y1="1518" x2="1146" y2="1518" stroke="#263a52" stroke-width="2"/>';
+  body += text(54, 1560, 'F4U-1D Corsair • Scott\'s cockpit • Package ' + version, 18, '#8ea5bd', 400);
+  body += text(1146, 1560, (index + 1) + ' / ' + pages.length, 18, '#8ea5bd', 400, 'end');
+
+  return '<?xml version="1.0" encoding="UTF-8"?>' +
+    '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">' +
+    body +
+    '</svg>';
+}
+
 for (const [index, page] of pages.entries()) {
-  const svg = renderPage(page, index);
+  const svg = page.kind === 'quadrants' ? renderQuadrantPage(page, index) : renderPage(page, index);
   const svgPath = join(svgDir, page.file + '.svg');
   const pngPath = join(pngDir, page.file + '.png');
   writeFileSync(svgPath, svg, 'utf8');
   await sharp(Buffer.from(svg)).png({ compressionLevel: 9, adaptiveFiltering: false }).toFile(pngPath);
 }
 
-console.log('Generated ' + pages.length + ' PTO2 OpenKneeboard pages for package ' + version + '.');
+console.log('Generated ' + pages.length + ' F4U-1D OpenKneeboard pages for package ' + version + '.');

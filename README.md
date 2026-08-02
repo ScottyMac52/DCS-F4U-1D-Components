@@ -7,9 +7,15 @@ OvGME packaging for Scott's F4U-1D Corsair cockpit.
 
 - WINCTRL CarrierAce PTO2 profile preserving all 25 assignments in the current
   DCS F4U-1D export.
+- Two GUID-qualified Logitech Flight Throttle Quadrant profiles preserving the
+  exported mixture, propeller RPM, throttle, supercharger, battery, fuel-pump,
+  and water-injection assignments.
+- Explicitly unbound secondary middle/outer axes and rocker inputs, with conflicting
+  DCS auto-bindings removed.
 - Airframe, carrier, lighting, parking-brake, stores-selector, and emergency-release
   controls on their analogous physical PTO2 controls.
-- Two photo-backed 1200 x 1600 OpenKneeboard pages with every mapped PTO2 control.
+- Three photo-backed 1200 x 1600 OpenKneeboard pages covering the PTO2 and both
+  Logitech quadrants.
 - Deterministic build, mapping, Lua, version, kneeboard, and package validation.
 - Tag-authoritative semantic versioning for release archives.
 
@@ -22,7 +28,8 @@ The release ZIP is an OvGME component targeting the DCS Saved Games root. Back u
 existing F4U-1D input directory, add the ZIP to your OvGME repository, and enable it.
 
 See [Installation](docs/INSTALLATION.md), [Control mappings](docs/CONTROL-MAPPINGS.md),
-and [OpenKneeboard/VAICOM](docs/OPENKNEEBOARD-VAICOM.md) for details.
+the [dual-quadrant device guide](docs/devices/LOGITECH-THROTTLE-QUADRANTS.md), and
+[OpenKneeboard/VAICOM](docs/OPENKNEEBOARD-VAICOM.md) for details.
 
 ## Build and validate
 

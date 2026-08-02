@@ -1,6 +1,6 @@
 # Kneeboard image sources and redistribution
 
-The generated kneeboard page is built entirely from files committed under
+The generated kneeboard pages are built entirely from files committed under
 kneeboard/assets/source. The build never downloads images.
 
 ## WINCTRL CarrierAce PTO2
@@ -18,3 +18,14 @@ kneeboard/assets/source. The build never downloads images.
 Product and company names identify compatible hardware. Their owners do not endorse
 this project. The retained source asset and scripts/build-kneeboard.mjs are the
 preferred form for modifying the generated kneeboard page.
+
+## Logitech Flight Throttle Quadrant
+
+- File: `logitech-flight-throttle-quadrant.png`.
+- Source: [Logitech G Flight Sim Throttle Quadrant product gallery](https://www.logitechg.com/en-us/shop/p/flight-simulator-throttle-quadrant),
+  retrieved 2026-08-01 from Logitech's official media host.
+- Copyright: Logitech. No ownership or endorsement is claimed.
+- Use: unmodified transparent product image embedded in a noncommercial control-reference
+  page to identify the compatible physical device. The image is not licensed under the
+  repository's GPL-derived PTO2 asset terms.
+- Integrity: SHA-256 `053b84c9192c60189fccfc4a87d5b9d6fbe92caf71f8189a775d4953772bed3d`.

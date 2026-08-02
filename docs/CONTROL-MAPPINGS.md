@@ -34,3 +34,45 @@ These identifiers and HID inputs come directly from Scott's current F4U-1D DCS
 export. The center hook position is retained because DCS exposes a native parking
 command. Wing movement and the hinge-pin lock remain independent. No assignment from
 the supplied working PTO2 export is removed or substituted.
+
+## Logitech Flight Quadrant — primary
+
+Device filename: `Logitech Flight Quadrant {840BBBD0-2139-11f1-8001-444553540000}.diff.lua`
+
+### Axes
+
+| Physical lever | HID input | DCS command | Exported command identifier | Exported tuning |
+|---|---|---|---|---|
+| Inner | JOY_Z | Mixture handle | a3230cd3 | Default |
+| Middle | JOY_Y | Propeller governor handle | a3224cd3 | Inverted; zero curvature/deadzone; full saturation |
+| Outer/end | JOY_X | Throttle Lever | a3236cd3 | Default |
+
+### Rocker switches
+
+| Physical rocker | HID input | DCS command | Exported command identifier |
+|---|---|---|---|
+| Left — upper (T1) | JOY_BTN1 | Battery, on | d3003pnilunilcd1vd1vpnilvunil |
+| Left — lower (T2) | JOY_BTN2 | Battery, off | d3003pnilunilcd1vd0vpnilvunil |
+| Middle — upper (T3) | JOY_BTN3 | Fuel pump, on | d3228pnilunilcd3vd1vpnilvunil |
+| Middle — lower (T4) | JOY_BTN4 | Fuel pump, off | d3228pnilunilcd3vd0vpnilvunil |
+| Right — upper (T5) | JOY_BTN5 | Enable water injection | d3244pnilunilcd3vd1vpnilvunil |
+| Right — lower (T6) | JOY_BTN6 | Disable water injection | d3244pnilunilcd3vd0vpnilvunil |
+
+The current export contained these six button assignments under the legacy `Saitek
+Pro Flight Quadrant` device name with the same `{840BBBD0-2139-11f1-8001-444553540000}`
+GUID. They are consolidated into the current `Logitech Flight Quadrant` filename so
+the package contains one authoritative profile for that physical device.
+
+## Logitech Flight Quadrant — secondary
+
+Device filename: `Logitech Flight Quadrant {1C8A8840-5386-11F1-8001-444553540000}.diff.lua`
+
+| Physical lever | HID input | DCS command | Exported command identifier | State |
+|---|---|---|---|---|
+| Inner | JOY_Z | Supercharger handle | a3235cd3 | Bound |
+| Middle | JOY_Y | — | — | Intentionally unbound; accidental Pitch auto-binding removed |
+| Outer/end | JOY_X | — | — | Intentionally unbound; accidental Roll auto-binding removed |
+
+All secondary-quadrant rocker switches remain intentionally unbound. Both quadrant
+profiles also remove accidental rudder bindings and other conflicting DCS defaults
+recorded in Scott's export.
