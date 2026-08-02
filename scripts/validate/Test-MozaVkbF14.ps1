@@ -16,7 +16,11 @@ $VkbName = ' VKBSim Gunfighter F14   {2D5CEC70-5189-11f1-8001-444553540000}.diff
 $MozaFiles = @(Get-ChildItem -LiteralPath $Joystick -File | Where-Object Name -EQ $MozaName)
 $VkbFiles = @(Get-ChildItem -LiteralPath $Joystick -File | Where-Object Name -EQ $VkbName)
 if ($MozaFiles.Count -ne 1) { throw 'Missing or ambiguous exact MOZA AB9 profile.' }
-if ($VkbFiles.Count -ne 1) { throw 'Missing or ambiguous exact VKB F-14 grip profile.' }
+if ($VkbFiles.Count -ne 1) {
+    $ActualNames = @(Get-ChildItem -LiteralPath $Joystick -File |
+        ForEach-Object { '<' + $_.Name + '> [' + (($_.Name.ToCharArray() | ForEach-Object { [int] $_ }) -join ',') + ']' })
+    throw "Missing or ambiguous exact VKB F-14 grip profile. Packaged names: $($ActualNames -join '; ')"
+}
 $MozaPath = $MozaFiles[0].FullName
 $VkbPath = $VkbFiles[0].FullName
 
