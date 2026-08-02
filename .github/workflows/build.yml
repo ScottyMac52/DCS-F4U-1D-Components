@@ -27,7 +27,7 @@ jobs:
         run: npm ci
       - name: Test semantic versioning
         run: npm run test:versioning
-      - name: Validate PTO2 profile
+      - name: Validate control profiles
         run: npm run test:profile
       - name: Parse Lua profiles
         shell: pwsh
@@ -36,9 +36,9 @@ jobs:
             & luac5.4 -p $_.FullName
             if ($LASTEXITCODE -ne 0) { throw "Invalid Lua: $($_.FullName)" }
           }
-      - name: Generate OpenKneeboard page
+      - name: Generate OpenKneeboard pages
         run: npm run build:kneeboard
-      - name: Validate OpenKneeboard page
+      - name: Validate OpenKneeboard pages
         run: npm run test:kneeboard
       - name: Build package
         shell: pwsh

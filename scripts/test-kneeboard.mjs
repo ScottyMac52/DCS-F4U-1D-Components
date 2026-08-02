@@ -11,7 +11,7 @@ const pngDir = join(root, 'kneeboard', 'F4U-1D');
 const svgDir = join(root, 'kneeboard', 'source');
 const assetDir = join(root, 'kneeboard', 'assets', 'source');
 const profileDir = join(root, 'src', 'Config', 'Input', 'F4U-1D', 'joystick');
-const pages = ['01-WINCTRL-PTO2-AIRFRAME', '02-WINCTRL-PTO2-STORES'];
+const pages = ['01-WINCTRL-PTO2-AIRFRAME', '02-WINCTRL-PTO2-STORES', '03-LOGITECH-DUAL-QUADRANTS'];
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -43,7 +43,7 @@ for (const [index, page] of pages.entries()) {
   const source = readFileSync(svgPath, 'utf8');
   const externalResourceCheck = source.replaceAll('http://www.w3.org/2000/svg', '');
   assert(!/https?:\/\//i.test(externalResourceCheck), page + '.svg contains a network dependency.');
-  assert(source.includes('data:image/png;base64,'), page + '.svg does not embed the PTO2 image.');
+  assert(source.includes('data:image/png;base64,'), page + '.svg does not embed its hardware image.');
   assert(source.includes((index + 1) + ' / ' + pages.length), page + '.svg has the wrong page number.');
   sources.push(source);
 }
@@ -61,22 +61,35 @@ for (const required of [
   'Pylon release selector ON',
   'Left-wing EMERGENCY RELEASE',
   'Right-wing EMERGENCY RELEASE',
+  'PRIMARY QUADRANT',
+  'Mixture • JOY_Z',
+  'Propeller RPM • JOY_Y • INVERTED',
+  'Throttle • JOY_X',
+  'SECONDARY QUADRANT',
+  'Supercharger • JOY_Z',
+  'JOY_X / JOY_Y intentionally unbound',
+  'Battery ON',
+  'Battery OFF',
+  'Fuel pump ON',
+  'Fuel pump OFF',
+  'Water injection ENABLE',
+  'Water injection DISABLE',
 ]) {
   assert(visibleText.includes(required), 'The PTO2 kneeboard is missing required text: ' + required);
 }
 
 const profileNames = readdirSync(profileDir).filter((name) => name.endsWith('.diff.lua'));
-assert(profileNames.length === 1, 'Expected exactly one F4U-1D joystick profile.');
-const lua = readFileSync(join(profileDir, profileNames[0]), 'utf8');
+assert(profileNames.length === 3, 'Expected PTO2 and two Logitech quadrant profiles.');
+const lua = readFileSync(join(profileDir, profileNames.find((name) => name.startsWith('WINCTRL CarrierAce PTO 2'))), 'utf8');
 const mappedButtons = new Set([...lua.matchAll(/JOY_BTN(\d+)/g)].map((match) => Number(match[1])));
-const labelledButtons = [...sources.join(' ').matchAll(/BTN (\d+)/g)].map((match) => Number(match[1]));
+const labelledButtons = [...sources.slice(0, 2).join(' ').matchAll(/BTN (\d+)/g)].map((match) => Number(match[1]));
 assert(labelledButtons.length === mappedButtons.size, 'Each mapped PTO2 button must appear exactly once across the kneeboard pages.');
 assert(new Set(labelledButtons).size === labelledButtons.length, 'A PTO2 button is labelled on more than one kneeboard page.');
 for (const button of mappedButtons) {
   assert(labelledButtons.includes(button), 'The PTO2 kneeboard is missing mapped BTN ' + button + '.');
 }
 
-for (const asset of ['pto2-clean.png', 'pto2-template.svg']) {
+for (const asset of ['pto2-clean.png', 'pto2-template.svg', 'logitech-flight-throttle-quadrant.png']) {
   assert(readdirSync(assetDir).includes(asset), 'Missing source asset: ' + asset);
 }
 assert(
@@ -86,6 +99,10 @@ assert(
 assert(
   hashFile(join(assetDir, 'pto2-clean.png')) === 'b2b00caeb85e2fcb4f4b5c8101e36f7279558c4543ced3e5934c84f617c1db3e',
   'The verified PTO2 image asset changed unexpectedly.',
+);
+assert(
+  hashFile(join(assetDir, 'logitech-flight-throttle-quadrant.png')) === '053b84c9192c60189fccfc4a87d5b9d6fbe92caf71f8189a775d4953772bed3d',
+  'The verified Logitech product image asset changed unexpectedly.',
 );
 
 const before = generatedHashes();
@@ -98,4 +115,4 @@ assert(build.status === 0, 'Deterministic rebuild failed:\n' + build.stdout + '\
 const after = generatedHashes();
 assert(JSON.stringify(after) === JSON.stringify(before), 'Kneeboard output changed across identical builds.');
 
-console.log('Kneeboard validation passed: two deterministic pages cover all 25 exported PTO2 assignments.');
+console.log('Kneeboard validation passed: three deterministic pages cover the PTO2 and dual Logitech quadrants.');
