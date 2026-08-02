@@ -6,6 +6,12 @@ All notable changes to this project are documented here.
 
 ### Added
 
+- Distinct MOZA AB9 axes/FFB and VKB BlackBox F-14 grip profiles for Scott's active
+  center-stick configuration.
+- Verified VKB gun, bomb, modified rocket, and four-way trim assignments without
+  unsupported weapon-selector bindings.
+- Photo-backed VKB F-14 grip OpenKneeboard page, device guide, and automated
+  device-separation, modifier, unused-control, asset, and package validation.
 - Dual GUID-qualified Logitech Flight Throttle Quadrant profiles from Scott's current
   F4U-1D export.
 - Primary mixture, propeller RPM, throttle, battery, fuel-pump, and water-injection

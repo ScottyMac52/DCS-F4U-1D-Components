@@ -29,3 +29,16 @@ preferred form for modifying the generated kneeboard page.
   page to identify the compatible physical device. The image is not licensed under the
   repository's GPL-derived PTO2 asset terms.
 - Integrity: SHA-256 `053b84c9192c60189fccfc4a87d5b9d6fbe92caf71f8189a775d4953772bed3d`.
+
+## VKB F-14 grip
+
+- Files: `vkb-f14-grip-photo.jpeg` and `vkb-f14-grip-photo-clean.png`.
+- Source: product photograph supplied by Scott and previously committed to Scott's
+  DCS F-14B(U) Components repository; the transparent cleaned derivative is reused
+  from that repository.
+- Copyright: VKB/VKBSim product design and the original photographer. No ownership
+  or endorsement is claimed.
+- Use: physical-device identification in a noncommercial control-reference page.
+- Transformations: background removal and a transparent crop for the cleaned PNG.
+- Source integrity: SHA-256 `79f18abe2b07a2bcfdc3c8163e4af9e0752f7d22ae03e0bb6eacefd349ecac77`.
+- Cleaned integrity: SHA-256 `32850cb9e877b24d3c3ba97b789fa7666f2281dcd221354e956b59260955b4bd`.

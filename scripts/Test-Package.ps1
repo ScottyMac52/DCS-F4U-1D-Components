@@ -12,7 +12,8 @@ $VerifyRoot = Join-Path $RepoRoot '.build/verify'
 
 if (-not (Test-Path $Archive -PathType Leaf)) { throw "Missing package: $Archive" }
 Remove-Item $VerifyRoot -Recurse -Force -ErrorAction SilentlyContinue
-Expand-Archive $Archive $VerifyRoot
+New-Item $VerifyRoot -ItemType Directory -Force | Out-Null
+[IO.Compression.ZipFile]::ExtractToDirectory($Archive, $VerifyRoot)
 
 $Container = Join-Path $VerifyRoot $PackageName
 $Joystick = Join-Path $Container 'Config/Input/F4U-1D/joystick'
@@ -21,12 +22,13 @@ if (-not (Test-Path $Joystick -PathType Container)) { throw 'Missing F4U-1D joys
 if (-not (Test-Path $Kneeboard -PathType Container)) { throw 'Missing F4U-1D kneeboard directory.' }
 
 $Profiles = @(Get-ChildItem $Joystick -Filter '*.diff.lua')
-if ($Profiles.Count -ne 3) { throw "Expected exactly three joystick profiles, found $($Profiles.Count)." }
+if ($Profiles.Count -ne 5) { throw "Expected exactly five joystick profiles, found $($Profiles.Count)." }
 $Pages = @(Get-ChildItem $Kneeboard -Filter '*.png' | Sort-Object Name)
 $ExpectedPages = @(
     '01-WINCTRL-PTO2-AIRFRAME.png',
     '02-WINCTRL-PTO2-STORES.png',
-    '03-LOGITECH-DUAL-QUADRANTS.png'
+    '03-LOGITECH-DUAL-QUADRANTS.png',
+    '04-VKB-F14-GRIP.png'
 )
 if ($Pages.Count -ne $ExpectedPages.Count) {
     throw "Expected exactly $($ExpectedPages.Count) kneeboard pages, found $($Pages.Count)."
