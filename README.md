@@ -12,6 +12,7 @@ OvGME packaging for Scott's F4U-1D Corsair cockpit.
   and water-injection assignments.
 - Separate MOZA AB9 and VKB BlackBox profiles: the base retains native X/Y axes and
   force feedback while the F-14 grip supplies verified weapon and trim buttons.
+- Later option to use the ThrustMaster grips aka F-16C Viper or F/A-18C Hornet grips with the MOZA AB9.
 - Guns on BTN 1, bombs on BTN 3, rockets on global modifier BTN 7 + BTN 3, and trim
   on BTN 9–12; maintained weapon-selector positions remain intentionally unbound.
 - Explicitly unbound secondary middle/outer axes and rocker inputs, with conflicting
