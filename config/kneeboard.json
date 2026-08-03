@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "aircraft": "F4U-1D Corsair",
+  "profiles": {
+    "pto2": "src/Config/Input/F4U-1D/joystick/WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua"
+  },
+  "pages": [
+    { "file": "01-WINCTRL-PTO2-AIRFRAME", "deviceId": "winctrl-pto2", "title": "WINCTRL CARRIERACE PTO2", "kicker": "F4U-1D AIRFRAME, CARRIER AND GROUND CONTROLS", "controls": {
+      "pto2-button-5": { "profile": "pto2", "key": "JOY_BTN5", "label": "Flaps up" }, "pto2-button-7": { "profile": "pto2", "key": "JOY_BTN7", "label": "Flaps down" },
+      "pto2-button-8": { "profile": "pto2", "key": "JOY_BTN8", "label": "Approach light ON" }, "pto2-button-9": { "profile": "pto2", "key": "JOY_BTN9", "label": "Approach light OFF" },
+      "pto2-button-10": { "profile": "pto2", "key": "JOY_BTN10", "label": "Airbrake up" }, "pto2-button-11": { "profile": "pto2", "key": "JOY_BTN11", "label": "Airbrake down" },
+      "pto2-button-28": { "profile": "pto2", "key": "JOY_BTN28", "label": "Wings fold" }, "pto2-button-29": { "profile": "pto2", "key": "JOY_BTN29", "label": "Wings stop" }, "pto2-button-30": { "profile": "pto2", "key": "JOY_BTN30", "label": "Wings spread" }, "pto2-button-31": { "profile": "pto2", "key": "JOY_BTN31", "label": "Wing lock" },
+      "pto2-button-32": { "profile": "pto2", "key": "JOY_BTN32", "label": "Hook up" }, "pto2-button-33": { "profile": "pto2", "key": "JOY_BTN33", "label": "Hook parking" }, "pto2-button-34": { "profile": "pto2", "key": "JOY_BTN34", "label": "Hook down" },
+      "pto2-button-35": { "profile": "pto2", "key": "JOY_BTN35", "label": "Gear up" }, "pto2-button-37": { "profile": "pto2", "key": "JOY_BTN37", "label": "Gear down" }, "pto2-button-38": { "profile": "pto2", "key": "JOY_BTN38", "label": "Parking brake OFF" }, "pto2-button-39": { "profile": "pto2", "key": "JOY_BTN39", "label": "Parking brake ON" }
+    } },
+    { "file": "02-WINCTRL-PTO2-STORES", "deviceId": "winctrl-pto2", "title": "WINCTRL CARRIERACE PTO2", "kicker": "F4U-1D STORES, EMERGENCY AND LIGHTING CONTROLS", "controls": {
+      "pto2-button-17": { "profile": "pto2", "key": "JOY_BTN17", "label": "Tank attach" }, "pto2-button-19": { "profile": "pto2", "key": "JOY_BTN19", "label": "Tank lock" }, "pto2-button-22": { "profile": "pto2", "key": "JOY_BTN22", "label": "Tank release" },
+      "pto2-button-23": { "profile": "pto2", "key": "JOY_BTN23", "label": "Pylon selector" }, "pto2-button-24": { "profile": "pto2", "key": "JOY_BTN24", "label": "Left selector" }, "pto2-button-25": { "profile": "pto2", "key": "JOY_BTN25", "label": "Right selector" },
+      "pto2-button-26": { "profile": "pto2", "key": "JOY_BTN26", "label": "Left emergency" }, "pto2-button-27": { "profile": "pto2", "key": "JOY_BTN27", "label": "Right emergency" }
+    } },
+    { "file": "04-VKB-F14-GRIP", "deviceId": "vkb-f14-gunfighter", "title": "VKB GUNFIGHTER • F-14 GRIP", "kicker": "F4U-1D TRIM AND WEAPONS CONTROLS", "labels": ["BTN 9–12: Trim", "BTN 3: Bomb release", "BTN 13–16: Weapon selector unbound", "BTN 7 + BTN 3: Rockets fire", "", "", "BTN 1: Guns fire"] }
+  ],
+  "instancePages": [
+    { "file": "03-LOGITECH-DUAL-QUADRANTS", "title": "DUAL LOGITECH THROTTLE QUADRANTS", "kicker": "ONE CANONICAL DEVICE TEMPLATE • TWO INDEPENDENT PHYSICAL INSTANCES", "instances": [
+      { "instanceId": "primary-quadrant", "deviceId": "logitech-throttle-quadrant", "title": "PRIMARY • GUID …840BBBD0", "labels": ["Mixture • JOY_Z", "Propeller RPM • JOY_Y • INVERTED", "Throttle • JOY_X", "BTN 1: Battery ON", "BTN 2: Battery OFF", "BTN 3: Fuel pump ON", "BTN 4: Fuel pump OFF", "BTN 5: Water injection ENABLE", "BTN 6: Water injection DISABLE"] },
+      { "instanceId": "secondary-quadrant", "deviceId": "logitech-throttle-quadrant", "title": "SECONDARY • GUID …1C8A8840", "labels": ["Supercharger • JOY_Z", "JOY_Y intentionally unbound", "JOY_X intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound"] }
+    ] }
+  ]
+}
