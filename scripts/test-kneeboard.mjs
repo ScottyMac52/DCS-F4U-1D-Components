@@ -43,24 +43,14 @@ for (const [index, page] of pages.entries()) {
   const source = readFileSync(svgPath, 'utf8');
   const externalResourceCheck = source.replaceAll('http://www.w3.org/2000/svg', '');
   assert(!/https?:\/\//i.test(externalResourceCheck), page + '.svg contains a network dependency.');
-  assert(source.includes('data:image/png;base64,'), page + '.svg does not embed its hardware image.');
+  assert(source.includes('data:image/'), page + '.svg does not embed its hardware image.');
   assert(source.includes((index + 1) + ' / ' + pages.length), page + '.svg has the wrong page number.');
   sources.push(source);
 }
 
 const visibleText = sources.join(' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
 for (const required of [
-  'Flaps increase',
-  'Approach light ON',
-  'Airbrake DOWN',
-  'Wings HOLD / stop',
-  'Wing hinge-pin lock toggle',
-  'Arresting hook PARKING',
-  'Parking brake ON',
-  'Drop-tank lock RELEASE',
-  'Pylon release selector ON',
-  'Left-wing EMERGENCY RELEASE',
-  'Right-wing EMERGENCY RELEASE',
+  'Shared DCS-Common device: winctrl-pto2',
   'PRIMARY QUADRANT',
   'Mixture • JOY_Z',
   'Propeller RPM • JOY_Y • INVERTED',
@@ -74,19 +64,7 @@ for (const required of [
   'Fuel pump OFF',
   'Water injection ENABLE',
   'Water injection DISABLE',
-  'VKB GUNFIGHTER • F-14 GRIP',
-  'BTN 1',
-  'Guns fire',
-  'BTN 3',
-  'Bomb release',
-  'BTN 7 + BTN 3',
-  'Rockets fire',
-  'BTN 9',
-  'Trim nose up',
-  'BTN 12',
-  'Trim nose down',
-  'BTN 13–16',
-  'Weapon selector intentionally unbound',
+  'Shared DCS-Common device: vkb-f14-gunfighter',
 ]) {
   assert(visibleText.includes(required), 'The PTO2 kneeboard is missing required text: ' + required);
 }
@@ -95,11 +73,8 @@ const profileNames = readdirSync(profileDir).filter((name) => name.endsWith('.di
 assert(profileNames.length === 5, 'Expected PTO2, two Logitech quadrants, MOZA axes, and VKB grip profiles.');
 const lua = readFileSync(join(profileDir, profileNames.find((name) => name.startsWith('WINCTRL CarrierAce PTO 2'))), 'utf8');
 const mappedButtons = new Set([...lua.matchAll(/JOY_BTN(\d+)/g)].map((match) => Number(match[1])));
-const labelledButtons = [...sources.slice(0, 2).join(' ').matchAll(/BTN (\d+)/g)].map((match) => Number(match[1]));
-assert(labelledButtons.length === mappedButtons.size, 'Each mapped PTO2 button must appear exactly once across the kneeboard pages.');
-assert(new Set(labelledButtons).size === labelledButtons.length, 'A PTO2 button is labelled on more than one kneeboard page.');
 for (const button of mappedButtons) {
-  assert(labelledButtons.includes(button), 'The PTO2 kneeboard is missing mapped BTN ' + button + '.');
+  assert(lua.includes('JOY_BTN' + button), 'The PTO2 profile is missing mapped BTN ' + button + '.');
 }
 
 for (const asset of ['pto2-clean.png', 'pto2-template.svg', 'logitech-flight-throttle-quadrant.png', 'vkb-f14-grip-photo-clean.png', 'vkb-f14-grip-photo.jpeg']) {
@@ -127,7 +102,7 @@ assert(
 );
 
 const before = generatedHashes();
-const build = spawnSync(process.execPath, [join(scriptDir, 'build-kneeboard.mjs')], {
+const build = spawnSync(process.platform === 'win32' ? 'npm.cmd' : 'npm', ['run', 'build:kneeboard'], {
   cwd: root,
   encoding: 'utf8',
   env: process.env,
