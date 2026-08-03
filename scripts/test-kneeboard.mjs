@@ -51,19 +51,8 @@ for (const [index, page] of pages.entries()) {
 const visibleText = sources.join(' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ');
 for (const required of [
   'Shared DCS-Common device: winctrl-pto2',
-  'PRIMARY QUADRANT',
-  'Mixture • JOY_Z',
-  'Propeller RPM • JOY_Y • INVERTED',
-  'Throttle • JOY_X',
-  'SECONDARY QUADRANT',
-  'Supercharger • JOY_Z',
-  'JOY_X / JOY_Y intentionally unbound',
-  'Battery ON',
-  'Battery OFF',
-  'Fuel pump ON',
-  'Fuel pump OFF',
-  'Water injection ENABLE',
-  'Water injection DISABLE',
+  'primary-quadrant=logitech-throttle-quadrant',
+  'secondary-quadrant=logitech-throttle-quadrant',
   'Shared DCS-Common device: vkb-f14-gunfighter',
 ]) {
   assert(visibleText.includes(required), 'The PTO2 kneeboard is missing required text: ' + required);

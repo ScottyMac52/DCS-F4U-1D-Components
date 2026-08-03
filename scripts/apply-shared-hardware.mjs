@@ -5,7 +5,7 @@ import sharp from 'sharp';
 
 const root = resolve(import.meta.dirname, '..');
 const commonRoot = resolve(process.env.DCS_COMMON_ROOT ?? join(root, '.dcs-common'));
-const { renderSharedHardwarePage } = await import(pathToFileURL(join(commonRoot, 'scripts/shared-hardware-consumer.mjs')));
+const { renderSharedHardwareInstancesPage, renderSharedHardwarePage } = await import(pathToFileURL(join(commonRoot, 'scripts/shared-hardware-consumer.mjs')));
 const svgDir = join(root, 'kneeboard/source');
 const pngDir = join(root, 'kneeboard/F4U-1D');
 mkdirSync(svgDir, { recursive: true });
@@ -35,3 +35,22 @@ for (const spec of pages) {
   writeFileSync(join(svgDir, `${spec.file}.svg`), svg);
   await sharp(Buffer.from(svg)).png().toFile(join(pngDir, `${spec.file}.png`));
 }
+
+const dual = renderSharedHardwareInstancesPage({
+  commonRoot,
+  title: 'DUAL LOGITECH THROTTLE QUADRANTS',
+  kicker: 'ONE CANONICAL DEVICE TEMPLATE • TWO INDEPENDENT PHYSICAL INSTANCES',
+  footer: 'F4U-1D Corsair • shared DCS-Common hardware instances • 3 / 4',
+  instances: [
+    {
+      instanceId: 'primary-quadrant', deviceId: 'logitech-throttle-quadrant', title: 'PRIMARY • GUID …840BBBD0',
+      labels: ['Mixture • JOY_Z', 'Propeller RPM • JOY_Y • INVERTED', 'Throttle • JOY_X', 'BTN 1: Battery ON', 'BTN 2: Battery OFF', 'BTN 3: Fuel pump ON', 'BTN 4: Fuel pump OFF', 'BTN 5: Water injection ENABLE', 'BTN 6: Water injection DISABLE'],
+    },
+    {
+      instanceId: 'secondary-quadrant', deviceId: 'logitech-throttle-quadrant', title: 'SECONDARY • GUID …1C8A8840',
+      labels: ['Supercharger • JOY_Z', 'JOY_Y intentionally unbound', 'JOY_X intentionally unbound', 'Rocker input intentionally unbound', 'Rocker input intentionally unbound', 'Rocker input intentionally unbound', 'Rocker input intentionally unbound', 'Rocker input intentionally unbound', 'Rocker input intentionally unbound'],
+    },
+  ],
+});
+writeFileSync(join(svgDir, '03-LOGITECH-DUAL-QUADRANTS.svg'), dual.svg);
+await sharp(Buffer.from(dual.svg)).png().toFile(join(pngDir, '03-LOGITECH-DUAL-QUADRANTS.png'));
