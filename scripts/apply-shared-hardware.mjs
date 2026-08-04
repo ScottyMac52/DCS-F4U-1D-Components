@@ -14,12 +14,12 @@ mkdirSync(svgDir, { recursive: true }); mkdirSync(pngDir, { recursive: true });
 
 for (const page of config.pages) {
   const number = Number(page.file.slice(0, 2));
-  const { svg } = renderSharedHardwarePage({ ...page, commonRoot, footer: `${config.aircraft} • shared DCS-Common hardware template • ${number} / 4` });
+  const { svg } = renderSharedHardwarePage({ ...page, commonRoot, provenance: { consumer: 'DCS-F4U-1D-Components', page: `${number} / 4` } });
   writeFileSync(join(svgDir, `${page.file}.svg`), svg);
   await sharp(Buffer.from(svg)).png().toFile(join(pngDir, `${page.file}.png`));
 }
 for (const page of config.instancePages) {
-  const { svg } = renderSharedHardwareInstancesPage({ ...page, commonRoot, footer: `${config.aircraft} • shared DCS-Common hardware instances • 3 / 4` });
+  const { svg } = renderSharedHardwareInstancesPage({ ...page, commonRoot, provenance: { consumer: 'DCS-F4U-1D-Components', page: '3 / 4' } });
   writeFileSync(join(svgDir, `${page.file}.svg`), svg);
   await sharp(Buffer.from(svg)).png().toFile(join(pngDir, `${page.file}.png`));
 }
