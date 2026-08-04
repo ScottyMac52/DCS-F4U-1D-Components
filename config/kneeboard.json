@@ -18,11 +18,11 @@
       "pto2-button-23": { "profile": "pto2", "key": "JOY_BTN23", "label": "Pylon selector" }, "pto2-button-24": { "profile": "pto2", "key": "JOY_BTN24", "label": "Left selector" }, "pto2-button-25": { "profile": "pto2", "key": "JOY_BTN25", "label": "Right selector" },
       "pto2-button-26": { "profile": "pto2", "key": "JOY_BTN26", "label": "Left emergency" }, "pto2-button-27": { "profile": "pto2", "key": "JOY_BTN27", "label": "Right emergency" }
     } },
-    { "file": "04-VKB-F14-GRIP", "deviceId": "vkb-f14-gunfighter", "title": "VKB GUNFIGHTER • F-14 GRIP", "kicker": "F4U-1D TRIM AND WEAPONS CONTROLS", "labels": ["BTN 9–12: Trim", "BTN 3: Bomb release", "BTN 13–16: Weapon selector unbound", "BTN 7 + BTN 3: Rockets fire", "", "", "BTN 1: Guns fire"] }
+    { "file": "04-VKB-F14-GRIP", "deviceId": "vkb-f14-gunfighter", "title": "VKB GUNFIGHTER • F-14 GRIP", "kicker": "F4U-1D TRIM AND WEAPONS CONTROLS", "labels": ["Trim", "Bomb release", "Weapon selector unbound", "Rockets fire", "", "", "Guns fire"] }
   ],
   "instancePages": [
     { "file": "03-LOGITECH-DUAL-QUADRANTS", "title": "DUAL LOGITECH THROTTLE QUADRANTS", "kicker": "ONE CANONICAL DEVICE TEMPLATE • TWO INDEPENDENT PHYSICAL INSTANCES", "instances": [
-      { "instanceId": "primary-quadrant", "deviceId": "logitech-throttle-quadrant", "title": "PRIMARY • GUID …840BBBD0", "labels": ["Mixture • JOY_Z", "Propeller RPM • JOY_Y • INVERTED", "Throttle • JOY_X", "BTN 1: Battery ON", "BTN 2: Battery OFF", "BTN 3: Fuel pump ON", "BTN 4: Fuel pump OFF", "BTN 5: Water injection ENABLE", "BTN 6: Water injection DISABLE"] },
+      { "instanceId": "primary-quadrant", "deviceId": "logitech-throttle-quadrant", "title": "PRIMARY • GUID …840BBBD0", "labels": ["Mixture • JOY_Z", "Propeller RPM • JOY_Y • INVERTED", "Throttle • JOY_X", "Battery ON", "Battery OFF", "Fuel pump ON", "Fuel pump OFF", "Water injection ENABLE", "Water injection DISABLE"] },
       { "instanceId": "secondary-quadrant", "deviceId": "logitech-throttle-quadrant", "title": "SECONDARY • GUID …1C8A8840", "labels": ["Supercharger • JOY_Z", "JOY_Y intentionally unbound", "JOY_X intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound"] }
     ] }
   ]
