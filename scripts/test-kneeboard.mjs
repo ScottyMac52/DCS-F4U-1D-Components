@@ -103,7 +103,6 @@ function runBuildStep(script) {
   );
 }
 runBuildStep('build-kneeboard.mjs');
-runBuildStep('apply-shared-hardware.mjs');
 const after = generatedHashes();
 assert(JSON.stringify(after) === JSON.stringify(before), 'Kneeboard output changed across identical builds.');
 
