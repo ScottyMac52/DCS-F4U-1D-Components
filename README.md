@@ -37,15 +37,34 @@ the [dual-quadrant device guide](docs/devices/LOGITECH-THROTTLE-QUADRANTS.md), t
 [MOZA/VKB F-14 guide](docs/devices/MOZA-AB9-VKB-F14.md), and
 [OpenKneeboard/VAICOM](docs/OPENKNEEBOARD-VAICOM.md) for details.
 
+## Shared kneeboard pipeline
+
+One script builds every page: `scripts/build-kneeboard.mjs`.
+
+It reads `config/kneeboard.json` and renders canonical device diagrams from
+[DCS-Common](https://github.com/ScottyMac52/DCS-Common) (`shared-hardware-consumer.mjs`
+and `profile-driven-kneeboard.mjs`), including dual Logitech instances on one page.
+
+DCS-Common is located via `DCS_COMMON_ROOT` or the CI checkout at `.dcs-common`.
+
 ## Build and validate
 
-Requirements: Node.js 22, PowerShell 7, and Lua 5.4.
+Requirements: Node.js 22, PowerShell 7, and a DCS-Common checkout.
 
-1. Run npm ci.
-2. Run npm run test:profile.
-3. Run npm run build:kneeboard.
-4. Run npm run test:kneeboard.
-5. Run ./scripts/Build-OvGME.ps1.
-6. Run ./scripts/Test-Package.ps1.
+```powershell
+npm ci
+$env:DCS_COMMON_ROOT = 'C:\path\to\DCS-Common'
+npm run test:profile
+npm run build:kneeboard
+npm run test:kneeboard
+npm run test:versioning
+./scripts/Build-OvGME.ps1 -Version 0.0.0-local
+./scripts/Test-Package.ps1 -Version 0.0.0-local
+./scripts/Build-Release.ps1 -Version 0.0.0-local
+./scripts/Test-Package.ps1 -Version 0.0.0-local
+```
 
-Generated archives are written to dist and are excluded from source control.
+There is no separate `apply-shared-hardware` step and no `Test-Release.ps1`.
+`Test-Package.ps1` validates both the OVGME package and the complete release bundle.
+
+Generated archives are written to `dist` and are excluded from source control.
