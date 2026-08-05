@@ -46,10 +46,24 @@ if ($PackageReadme -notmatch ('OVGME PACKAGE VERSION ' + [regex]::Escape($Versio
     throw 'README.TXT does not contain the package version.'
 }
 
-$HashLine = (Get-Content (Join-Path $RepoRoot 'dist/SHA256SUMS.txt') -Raw).Trim()
+# Build-OvGME writes a single-line SHA256SUMS for the package zip.
+# Build-Release rewrites dist/SHA256SUMS.txt with every dist/*.zip (package + complete).
+# Accept either form by requiring a matching line for this archive, not whole-file equality.
+$ArchiveName = [IO.Path]::GetFileName($Archive)
 $ActualHash = (Get-FileHash $Archive -Algorithm SHA256).Hash.ToLowerInvariant()
-$ExpectedHashLine = "$ActualHash  $([IO.Path]::GetFileName($Archive))"
-if ($HashLine -ne $ExpectedHashLine) { throw 'SHA256SUMS.txt does not match the package archive.' }
+$SumsPath = Join-Path $RepoRoot 'dist/SHA256SUMS.txt'
+if (-not (Test-Path $SumsPath -PathType Leaf)) { throw 'Missing dist/SHA256SUMS.txt.' }
+$HashLines = @(Get-Content $SumsPath | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+$MatchingLine = $HashLines | Where-Object {
+    $_ -match ('^[0-9a-fA-F]{64}\s+' + [regex]::Escape($ArchiveName) + '$')
+} | Select-Object -First 1
+if (-not $MatchingLine) {
+    throw "SHA256SUMS.txt is missing an entry for $ArchiveName."
+}
+$ListedHash = ($MatchingLine -split '\s+', 2)[0].ToLowerInvariant()
+if ($ListedHash -ne $ActualHash) {
+    throw "SHA256SUMS.txt hash for $ArchiveName does not match the package archive."
+}
 
 foreach ($Profile in $Profiles) {
     $Lua = Get-Content -LiteralPath $Profile.FullName -Raw
