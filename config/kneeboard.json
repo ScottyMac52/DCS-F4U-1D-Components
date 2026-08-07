@@ -84,9 +84,9 @@
           "deviceId": "logitech-throttle-quadrant",
           "title": "SECONDARY • GUID …1C8A8840",
           "labels": {
-            "lev1": "",
+            "lev1": "Supercharger",
             "lev2": "",
-            "lev3": "Supercharger",
+            "lev3": "",
             "detent1": "",
             "detent2": "",
             "detent3": "",
