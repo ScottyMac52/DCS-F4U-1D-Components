@@ -22,8 +22,34 @@
   ],
   "instancePages": [
     { "file": "03-LOGITECH-DUAL-QUADRANTS", "title": "DUAL LOGITECH THROTTLE QUADRANTS", "kicker": "ONE CANONICAL DEVICE TEMPLATE • TWO INDEPENDENT PHYSICAL INSTANCES", "instances": [
-      { "instanceId": "primary-quadrant", "deviceId": "logitech-throttle-quadrant", "title": "PRIMARY • GUID …840BBBD0", "labels": ["Mixture • JOY_Z", "Propeller RPM • JOY_Y • INVERTED", "Throttle • JOY_X", "Battery ON", "Battery OFF", "Fuel pump ON", "Fuel pump OFF", "Water injection ENABLE", "Water injection DISABLE"] },
-      { "instanceId": "secondary-quadrant", "deviceId": "logitech-throttle-quadrant", "title": "SECONDARY • GUID …1C8A8840", "labels": ["Supercharger • JOY_Z", "JOY_Y intentionally unbound", "JOY_X intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound", "Rocker input intentionally unbound"] }
+      { "instanceId": "primary-quadrant", "deviceId": "logitech-throttle-quadrant", "title": "PRIMARY • GUID …840BBBD0", "labels": {
+  "lev1": "Mixture",
+  "lev2": "Propeller RPM (inverted)",
+  "lev3": "Throttle",
+  "detent1": "",
+  "detent2": "",
+  "detent3": "",
+  "t1": "Battery ON",
+  "t2": "Battery OFF",
+  "t3": "Fuel pump ON",
+  "t4": "Fuel pump OFF",
+  "t5": "Water injection ENABLE",
+  "t6": "Water injection DISABLE"
+},
+      { "instanceId": "secondary-quadrant", "deviceId": "logitech-throttle-quadrant", "title": "SECONDARY • GUID …1C8A8840", "labels": {
+  "lev1": "Supercharger",
+  "lev2": "",
+  "lev3": "",
+  "detent1": "",
+  "detent2": "",
+  "detent3": "",
+  "t1": "",
+  "t2": "",
+  "t3": "",
+  "t4": "",
+  "t5": "",
+  "t6": ""
+}
     ] }
   ]
 }
