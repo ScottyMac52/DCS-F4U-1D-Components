@@ -1,12 +1,11 @@
-name: Create tagged OvGME release
-
+name: Create tagged OVGME release
 on:
   workflow_dispatch:
     inputs:
       bump:
         description: Semantic version component to increment
         required: true
-        default: minor
+        default: patch
         type: choice
         options: [patch, minor, major]
 
@@ -24,17 +23,16 @@ jobs:
       bump: ${{ inputs.bump }}
       install-lua-parser: true
       run-lua-parse: true
-      extra-validation-command: npm run test:profile
+      run-release-validation: true
       package-script: scripts/Build-OvGME.ps1
       test-package-script: scripts/Test-Package.ps1
       build-release-script: scripts/Build-Release.ps1
       test-release-script: scripts/Test-Package.ps1
-      run-release-validation: true
       artifact-name: F4U-1D-Release-${{ inputs.bump }}-${{ github.run_number }}
       artifact-path: |
         dist/*.zip
         dist/SHA256SUMS.txt
       release-notes-path: packaging/release/RELEASE-NOTES.md
       kneeboard-paths: kneeboard/source kneeboard/F4U-1D
-      release-title-prefix: DCS F4U-1D Corsair Components
+      release-title-prefix: DCS-F4U-1D-Components
     secrets: inherit
