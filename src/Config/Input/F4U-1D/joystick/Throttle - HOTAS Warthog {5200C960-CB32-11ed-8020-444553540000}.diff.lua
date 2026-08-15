@@ -25,11 +25,6 @@ local diff = {
 			},
 		},
 		["a3224cd3"] = {
-			["added"] = {
-				[1] = {
-					["key"] = "JOY_RZ",
-				},
-			},
 			["name"] = "Propeller governor handle",
 			["removed"] = {
 				[1] = {
@@ -37,13 +32,13 @@ local diff = {
 				},
 			},
 		},
-		["a3235cd3"] = {
-			["added"] = {
+		["a3236cd3"] = {
+			["name"] = "Throttle Lever",
+			["removed"] = {
 				[1] = {
-					["key"] = "JOY_SLIDER1",
+					["key"] = "JOY_Z",
 				},
 			},
-			["name"] = "Supercharger handle",
 		},
 	},
 	["keyDiffs"] = {

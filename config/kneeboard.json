@@ -3,14 +3,19 @@
   "aircraft": "F4U-1D",
   "profiles": {
     "vkb-f14-gunfighter": "src/Config/Input/F4U-1D/joystick/ VKBSim Gunfighter F14   {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua",
+    "ava-base-f16c": "src/Config/Input/F4U-1D/joystick/Ava [R] Viper {F77212B0-00A8-11f1-8001-444553540000}.diff.lua",
     "tm-mfd-1": "src/Config/Input/F4U-1D/joystick/F16 MFD 1 {51FA60C0-CB32-11ed-800B-444553540000}.diff.lua",
     "tm-mfd-2": "src/Config/Input/F4U-1D/joystick/F16 MFD 2 {51FA39B0-CB32-11ed-8008-444553540000}.diff.lua",
     "tm-mfd-3": "src/Config/Input/F4U-1D/joystick/F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua",
-    "logitech-throttle-quadrant": "src/Config/Input/F4U-1D/joystick/Logitech Flight Quadrant {840BBBD0-2139-11f1-8001-444553540000}.diff.lua",
-    "moza-ab9": "src/Config/Input/F4U-1D/joystick/MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua",
+    "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000": "src/Config/Input/F4U-1D/joystick/Logitech Flight Quadrant {1C8A8840-5386-11F1-8001-444553540000}.diff.lua",
+    "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000": "src/Config/Input/F4U-1D/joystick/Logitech Flight Quadrant {840BBBD0-2139-11f1-8001-444553540000}.diff.lua",
+    "moza-ab9-hornet-grip": "src/Config/Input/F4U-1D/joystick/MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua",
+    "onyourtwelve-pdcp": "src/Config/Input/F4U-1D/joystick/OnYourTwelve F-14 PDCP {52C96400-3F11-11f1-8001-444553540000}.diff.lua",
     "tm-tpr": "src/Config/Input/F4U-1D/joystick/T-Pendular-Rudder {14ED3D40-3F58-11f1-8002-444553540000}.diff.lua",
     "tm-warthog-throttle": "src/Config/Input/F4U-1D/joystick/Throttle - HOTAS Warthog {5200C960-CB32-11ed-8020-444553540000}.diff.lua",
-    "winctrl-pto2": "src/Config/Input/F4U-1D/joystick/WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua"
+    "viper-tqs-mission-pack": "src/Config/Input/F4U-1D/joystick/Viper TQS {C0A33440-3F54-11f1-8001-444553540000}.diff.lua",
+    "winctrl-pto2": "src/Config/Input/F4U-1D/joystick/WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua",
+    "winctrl-icp": "src/Config/Input/F4U-1D/joystick/WINCTRL ViperAce ICP {3731E2E0-4D98-11f1-8001-444553540000}.diff.lua"
   },
   "pages": [
     {
@@ -67,7 +72,16 @@
       ]
     },
     {
-      "file": "02-TM-MFD-1",
+      "file": "02-AVA-BASE-F16C",
+      "deviceId": "ava-base-f16c",
+      "title": "Ava [R] Viper",
+      "kicker": "SCAFFOLD DRAFT",
+      "_comment": "labels are pre-filled from DCS binding names via controls. Edit any string to override display text; keep callout IDs in sync with controls. You can also set \"label\" on a controls entry.",
+      "labels": {},
+      "controls": {}
+    },
+    {
+      "file": "03-TM-MFD-1",
       "deviceId": "tm-mfd",
       "title": "F16 MFD 1",
       "kicker": "INSTANCE 1",
@@ -118,7 +132,7 @@
       }
     },
     {
-      "file": "03-TM-MFD-2",
+      "file": "04-TM-MFD-2",
       "deviceId": "tm-mfd",
       "title": "F16 MFD 2",
       "kicker": "INSTANCE 2",
@@ -149,28 +163,64 @@
       }
     },
     {
-      "file": "04-TM-MFD-3",
+      "file": "05-TM-MFD-3",
       "deviceId": "tm-mfd",
       "title": "F16 MFD 3",
       "kicker": "INSTANCE 3",
       "_comment": "labels are pre-filled from DCS binding names via controls. Edit any string to override display text; keep callout IDs in sync with controls. You can also set \"label\" on a controls entry.",
       "labels": {
-        "mfd-rocker-sym": "Zoom in",
-        "mfd-rocker-int": "Zoom out"
+        "mfd-rocker-con-up": "Zoom in"
+      },
+      "layers": [
+        {
+          "id": "base",
+          "controls": {
+            "mfd-rocker-con-up": {
+              "profile": "tm-mfd-3",
+              "key": "JOY_BTN23"
+            }
+          },
+          "labels": {
+            "mfd-rocker-con-up": "Zoom in"
+          }
+        },
+        {
+          "id": "JOY_BTN3",
+          "file": "05-TM-MFD-3-JOY_BTN3",
+          "title": "F16 MFD 3 • JOY_BTN3",
+          "modifiers": [
+            "JOY_BTN3"
+          ],
+          "controls": {
+            "mfd-rocker-con-down": {
+              "profile": "tm-mfd-3",
+              "key": "JOY_BTN24"
+            }
+          },
+          "labels": {
+            "mfd-rocker-con-down": "Zoom out"
+          }
+        }
+      ]
+    },
+    {
+      "file": "06-LOGITECH-THROTTLE-QUADRANT-1C8A8840-5386-11F1-8001-444553540000",
+      "deviceId": "logitech-throttle-quadrant",
+      "title": "Logitech Flight Quadrant",
+      "kicker": "SCAFFOLD DRAFT",
+      "_comment": "labels are pre-filled from DCS binding names via controls. Edit any string to override display text; keep callout IDs in sync with controls. You can also set \"label\" on a controls entry.",
+      "labels": {
+        "lev3": "Supercharger handle"
       },
       "controls": {
-        "mfd-rocker-sym": {
-          "profile": "tm-mfd-3",
-          "key": "JOY_BTN27"
-        },
-        "mfd-rocker-int": {
-          "profile": "tm-mfd-3",
-          "key": "JOY_BTN28"
+        "lev3": {
+          "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
+          "key": "JOY_Z"
         }
       }
     },
     {
-      "file": "06-LOGITECH-THROTTLE-QUADRANT",
+      "file": "07-LOGITECH-THROTTLE-QUADRANT-840BBBD0-2139-11F1-8001-444553540000",
       "deviceId": "logitech-throttle-quadrant",
       "title": "Logitech Flight Quadrant",
       "kicker": "SCAFFOLD DRAFT",
@@ -188,54 +238,175 @@
       },
       "controls": {
         "t2": {
-          "profile": "logitech-throttle-quadrant",
+          "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
           "key": "JOY_BTN2"
         },
         "t1": {
-          "profile": "logitech-throttle-quadrant",
+          "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
           "key": "JOY_BTN1"
         },
         "t4": {
-          "profile": "logitech-throttle-quadrant",
+          "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
           "key": "JOY_BTN4"
         },
         "t3": {
-          "profile": "logitech-throttle-quadrant",
+          "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
           "key": "JOY_BTN3"
         },
         "t6": {
-          "profile": "logitech-throttle-quadrant",
+          "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
           "key": "JOY_BTN6"
         },
         "t5": {
-          "profile": "logitech-throttle-quadrant",
+          "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
           "key": "JOY_BTN5"
         },
         "lev2": {
-          "profile": "logitech-throttle-quadrant",
+          "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
           "key": "JOY_Y"
         },
         "lev3": {
-          "profile": "logitech-throttle-quadrant",
+          "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
           "key": "JOY_Z"
         },
         "lev1": {
-          "profile": "logitech-throttle-quadrant",
+          "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
           "key": "JOY_X"
         }
       }
     },
     {
-      "file": "07-MOZA-AB9",
-      "deviceId": "moza-ab9",
+      "file": "08-MOZA-AB9-HORNET-GRIP",
+      "deviceId": "moza-ab9-hornet-grip",
       "title": "MOZA AB9 FFB Base",
+      "kicker": "SCAFFOLD DRAFT",
+      "_comment": "labels are pre-filled from DCS binding names via controls. Edit any string to override display text; keep callout IDs in sync with controls. You can also set \"label\" on a controls entry.",
+      "labels": {
+        "hornet-grip-weapon-select-forward": "Master arm - ON",
+        "hornet-grip-weapon-select-aft": "Master arm - OFF",
+        "hornet-grip-trigger-stage2": "Guns fire button",
+        "hornet-grip-weapon-release": "Rockets fire button",
+        "hornet-grip-trigger-stage1": "Gun camera",
+        "hornet-grip-weapon-select-right": "Rockets Box Off",
+        "hornet-grip-weapon-select-left": "Rockets Box On",
+        "hornet-grip-trim-down": "Trim, nose up",
+        "hornet-grip-trim-up": "Trim, nose down",
+        "hornet-grip-trim-left": "Trim, left bank",
+        "hornet-grip-trim-right": "Trim, right bank"
+      },
+      "layers": [
+        {
+          "id": "base",
+          "controls": {
+            "hornet-grip-weapon-select-forward": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN15"
+            },
+            "hornet-grip-weapon-select-aft": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN17"
+            },
+            "hornet-grip-trigger-stage2": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN6"
+            },
+            "hornet-grip-weapon-release": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN2"
+            },
+            "hornet-grip-trigger-stage1": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN1"
+            },
+            "hornet-grip-weapon-select-right": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN16"
+            },
+            "hornet-grip-weapon-select-left": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN18"
+            },
+            "hornet-grip-trim-down": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN_POV1_D"
+            },
+            "hornet-grip-trim-up": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN_POV1_U"
+            },
+            "hornet-grip-trim-left": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN_POV1_L"
+            },
+            "hornet-grip-trim-right": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN_POV1_R"
+            }
+          },
+          "labels": {
+            "hornet-grip-weapon-select-forward": "Master arm - ON",
+            "hornet-grip-weapon-select-aft": "Master arm - OFF",
+            "hornet-grip-trigger-stage2": "Guns fire button",
+            "hornet-grip-weapon-release": "Rockets fire button",
+            "hornet-grip-trigger-stage1": "Gun camera",
+            "hornet-grip-weapon-select-right": "Rockets Box Off",
+            "hornet-grip-weapon-select-left": "Rockets Box On",
+            "hornet-grip-trim-down": "Trim, nose up",
+            "hornet-grip-trim-up": "Trim, nose down",
+            "hornet-grip-trim-left": "Trim, left bank",
+            "hornet-grip-trim-right": "Trim, right bank"
+          }
+        },
+        {
+          "id": "JOY_BTN3",
+          "file": "08-MOZA-AB9-HORNET-GRIP-JOY_BTN3",
+          "title": "MOZA AB9 FFB Base • JOY_BTN3",
+          "modifiers": [
+            "JOY_BTN3"
+          ],
+          "controls": {
+            "hornet-grip-weapon-release": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN2"
+            },
+            "hornet-grip-trim-left": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN_POV1_L"
+            },
+            "hornet-grip-trim-right": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN_POV1_R"
+            },
+            "hornet-grip-trim-up": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN_POV1_U"
+            },
+            "hornet-grip-trim-down": {
+              "profile": "moza-ab9-hornet-grip",
+              "key": "JOY_BTN_POV1_D"
+            }
+          },
+          "labels": {
+            "hornet-grip-weapon-release": "Weapons release button",
+            "hornet-grip-trim-left": "Glance left",
+            "hornet-grip-trim-right": "Glance right",
+            "hornet-grip-trim-up": "Glance up",
+            "hornet-grip-trim-down": "Glance down"
+          }
+        }
+      ]
+    },
+    {
+      "file": "09-ONYOURTWELVE-PDCP",
+      "deviceId": "onyourtwelve-pdcp",
+      "title": "OnYourTwelve F-14 PDCP",
       "kicker": "SCAFFOLD DRAFT",
       "_comment": "labels are pre-filled from DCS binding names via controls. Edit any string to override display text; keep callout IDs in sync with controls. You can also set \"label\" on a controls entry.",
       "labels": {},
       "controls": {}
     },
     {
-      "file": "08-TM-TPR",
+      "file": "10-TM-TPR",
       "deviceId": "tm-tpr",
       "title": "T-Pendular-Rudder",
       "kicker": "SCAFFOLD DRAFT",
@@ -261,7 +432,7 @@
       }
     },
     {
-      "file": "09-TM-WARTHOG-THROTTLE",
+      "file": "11-TM-WARTHOG-THROTTLE",
       "deviceId": "tm-warthog-throttle",
       "title": "Throttle - HOTAS Warthog",
       "kicker": "SCAFFOLD DRAFT",
@@ -273,9 +444,7 @@
         "warthog-thr-flaps-down": "Flaps +",
         "warthog-thr-boat-forward": "Hook, down",
         "warthog-thr-boat-back": "Hook, up",
-        "warthog-thr-eac-on": "Master arm toggle",
-        "warthog-thr-axis-left-throttle": "Propeller governor handle",
-        "warthog-thr-axis-friction": "Supercharger handle"
+        "warthog-thr-eac-on": "Master arm toggle"
       },
       "controls": {
         "warthog-thr-speedbrake-back": {
@@ -305,19 +474,20 @@
         "warthog-thr-eac-on": {
           "profile": "tm-warthog-throttle",
           "key": "JOY_BTN24"
-        },
-        "warthog-thr-axis-left-throttle": {
-          "profile": "tm-warthog-throttle",
-          "key": "JOY_RZ"
-        },
-        "warthog-thr-axis-friction": {
-          "profile": "tm-warthog-throttle",
-          "key": "JOY_SLIDER1"
         }
       }
     },
     {
-      "file": "10-WINCTRL-PTO2",
+      "file": "12-VIPER-TQS-MISSION-PACK",
+      "deviceId": "viper-tqs-mission-pack",
+      "title": "Viper TQS",
+      "kicker": "SCAFFOLD DRAFT",
+      "_comment": "labels are pre-filled from DCS binding names via controls. Edit any string to override display text; keep callout IDs in sync with controls. You can also set \"label\" on a controls entry.",
+      "labels": {},
+      "controls": {}
+    },
+    {
+      "file": "13-WINCTRL-PTO2",
       "deviceId": "winctrl-pto2",
       "title": "WINCTRL CarrierAce PTO 2",
       "kicker": "SCAFFOLD DRAFT",
@@ -328,12 +498,12 @@
         "pto2-button-29": "Wings fold, stop",
         "pto2-button-30": "Wings fold, spread",
         "pto2-button-28": "Wings fold, fold",
+        "pto2-button-31": "Wings, lock",
         "pto2-button-34": "Hook, down",
         "pto2-button-33": "Hook, parking",
         "pto2-button-32": "Hook, up",
         "pto2-button-35": "Gears, up",
         "pto2-button-37": "Gears, down",
-        "pto2-button-31": "Wings lock toggle",
         "pto2-button-11": "Airbrake, down",
         "pto2-button-10": "Airbrake, up",
         "pto2-button-9": "Approach light Off",
@@ -349,108 +519,205 @@
         "pto2-button-39": "Parking brake ON",
         "pto2-button-38": "Parking brake OFF"
       },
-      "controls": {
-        "pto2-button-7": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN7"
+      "layers": [
+        {
+          "id": "base",
+          "controls": {
+            "pto2-button-7": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN7"
+            },
+            "pto2-button-5": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN5"
+            },
+            "pto2-button-29": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN29"
+            },
+            "pto2-button-30": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN30"
+            },
+            "pto2-button-28": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN28"
+            },
+            "pto2-button-31": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN31"
+            },
+            "pto2-button-34": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN34"
+            },
+            "pto2-button-33": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN33"
+            },
+            "pto2-button-32": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN32"
+            },
+            "pto2-button-35": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN35"
+            },
+            "pto2-button-37": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN37"
+            },
+            "pto2-button-11": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN11"
+            },
+            "pto2-button-10": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN10"
+            },
+            "pto2-button-9": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN9"
+            },
+            "pto2-button-8": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN8"
+            },
+            "pto2-button-19": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN19"
+            },
+            "pto2-button-22": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN22"
+            },
+            "pto2-button-17": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN17"
+            },
+            "pto2-button-24": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN24"
+            },
+            "pto2-button-25": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN25"
+            },
+            "pto2-button-23": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN23"
+            },
+            "pto2-button-26": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN26"
+            },
+            "pto2-button-27": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN27"
+            },
+            "pto2-button-39": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN39"
+            },
+            "pto2-button-38": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN38"
+            }
+          },
+          "labels": {
+            "pto2-button-7": "Flaps -",
+            "pto2-button-5": "Flaps +",
+            "pto2-button-29": "Wings fold, stop",
+            "pto2-button-30": "Wings fold, spread",
+            "pto2-button-28": "Wings fold, fold",
+            "pto2-button-31": "Wings, lock",
+            "pto2-button-34": "Hook, down",
+            "pto2-button-33": "Hook, parking",
+            "pto2-button-32": "Hook, up",
+            "pto2-button-35": "Gears, up",
+            "pto2-button-37": "Gears, down",
+            "pto2-button-11": "Airbrake, down",
+            "pto2-button-10": "Airbrake, up",
+            "pto2-button-9": "Approach light Off",
+            "pto2-button-8": "Approach light On",
+            "pto2-button-19": "Droppable tank lock: lock",
+            "pto2-button-22": "Droppable tank lock: release",
+            "pto2-button-17": "Droppable tank lock: attach",
+            "pto2-button-24": "Left wing, release selector ON",
+            "pto2-button-25": "Right wing, release selector ON",
+            "pto2-button-23": "Pylon, release selector ON",
+            "pto2-button-26": "Left wing, emergency release ON",
+            "pto2-button-27": "Right wing, emergency release ON",
+            "pto2-button-39": "Parking brake ON",
+            "pto2-button-38": "Parking brake OFF"
+          }
         },
-        "pto2-button-5": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN5"
-        },
-        "pto2-button-29": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN29"
-        },
-        "pto2-button-30": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN30"
-        },
-        "pto2-button-28": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN28"
-        },
-        "pto2-button-34": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN34"
-        },
-        "pto2-button-33": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN33"
-        },
-        "pto2-button-32": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN32"
-        },
-        "pto2-button-35": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN35"
-        },
-        "pto2-button-37": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN37"
-        },
-        "pto2-button-31": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN31"
-        },
-        "pto2-button-11": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN11"
-        },
-        "pto2-button-10": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN10"
-        },
-        "pto2-button-9": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN9"
-        },
-        "pto2-button-8": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN8"
-        },
-        "pto2-button-19": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN19"
-        },
-        "pto2-button-22": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN22"
-        },
-        "pto2-button-17": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN17"
-        },
-        "pto2-button-24": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN24"
-        },
-        "pto2-button-25": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN25"
-        },
-        "pto2-button-23": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN23"
-        },
-        "pto2-button-26": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN26"
-        },
-        "pto2-button-27": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN27"
-        },
-        "pto2-button-39": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN39"
-        },
-        "pto2-button-38": {
-          "profile": "winctrl-pto2",
-          "key": "JOY_BTN38"
+        {
+          "id": "JOY_BTN3",
+          "file": "13-WINCTRL-PTO2-JOY_BTN3",
+          "title": "WINCTRL CarrierAce PTO 2 • JOY_BTN3",
+          "modifiers": [
+            "JOY_BTN3"
+          ],
+          "controls": {
+            "pto2-button-31": {
+              "profile": "winctrl-pto2",
+              "key": "JOY_BTN31"
+            }
+          },
+          "labels": {
+            "pto2-button-31": "Wings, unlock"
+          }
         }
-      }
+      ]
+    },
+    {
+      "file": "14-WINCTRL-ICP",
+      "deviceId": "winctrl-icp",
+      "title": "WINCTRL ViperAce ICP",
+      "kicker": "SCAFFOLD DRAFT",
+      "_comment": "labels are pre-filled from DCS binding names via controls. Edit any string to override display text; keep callout IDs in sync with controls. You can also set \"label\" on a controls entry.",
+      "labels": {},
+      "controls": {}
     }
-  ]
+  ],
+  "modifiersFile": "src/Config/Input/F4U-1D/modifiers.lua",
+  "modifiers": {
+    "JOY_BTN3": {
+      "nativeName": "JOY_BTN3",
+      "mode": "hold"
+    },
+    "LAlt": {
+      "nativeName": "LAlt",
+      "mode": "hold"
+    },
+    "LCtrl": {
+      "nativeName": "LCtrl",
+      "mode": "hold"
+    },
+    "LShift": {
+      "nativeName": "LShift",
+      "mode": "hold"
+    },
+    "LWin": {
+      "nativeName": "LWin",
+      "mode": "hold"
+    },
+    "RAlt": {
+      "nativeName": "RAlt",
+      "mode": "hold"
+    },
+    "RCtrl": {
+      "nativeName": "RCtrl",
+      "mode": "hold"
+    },
+    "RShift": {
+      "nativeName": "RShift",
+      "mode": "hold"
+    },
+    "RWin": {
+      "nativeName": "RWin",
+      "mode": "hold"
+    }
+  }
 }

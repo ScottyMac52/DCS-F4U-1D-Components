@@ -40,6 +40,25 @@ local diff = {
 			},
 			["name"] = "Wings fold, fold",
 		},
+		["d3531pnilunilcd7vd0vpnilvunil"] = {
+			["added"] = {
+				[1] = {
+					["key"] = "JOY_BTN31",
+					["reformers"] = {
+						[1] = "JOY_BTN3",
+					},
+				},
+			},
+			["name"] = "Wings, unlock",
+		},
+		["d3531pnilunilcd7vd1vpnilvunil"] = {
+			["added"] = {
+				[1] = {
+					["key"] = "JOY_BTN31",
+				},
+			},
+			["name"] = "Wings, lock",
+		},
 		["d3532pnilunilcd7vd-1vpnilvunil"] = {
 			["added"] = {
 				[1] = {
@@ -79,14 +98,6 @@ local diff = {
 				},
 			},
 			["name"] = "Gears, down",
-		},
-		["d3535pnilunilcd7vd-1vpnilvunil"] = {
-			["added"] = {
-				[1] = {
-					["key"] = "JOY_BTN31",
-				},
-			},
-			["name"] = "Wings lock toggle",
 		},
 		["d3543pnilunilcd7vd-1vpnilvunil"] = {
 			["added"] = {

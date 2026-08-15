@@ -3,7 +3,7 @@ local diff = {
 		["dnilp37u291cdnilvdnilvpnilvunil"] = {
 			["added"] = {
 				[1] = {
-					["key"] = "JOY_BTN27",
+					["key"] = "JOY_BTN23",
 				},
 			},
 			["name"] = "Zoom in",
@@ -11,7 +11,10 @@ local diff = {
 		["dnilp38u292cdnilvdnilvpnilvunil"] = {
 			["added"] = {
 				[1] = {
-					["key"] = "JOY_BTN28",
+					["key"] = "JOY_BTN24",
+					["reformers"] = {
+						[1] = "JOY_BTN3",
+					},
 				},
 			},
 			["name"] = "Zoom out",
