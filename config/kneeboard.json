@@ -687,6 +687,10 @@
       "nativeName": "JOY_BTN3",
       "mode": "hold"
     },
+    "JOY_BTN7": {
+      "nativeName": "JOY_BTN7",
+      "mode": "hold"
+    },
     "LAlt": {
       "nativeName": "LAlt",
       "mode": "hold"
