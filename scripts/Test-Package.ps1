@@ -35,6 +35,15 @@ try {
   if ($entries -notcontains "${payloadPrefix}Config/Input/F4U-1D/modifiers.lua") {
     throw 'OVGME archive is missing the F4U-1D modifiers.lua.'
   }
+  $quadrantProfiles = @(
+    'Logitech Flight Quadrant {1C8A8840-5386-11F1-8001-444553540000}.diff.lua',
+    'Logitech Flight Quadrant {840BBBD0-2139-11f1-8001-444553540000}.diff.lua'
+  )
+  foreach ($profile in $quadrantProfiles) {
+    if ($entries -notcontains "${payloadPrefix}Config/Input/F4U-1D/joystick/$profile") {
+      throw "OVGME archive is missing Logitech quadrant profile '$profile'."
+    }
+  }
   if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}Config/Input/UiLayer/joystick/", [System.StringComparison]::Ordinal) })) {
     throw 'OVGME archive is missing the shared UI Layer joystick payload.'
   }
