@@ -5,7 +5,8 @@ $ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSScriptRoot
 $dist = Join-Path $root 'dist'
 $pkgName = 'DCS-F4U-1D-Components'
-$zip = Join-Path $dist "$pkgName-$Version-OVGME.zip"
+$archiveBase = "$pkgName-$Version-OVGME"
+$zip = Join-Path $dist "$archiveBase.zip"
 if (-not (Test-Path $zip)) { throw "Missing package $zip" }
 $sums = Get-Content (Join-Path $dist 'SHA256SUMS.txt')
 $leaf = Split-Path $zip -Leaf
@@ -14,4 +15,40 @@ if (-not $hashLine) { throw 'SHA256SUMS.txt does not list the package archive.' 
 $expected = ($hashLine -split '\s+')[0].ToLowerInvariant()
 $actual = (Get-FileHash $zip -Algorithm SHA256).Hash.ToLowerInvariant()
 if ($expected -ne $actual) { throw 'SHA256SUMS.txt does not match the package archive.' }
-Write-Host "Package checksum OK for $leaf"
+
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+$archive = [System.IO.Compression.ZipFile]::OpenRead($zip)
+try {
+  $entries = @($archive.Entries | ForEach-Object { $_.FullName.Replace('\', '/') })
+  $payloadPrefix = "$archiveBase/"
+  $unexpected = @($entries | Where-Object {
+    $_ -ne 'README.TXT' -and
+    $_ -ne 'VERSION.TXT' -and
+    -not $_.StartsWith($payloadPrefix, [System.StringComparison]::Ordinal)
+  })
+  if ($unexpected.Count -gt 0) {
+    throw "Invalid OVGME archive root. Expected '$archiveBase/' but found '$($unexpected[0])'."
+  }
+  if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}Config/Input/F4U-1D/joystick/", [System.StringComparison]::Ordinal) })) {
+    throw 'OVGME archive is missing the F4U-1D joystick profile payload.'
+  }
+  if ($entries -notcontains "${payloadPrefix}Config/Input/F4U-1D/modifiers.lua") {
+    throw 'OVGME archive is missing the F4U-1D modifiers.lua.'
+  }
+  if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}Config/Input/UiLayer/joystick/", [System.StringComparison]::Ordinal) })) {
+    throw 'OVGME archive is missing the shared UI Layer joystick payload.'
+  }
+  if ($entries -notcontains "${payloadPrefix}Config/Input/UiLayer/modifiers.lua") {
+    throw 'OVGME archive is missing the shared UI Layer modifiers.lua.'
+  }
+  if (-not ($entries | Where-Object { $_.StartsWith("${payloadPrefix}KNEEBOARD/F4U-1D/", [System.StringComparison]::Ordinal) })) {
+    throw 'OVGME archive is missing the kneeboard payload.'
+  }
+  if ($entries -notcontains 'README.TXT') { throw 'OVGME archive is missing README.TXT.' }
+  if ($entries -notcontains 'VERSION.TXT') { throw 'OVGME archive is missing VERSION.TXT.' }
+}
+finally {
+  $archive.Dispose()
+}
+
+Write-Host "Package checksum and OVGME structure OK for $leaf"
