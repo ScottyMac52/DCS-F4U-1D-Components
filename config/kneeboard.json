@@ -1,6 +1,7 @@
 {
   "schemaVersion": 1,
   "aircraft": "F4U-1D",
+  "includeUiLayer": true,
   "profiles": {
     "vkb-f14-gunfighter": "src/Config/Input/F4U-1D/joystick/ VKBSim Gunfighter F14   {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua",
     "ava-base-f16c": "src/Config/Input/F4U-1D/joystick/Ava [R] Viper {F77212B0-00A8-11f1-8001-444553540000}.diff.lua",
