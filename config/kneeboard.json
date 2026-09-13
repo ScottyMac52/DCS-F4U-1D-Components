@@ -2,6 +2,37 @@
   "schemaVersion": 1,
   "aircraft": "F4U-1D",
   "includeUiLayer": true,
+  "summaryPages": [
+    {
+      "type": "summary",
+      "file": "00-F4U1D-CONTROL-OVERVIEW",
+      "title": "F4U-1D USED DEVICES",
+      "kicker": "PHYSICAL CONTROLLERS USED BY THIS CONFIGURATION",
+      "items": [
+        { "key": "STICK", "text": "MOZA AB9 + VKB F-14 • flight and weapons", "accent": "red" },
+        { "key": "MFD 1", "text": "Ignition • fuel selector and pump • cowl flaps", "accent": "blue" },
+        { "key": "MFD 2", "text": "Supercharger • oil-cooler controls", "accent": "blue" },
+        { "key": "MFD 3", "text": "Views • zoom • UI Layer controls", "accent": "blue" },
+        { "key": "QUADS", "text": "Dual Logitech • engine axes and switches", "accent": "blue" },
+        { "key": "TPR", "text": "Rudder • left and right toe brakes", "accent": "blue" },
+        { "key": "PTO2", "text": "Gear • flaps • hook • wing fold • brakes • stores", "accent": "cyan" },
+        { "key": "PTT", "text": "Viper TQS • AutoHotkey • VoiceAttack / VAICOM PRO", "accent": "cyan" }
+      ]
+    },
+    {
+      "type": "summary",
+      "file": "00-F4U1D-VAICOM-OVERVIEW",
+      "title": "VAICOM PRO + VIPER TQS PTT",
+      "kicker": "AUTOHOTKEY V2 • VOICEATTACK / VAICOM PRO",
+      "items": [
+        { "key": "TX1", "text": "Viper TQS 5Joy1 • VHF AM • Ctrl+Alt+Shift+1", "accent": "blue" },
+        { "key": "TX2", "text": "Viper TQS 5Joy2 • UHF • Ctrl+Alt+Shift+2", "accent": "blue" },
+        { "key": "TX3", "text": "Viper TQS 5Joy3 • VHF FM • Ctrl+Alt+Shift+3", "accent": "blue" },
+        { "key": "TX4", "text": "Viper TQS 5Joy4 • AUTO • Ctrl+Alt+Shift+4", "accent": "blue" },
+        { "key": "TX5", "text": "Viper TQS 5Joy5 • INT • Ctrl+Alt+Shift+5", "accent": "blue" }
+      ]
+    }
+  ],
   "profiles": {
     "vkb-f14-gunfighter": "src/Config/Input/F4U-1D/joystick/ VKBSim Gunfighter F14   {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua",
     "ava-base-f16c": "src/Config/Input/F4U-1D/joystick/Ava [R] Viper {F77212B0-00A8-11f1-8001-444553540000}.diff.lua",
@@ -13,7 +44,6 @@
     "moza-ab9": "src/Config/Input/F4U-1D/joystick/MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua",
     "onyourtwelve-pdcp": "src/Config/Input/F4U-1D/joystick/OnYourTwelve F-14 PDCP {52C96400-3F11-11f1-8001-444553540000}.diff.lua",
     "tm-tpr": "src/Config/Input/F4U-1D/joystick/T-Pendular-Rudder {14ED3D40-3F58-11f1-8002-444553540000}.diff.lua",
-    "tm-warthog-throttle": "src/Config/Input/F4U-1D/joystick/Throttle - HOTAS Warthog {5200C960-CB32-11ed-8020-444553540000}.diff.lua",
     "viper-tqs-mission-pack": "src/Config/Input/F4U-1D/joystick/Viper TQS {C0A33440-3F54-11f1-8001-444553540000}.diff.lua",
     "winctrl-pto2": "src/Config/Input/F4U-1D/joystick/WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua",
     "winctrl-icp": "src/Config/Input/F4U-1D/joystick/WINCTRL ViperAce ICP {3731E2E0-4D98-11f1-8001-444553540000}.diff.lua"
@@ -443,69 +473,6 @@
           "key": "JOY_X",
           "command": "a3540cd7",
           "label": "Right toe brake axis"
-        }
-      }
-    },
-    {
-      "file": "11-TM-WARTHOG-THROTTLE",
-      "includeUiLayer": true,
-      "deviceId": "tm-warthog-throttle",
-      "deviceInstance": null,
-      "title": "Throttle - HOTAS Warthog",
-      "kicker": "SCAFFOLD DRAFT",
-      "_comment": "labels default to the imported DCS command name and remain editable; deviceLabel contains the canonical DCS-Common hardware label. keep callout IDs in sync with controls. You can also set \"label\" on a controls entry.",
-      "labels": {
-        "warthog-thr-speedbrake-back": "Speedbrake back",
-        "warthog-thr-speedbrake-forward": "Speedbrake forward",
-        "warthog-thr-flaps-up": "Flaps -",
-        "warthog-thr-flaps-down": "Flaps +",
-        "warthog-thr-boat-forward": "Hook Down",
-        "warthog-thr-boat-back": "Hook Up",
-        "warthog-thr-eac-on": "EAC on"
-      },
-      "modifierCallouts": {},
-      "controls": {
-        "warthog-thr-speedbrake-back": {
-          "profile": "tm-warthog-throttle",
-          "key": "JOY_BTN8",
-          "command": "d3221pnilunilcd3vd-0.333vpnilvunil",
-          "label": "Speedbrake back"
-        },
-        "warthog-thr-speedbrake-forward": {
-          "profile": "tm-warthog-throttle",
-          "key": "JOY_BTN7",
-          "command": "d3221pnilunilcd3vd0.333vpnilvunil",
-          "label": "Speedbrake forward"
-        },
-        "warthog-thr-flaps-up": {
-          "profile": "tm-warthog-throttle",
-          "key": "JOY_BTN22",
-          "command": "d3512pnilunilcd7vd-0.2vpnilvunil",
-          "label": "Flaps -"
-        },
-        "warthog-thr-flaps-down": {
-          "profile": "tm-warthog-throttle",
-          "key": "JOY_BTN23",
-          "command": "d3512pnilunilcd7vd0.2vpnilvunil",
-          "label": "Flaps +"
-        },
-        "warthog-thr-boat-forward": {
-          "profile": "tm-warthog-throttle",
-          "key": "JOY_BTN9",
-          "command": "d3532pnilunilcd7vd-1vpnilvunil",
-          "label": "Hook Down"
-        },
-        "warthog-thr-boat-back": {
-          "profile": "tm-warthog-throttle",
-          "key": "JOY_BTN10",
-          "command": "d3532pnilunilcd7vd1vpnilvunil",
-          "label": "Hook Up"
-        },
-        "warthog-thr-eac-on": {
-          "profile": "tm-warthog-throttle",
-          "key": "JOY_BTN24",
-          "command": "d3934pnilunilcd13vd0vpnilvunil",
-          "label": "EAC on"
         }
       }
     },
