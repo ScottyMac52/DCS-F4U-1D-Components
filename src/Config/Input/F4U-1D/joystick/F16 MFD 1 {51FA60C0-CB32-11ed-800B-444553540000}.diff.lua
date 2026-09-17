@@ -68,25 +68,25 @@ local diff = {
     },
     ["d3903pnilunilcd13vd0vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN11" },
+        [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
       ["name"] = "Guns, right, charge OFF",
     },
     ["d3903pnilunilcd13vd1vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN12" },
+        [1] = { ["key"] = "JOY_BTN11" },
       },
       ["name"] = "Guns, right, charge ON",
     },
     ["d3904pnilunilcd13vd0vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN15" },
+        [1] = { ["key"] = "JOY_BTN15", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
       ["name"] = "Guns, left, charge OFF",
     },
     ["d3904pnilunilcd13vd1vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN14" },
+        [1] = { ["key"] = "JOY_BTN15" },
       },
       ["name"] = "Guns, left, charge ON",
     },
@@ -104,13 +104,13 @@ local diff = {
     },
     ["d3936pnilunilcd13vd0vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN13" },
+        [1] = { ["key"] = "JOY_BTN18" },
       },
       ["name"] = "Guns, center selector",
     },
     ["d3937pnilunilcd13vd0vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN13", ["reformers"] = { [1] = "JOY_BTN7" } },
+        [1] = { ["key"] = "JOY_BTN19" },
       },
       ["name"] = "Guns, inboard selector",
     },
@@ -137,6 +137,54 @@ local diff = {
         [1] = { ["key"] = "JOY_BTN25", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
       ["name"] = "Gunsight light +",
+    },
+    ["d3961pnilunilcd13vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN14", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Guns, outboard, convergence +",
+    },
+    ["d3961pnilunilcd13vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN14" },
+      },
+      ["name"] = "Guns, outboard, convergence -",
+    },
+    ["d3959pnilunilcd13vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN12", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Guns, inboard, convergence +",
+    },
+    ["d3959pnilunilcd13vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN12" },
+      },
+      ["name"] = "Guns, inboard, convergence -",
+    },
+    ["d3935pnilunilcd13vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN17" },
+      },
+      ["name"] = "Guns, outboard selector",
+    },
+    ["d3960pnilunilcd13vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN13", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Guns, center, convergence +",
+    },
+    ["d3960pnilunilcd13vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN13" },
+      },
+      ["name"] = "Guns, center, convergence -",
+    },
+    ["d3910pnilunilcd13vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN18", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Gunsight light toggle",
     },
   },
 }

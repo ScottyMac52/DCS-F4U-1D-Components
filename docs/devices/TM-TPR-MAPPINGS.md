@@ -16,5 +16,5 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_Z` | Rudder | — |
-| `JOY_Y` | Left toe brake | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
-| `JOY_X` | Right toe brake | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
+| `JOY_Y` | Left Brake | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
+| `JOY_X` | Right Brake | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |

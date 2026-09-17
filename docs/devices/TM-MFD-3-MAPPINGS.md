@@ -15,15 +15,15 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN3` | Srch | — |
+| `JOY_BTN3` | Search | — |
 | `JOY_BTN21` | Scp On | — |
-| `JOY_BTN4` | Scp ON | — |
-| `JOY_BTN22` | Scp Off | — |
+| `JOY_BTN4` | Scp On | — |
+| `JOY_BTN22` | Scp OFF | — |
 | `JOY_BTN5` | Scp OFF | — |
 | `JOY_BTN27` | Scp Gain+ | — |
 | `JOY_BTN28` | Scp Gain- | — |
-| `JOY_BTN25` | Scp Brght+ | — |
-| `JOY_BTN26` | Scp Brght- | — |
+| `JOY_BTN25` | Scp Bright+ | — |
+| `JOY_BTN26` | Scp Bright- | — |
 | `JOY_BTN1` | Lock | — |
 | `JOY_BTN13` | REL | — |
 | `JOY_BTN14` | ATTCH | — |
@@ -33,11 +33,11 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | `JOY_BTN17` | Cage | — |
 | `JOY_BTN18` | Pitch Up | — |
 | `JOY_BTN16` | Pitch Dwn | — |
-| `JOY_BTN6` | Recognition lights - red - cycle | — |
-| `JOY_BTN7` | Recognition lights - red - Steady | — |
-| `JOY_BTN9` | Exterior lights cycle | — |
-| `JOY_BTN10` | Section cycle | — |
-| `JOY_BTN11` | Section Bright | — |
+| `JOY_BTN6` | Recgntn lghts red cyc | — |
+| `JOY_BTN7` | Recgntn lghts red Stdy | — |
+| `JOY_BTN9` | Ext lghts cyc | — |
+| `JOY_BTN10` | Sec Cyc | — |
+| `JOY_BTN11` | Sec Brght | — |
 
 #### Modifier layer: `JOY_BTN3`
 
@@ -50,7 +50,7 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN7 + JOY_BTN17` | Uncage | — |
-| `JOY_BTN7 + JOY_BTN6` | Recognition lights - red - Flash | — |
-| `JOY_BTN7 + JOY_BTN7` | Recognition lights - red - Off | — |
-| `JOY_BTN7 + JOY_BTN9` | Exterior lights Flash | — |
-| `JOY_BTN7 + JOY_BTN11` | Section Dim | — |
+| `JOY_BTN7 + JOY_BTN6` | Recgntn lghts red Flsh | — |
+| `JOY_BTN7 + JOY_BTN7` | Recgntn lghts red Off | — |
+| `JOY_BTN7 + JOY_BTN9` | Ext lghts Fl | — |
+| `JOY_BTN7 + JOY_BTN11` | Sec Dim | — |

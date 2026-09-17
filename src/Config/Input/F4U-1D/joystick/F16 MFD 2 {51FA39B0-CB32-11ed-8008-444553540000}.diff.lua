@@ -313,6 +313,12 @@ local diff = {
       },
       ["name"] = "Recognition lights - green - Steady",
     },
+    ["d3104pnilu3104cd2vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN8" },
+      },
+      ["name"] = "Hand pump",
+    },
   },
 }
 return diff

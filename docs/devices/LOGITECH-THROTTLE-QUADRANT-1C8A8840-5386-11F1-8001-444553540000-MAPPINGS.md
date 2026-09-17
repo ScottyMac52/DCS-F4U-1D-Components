@@ -16,8 +16,8 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN6` | Close | — |
-| `JOY_BTN5` | Starter cover | — |
-| `JOY_BTN1` | Oil cooler | — |
+| `JOY_BTN5` | Strtr Cov Opn | — |
+| `JOY_BTN1` | Oil Cool | — |
 | `JOY_BTN2` | Close | — |
 | `JOY_BTN3` | Primer | — |
 | `JOY_BTN4` | Starter | — |

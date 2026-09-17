@@ -15,17 +15,17 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN15` |  | — |
-| `JOY_BTN17` |  | — |
-| `JOY_BTN6` |  | — |
-| `JOY_BTN2` |  | — |
-| `JOY_BTN1` |  | — |
-| `JOY_BTN16` |  | — |
-| `JOY_BTN18` |  | — |
-| `JOY_BTN_POV1_D` |  | — |
-| `JOY_BTN_POV1_U` |  | — |
-| `JOY_BTN_POV1_L` |  | — |
-| `JOY_BTN_POV1_R` |  | — |
+| `JOY_BTN15` | MA On | — |
+| `JOY_BTN17` | MA Off | — |
+| `JOY_BTN6` | Shoot | — |
+| `JOY_BTN2` | Rckts Fire | — |
+| `JOY_BTN1` | Cam | — |
+| `JOY_BTN16` | Rckts Off | — |
+| `JOY_BTN18` | Rckts On | — |
+| `JOY_BTN_POV1_D` | Nose Up | — |
+| `JOY_BTN_POV1_U` | Nose Down | — |
+| `JOY_BTN_POV1_L` | LWD | — |
+| `JOY_BTN_POV1_R` | RWD | — |
 | `JOY_Y` | Pitch | — |
 | `JOY_X` | Roll | — |
 
@@ -34,7 +34,7 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN3 + JOY_BTN2` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_L` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_R` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_U` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_D` |  | — |
+| `JOY_BTN3 + JOY_BTN_POV1_L` | Left | — |
+| `JOY_BTN3 + JOY_BTN_POV1_R` | Right | — |
+| `JOY_BTN3 + JOY_BTN_POV1_U` | Up | — |
+| `JOY_BTN3 + JOY_BTN_POV1_D` | Down | — |

@@ -7,16 +7,14 @@ This reference is generated from the effective DCS `.diff.lua` profiles used by 
 | Device | Profile file | Layers | Assignments |
 | --- | --- | --- | ---: |
 | [Ava [R] Viper](devices/AVA-BASE-F16C-MAPPINGS.md) | `Ava [R] Viper {F77212B0-00A8-11f1-8001-444553540000}.diff.lua` | Base | 0 |
-| [F16 MFD 1](devices/TM-MFD-1-MAPPINGS.md) | `F16 MFD 1 {51FA60C0-CB32-11ed-800B-444553540000}.diff.lua` | Base, JOY_BTN7 | 23 |
-| [F16 MFD 2](devices/TM-MFD-2-MAPPINGS.md) | `F16 MFD 2 {51FA39B0-CB32-11ed-8008-444553540000}.diff.lua` | Base, JOY_BTN7 | 53 |
+| [F16 MFD 1](devices/TM-MFD-1-MAPPINGS.md) | `F16 MFD 1 {51FA60C0-CB32-11ed-800B-444553540000}.diff.lua` | Base, JOY_BTN7 | 31 |
+| [F16 MFD 2](devices/TM-MFD-2-MAPPINGS.md) | `F16 MFD 2 {51FA39B0-CB32-11ed-8008-444553540000}.diff.lua` | Base, JOY_BTN7 | 54 |
 | [F16 MFD 3](devices/TM-MFD-3-MAPPINGS.md) | `F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua` | Base, JOY_BTN3, JOY_BTN7 | 29 |
 | [Logitech Flight Quadrant](devices/LOGITECH-THROTTLE-QUADRANT-1C8A8840-5386-11F1-8001-444553540000-MAPPINGS.md) | `Logitech Flight Quadrant {1C8A8840-5386-11F1-8001-444553540000}.diff.lua` | Base, JOY_BTN7 | 14 |
 | [Logitech Flight Quadrant](devices/LOGITECH-THROTTLE-QUADRANT-840BBBD0-2139-11F1-8001-444553540000-MAPPINGS.md) | `Logitech Flight Quadrant {840BBBD0-2139-11f1-8001-444553540000}.diff.lua` | JOY_BTN7, Base | 14 |
 | [MOZA AB9 FFB Base](devices/MOZA-AB9-MAPPINGS.md) | `MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua` | Base, JOY_BTN3 | 18 |
 | [T-Pendular-Rudder](devices/TM-TPR-MAPPINGS.md) | `T-Pendular-Rudder {14ED3D40-3F58-11f1-8002-444553540000}.diff.lua` | Base | 3 |
-| [Throttle - HOTAS Warthog](devices/TM-WARTHOG-THROTTLE-MAPPINGS.md) | `Throttle - HOTAS Warthog {5200C960-CB32-11ed-8020-444553540000}.diff.lua` | Base | 0 |
-| [Ava [R] Viper](devices/VJOY-DEVICE-MAPPINGS.md) | `vJoy Device {00DE48B0-724A-11f1-8002-444553540000}.diff.lua` | Base | 0 |
-| [ VKBSim Gunfighter F14](devices/VKB-F14-GUNFIGHTER-MAPPINGS.md) | `VKBSim Gunfighter F14 {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua` | Base, JOY_BTN7 | 18 |
+| [VKBSim Gunfighter F14](devices/VKB-F14-GUNFIGHTER-MAPPINGS.md) | `VKBSim Gunfighter F14 {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua` | Base, JOY_BTN7 | 18 |
 | [WINCTRL CarrierAce PTO 2](devices/WINCTRL-PTO2-MAPPINGS.md) | `WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua` | Base, JOY_BTN3, JOY_BTN7 | 37 |
 | [WINCTRL ViperAce ICP](devices/WINCTRL-ICP-MAPPINGS.md) | `WINCTRL ViperAce ICP {3731E2E0-4D98-11f1-8001-444553540000}.diff.lua` | Base, JOY_BTN7 | 42 |
 
@@ -51,22 +49,25 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN24` | Ign Sw- | — |
-| `JOY_BTN23` | Ign Sw+ | — |
+| `JOY_BTN24` | Mag- | — |
+| `JOY_BTN23` | Mag+ | — |
 | `JOY_BTN26` | Fuel- | — |
 | `JOY_BTN25` | Fuel+ | — |
 | `JOY_BTN28` | Cwl Flps- | — |
 | `JOY_BTN27` | Cwl Flps+ | — |
-| `JOY_BTN22` | Fuel Pmp- | — |
-| `JOY_BTN21` | Fuel Pmp+ | — |
+| `JOY_BTN22` | Off | — |
+| `JOY_BTN21` | Fuel Pmp | — |
 | `JOY_BTN3` | Canopy | — |
-| `JOY_BTN11` | R Off | — |
-| `JOY_BTN12` | R On | — |
-| `JOY_BTN15` | L Off | — |
-| `JOY_BTN14` | L On | — |
-| `JOY_BTN13` | Ctr | — |
+| `JOY_BTN11` | R Chrg | — |
+| `JOY_BTN15` | L Chrg | — |
+| `JOY_BTN18` | Center | — |
+| `JOY_BTN19` | Inboard | — |
 | `JOY_BTN1` | Chrt Brd- | — |
 | `JOY_BTN2` | Chrt Brd+ | — |
+| `JOY_BTN14` | Out- | — |
+| `JOY_BTN12` | In- | — |
+| `JOY_BTN17` | Outboard | — |
+| `JOY_BTN13` | Ctr- | — |
 
 #### Modifier layer: `JOY_BTN7`
 
@@ -74,11 +75,16 @@ No module-specific assignments are present. The profile remains available for sh
 | --- | --- | --- |
 | `JOY_BTN7 + JOY_BTN27` | MA On | — |
 | `JOY_BTN7 + JOY_BTN28` | MA Off | — |
+| `JOY_BTN7 + JOY_BTN11` | OFF | — |
+| `JOY_BTN7 + JOY_BTN15` | OFF | — |
 | `JOY_BTN7 + JOY_BTN23` | Gun Sght On | — |
 | `JOY_BTN7 + JOY_BTN24` | Gun Sght Off | — |
-| `JOY_BTN7 + JOY_BTN13` | Inbrd | — |
 | `JOY_BTN7 + JOY_BTN26` | Gun Sght- | — |
 | `JOY_BTN7 + JOY_BTN25` | Gun Sght+ | — |
+| `JOY_BTN7 + JOY_BTN14` | Out+ | — |
+| `JOY_BTN7 + JOY_BTN12` | In+ | — |
+| `JOY_BTN7 + JOY_BTN13` | Ctr+ | — |
+| `JOY_BTN7 + JOY_BTN18` | Gnsght lght | — |
 
 ### F16 MFD 2
 
@@ -93,8 +99,8 @@ No module-specific assignments are present. The profile remains available for sh
 | --- | --- | --- |
 | `JOY_BTN28` | SprChgr- | — |
 | `JOY_BTN27` | SprChgr+ | — |
-| `JOY_BTN22` | Oil Cls | — |
-| `JOY_BTN21` | Oil Opn | — |
+| `JOY_BTN22` | Close | — |
+| `JOY_BTN21` | Oil Cool | — |
 | `JOY_BTN14` | Start Cov  | — |
 | `JOY_BTN15` | Mag- | — |
 | `JOY_BTN13` | Primer | — |
@@ -109,15 +115,16 @@ No module-specific assignments are present. The profile remains available for sh
 | `JOY_BTN3` | Shw cntrls | — |
 | `JOY_BTN4` | pilot body | — |
 | `JOY_BTN5` | Sound | — |
-| `JOY_BTN20` | Left panel light + | — |
-| `JOY_BTN19` | Left panel light - | — |
-| `JOY_BTN17` | Left instr. board light + | — |
-| `JOY_BTN16` | Left instr. board light - | — |
-| `JOY_BTN9` | Right instr. board light + | — |
-| `JOY_BTN10` | Right instr. board light - | — |
-| `JOY_BTN6` | Right panel light + | — |
-| `JOY_BTN7` | Right panel light - | — |
+| `JOY_BTN20` | Pnl lght+ | — |
+| `JOY_BTN19` | Pnl lght- | — |
+| `JOY_BTN17` | Brd lght+ | — |
+| `JOY_BTN16` | Brd lght- | — |
+| `JOY_BTN9` | Brd lght+ | — |
+| `JOY_BTN10` | Brd lght- | — |
+| `JOY_BTN6` | Pnl lght+ | — |
+| `JOY_BTN7` | Pnl lght- | — |
 | `JOY_BTN18` | Torch | — |
+| `JOY_BTN8` | Pmp | — |
 
 #### Modifier layer: `JOY_BTN7`
 
@@ -135,20 +142,20 @@ No module-specific assignments are present. The profile remains available for sh
 | `JOY_BTN7 + JOY_BTN5` | Mouse | — |
 | `JOY_BTN7 + JOY_BTN27` | Cockpit lights ON | — |
 | `JOY_BTN7 + JOY_BTN28` | Cockpit lights OFF | — |
-| `JOY_BTN7 + JOY_BTN21` | Exterior lights On | — |
-| `JOY_BTN7 + JOY_BTN22` | Exterior lights Off | — |
-| `JOY_BTN7 + JOY_BTN25` | Formation Bright | — |
-| `JOY_BTN7 + JOY_BTN26` | Formation Dim | — |
-| `JOY_BTN7 + JOY_BTN24` | Formation Off | — |
-| `JOY_BTN7 + JOY_BTN23` | Formation cycle | — |
-| `JOY_BTN7 + JOY_BTN20` | Recognition lights - amber - cycle | — |
-| `JOY_BTN7 + JOY_BTN19` | Recognition lights - amber - Flash | — |
-| `JOY_BTN7 + JOY_BTN18` | Recognition lights - amber - Off | — |
-| `JOY_BTN7 + JOY_BTN17` | Recognition lights - amber - Steady | — |
-| `JOY_BTN7 + JOY_BTN6` | Recognition lights - green - cycle | — |
-| `JOY_BTN7 + JOY_BTN7` | Recognition lights - green - Flash | — |
-| `JOY_BTN7 + JOY_BTN8` | Recognition lights - green - Off | — |
-| `JOY_BTN7 + JOY_BTN9` | Recognition lights - green - Steady | — |
+| `JOY_BTN7 + JOY_BTN21` | Ext lghts On | — |
+| `JOY_BTN7 + JOY_BTN22` | Ext lghts Off | — |
+| `JOY_BTN7 + JOY_BTN25` | Form Brght | — |
+| `JOY_BTN7 + JOY_BTN26` | Form Dim | — |
+| `JOY_BTN7 + JOY_BTN24` | Form Off | — |
+| `JOY_BTN7 + JOY_BTN23` | Form cyc | — |
+| `JOY_BTN7 + JOY_BTN20` | Recgntn lghts amber cyc | — |
+| `JOY_BTN7 + JOY_BTN19` | Recgntn lghts amber Flsh | — |
+| `JOY_BTN7 + JOY_BTN18` | Recgntn lghts amber Off | — |
+| `JOY_BTN7 + JOY_BTN17` | Recgntn lghts amber Stdy | — |
+| `JOY_BTN7 + JOY_BTN6` | Recgntn lghts grn cyc | — |
+| `JOY_BTN7 + JOY_BTN7` | Recgntn lghts grn Flsh | — |
+| `JOY_BTN7 + JOY_BTN8` | Recgntn lghts grn Off | — |
+| `JOY_BTN7 + JOY_BTN9` | Recgntn lghts grn Stdy | — |
 
 ### F16 MFD 3
 
@@ -161,15 +168,15 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN3` | Srch | — |
+| `JOY_BTN3` | Search | — |
 | `JOY_BTN21` | Scp On | — |
-| `JOY_BTN4` | Scp ON | — |
-| `JOY_BTN22` | Scp Off | — |
+| `JOY_BTN4` | Scp On | — |
+| `JOY_BTN22` | Scp OFF | — |
 | `JOY_BTN5` | Scp OFF | — |
 | `JOY_BTN27` | Scp Gain+ | — |
 | `JOY_BTN28` | Scp Gain- | — |
-| `JOY_BTN25` | Scp Brght+ | — |
-| `JOY_BTN26` | Scp Brght- | — |
+| `JOY_BTN25` | Scp Bright+ | — |
+| `JOY_BTN26` | Scp Bright- | — |
 | `JOY_BTN1` | Lock | — |
 | `JOY_BTN13` | REL | — |
 | `JOY_BTN14` | ATTCH | — |
@@ -179,11 +186,11 @@ No module-specific assignments are present. The profile remains available for sh
 | `JOY_BTN17` | Cage | — |
 | `JOY_BTN18` | Pitch Up | — |
 | `JOY_BTN16` | Pitch Dwn | — |
-| `JOY_BTN6` | Recognition lights - red - cycle | — |
-| `JOY_BTN7` | Recognition lights - red - Steady | — |
-| `JOY_BTN9` | Exterior lights cycle | — |
-| `JOY_BTN10` | Section cycle | — |
-| `JOY_BTN11` | Section Bright | — |
+| `JOY_BTN6` | Recgntn lghts red cyc | — |
+| `JOY_BTN7` | Recgntn lghts red Stdy | — |
+| `JOY_BTN9` | Ext lghts cyc | — |
+| `JOY_BTN10` | Sec Cyc | — |
+| `JOY_BTN11` | Sec Brght | — |
 
 #### Modifier layer: `JOY_BTN3`
 
@@ -196,10 +203,10 @@ No module-specific assignments are present. The profile remains available for sh
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN7 + JOY_BTN17` | Uncage | — |
-| `JOY_BTN7 + JOY_BTN6` | Recognition lights - red - Flash | — |
-| `JOY_BTN7 + JOY_BTN7` | Recognition lights - red - Off | — |
-| `JOY_BTN7 + JOY_BTN9` | Exterior lights Flash | — |
-| `JOY_BTN7 + JOY_BTN11` | Section Dim | — |
+| `JOY_BTN7 + JOY_BTN6` | Recgntn lghts red Flsh | — |
+| `JOY_BTN7 + JOY_BTN7` | Recgntn lghts red Off | — |
+| `JOY_BTN7 + JOY_BTN9` | Ext lghts Fl | — |
+| `JOY_BTN7 + JOY_BTN11` | Sec Dim | — |
 
 ### Logitech Flight Quadrant
 
@@ -213,8 +220,8 @@ No module-specific assignments are present. The profile remains available for sh
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN6` | Close | — |
-| `JOY_BTN5` | Starter cover | — |
-| `JOY_BTN1` | Oil cooler | — |
+| `JOY_BTN5` | Strtr Cov Opn | — |
+| `JOY_BTN1` | Oil Cool | — |
 | `JOY_BTN2` | Close | — |
 | `JOY_BTN3` | Primer | — |
 | `JOY_BTN4` | Starter | — |
@@ -256,7 +263,7 @@ No module-specific assignments are present. The profile remains available for sh
 | `JOY_BTN2` | Off | — |
 | `JOY_BTN1` | Battery | — |
 | `JOY_BTN4` | Off | — |
-| `JOY_BTN3` | Fuel Pump | — |
+| `JOY_BTN3` | Fuel Pmp | — |
 | `JOY_BTN6` | Off | — |
 | `JOY_BTN5` | Water Inj | — |
 | `JOY_Y` | Propeller | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
@@ -274,17 +281,17 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN15` |  | — |
-| `JOY_BTN17` |  | — |
-| `JOY_BTN6` |  | — |
-| `JOY_BTN2` |  | — |
-| `JOY_BTN1` |  | — |
-| `JOY_BTN16` |  | — |
-| `JOY_BTN18` |  | — |
-| `JOY_BTN_POV1_D` |  | — |
-| `JOY_BTN_POV1_U` |  | — |
-| `JOY_BTN_POV1_L` |  | — |
-| `JOY_BTN_POV1_R` |  | — |
+| `JOY_BTN15` | MA On | — |
+| `JOY_BTN17` | MA Off | — |
+| `JOY_BTN6` | Shoot | — |
+| `JOY_BTN2` | Rckts Fire | — |
+| `JOY_BTN1` | Cam | — |
+| `JOY_BTN16` | Rckts Off | — |
+| `JOY_BTN18` | Rckts On | — |
+| `JOY_BTN_POV1_D` | Nose Up | — |
+| `JOY_BTN_POV1_U` | Nose Down | — |
+| `JOY_BTN_POV1_L` | LWD | — |
+| `JOY_BTN_POV1_R` | RWD | — |
 | `JOY_Y` | Pitch | — |
 | `JOY_X` | Roll | — |
 
@@ -293,10 +300,10 @@ No module-specific assignments are present. The profile remains available for sh
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN3 + JOY_BTN2` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_L` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_R` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_U` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_D` |  | — |
+| `JOY_BTN3 + JOY_BTN_POV1_L` | Left | — |
+| `JOY_BTN3 + JOY_BTN_POV1_R` | Right | — |
+| `JOY_BTN3 + JOY_BTN_POV1_U` | Up | — |
+| `JOY_BTN3 + JOY_BTN_POV1_D` | Down | — |
 
 ### T-Pendular-Rudder
 
@@ -310,46 +317,24 @@ No module-specific assignments are present. The profile remains available for sh
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_Z` | Rudder | — |
-| `JOY_Y` | Left toe brake | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
-| `JOY_X` | Right toe brake | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
+| `JOY_Y` | Left Brake | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
+| `JOY_X` | Right Brake | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
 
-### Throttle - HOTAS Warthog
-
-- Profile: `Throttle - HOTAS Warthog {5200C960-CB32-11ed-8020-444553540000}.diff.lua`
-- Shared hardware: `tm-warthog-throttle`
-- Physical instance: `5200c960-cb32-11ed-8020-444553540000`
-- Kneeboard page: `08-TM-WARTHOG-THROTTLE.png`
-
-#### Base layer
-
-No module-specific assignments are present. The profile remains available for shared UI Layer controls and future module bindings.
-
-### Ava [R] Viper
-
-- Profile: `vJoy Device {00DE48B0-724A-11f1-8002-444553540000}.diff.lua`
-- Shared hardware: `ava-base-f16c`
-- Physical instance: ``
-- Kneeboard page: `02-AVA-BASE-F16C.png`
-
-#### Base layer
-
-No module-specific assignments are present. The profile remains available for shared UI Layer controls and future module bindings.
-
-###  VKBSim Gunfighter F14
+### VKBSim Gunfighter F14
 
 - Profile: `VKBSim Gunfighter F14 {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua`
 - Shared hardware: `vkb-f14-gunfighter`
 - Physical instance: `2d5cec70-5189-11f1-8001-444553540000`
-- Kneeboard page: `09-VKB-F14-GUNFIGHTER.png`
+- Kneeboard page: `08-VKB-F14-GUNFIGHTER.png`
 
 #### Base layer
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN2` | Shoot | — |
-| `JOY_BTN1` | Gun camera | — |
-| `JOY_BTN16` | OFF | — |
-| `JOY_BTN14` | On | — |
+| `JOY_BTN1` | Cam | — |
+| `JOY_BTN16` | Rckts Off | — |
+| `JOY_BTN14` | Rckts On | — |
 | `JOY_BTN15` | Safe | — |
 | `JOY_BTN13` | Arm | — |
 | `JOY_BTN4` | Rckts Auto | — |
@@ -375,15 +360,15 @@ No module-specific assignments are present. The profile remains available for sh
 - Profile: `WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua`
 - Shared hardware: `winctrl-pto2`
 - Physical instance: `19b7d090-6120-11f0-8001-444553540000`
-- Kneeboard page: `10-WINCTRL-PTO2.png`
+- Kneeboard page: `09-WINCTRL-PTO2.png`
 
 #### Base layer
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN1` | Lower-left panel pushbutton | — |
+| `JOY_BTN1` | Starter | — |
 | `JOY_BTN13` | bypass carrier | — |
-| `JOY_BTN12` | bypass field | — |
+| `JOY_BTN12` | Strtr Cov Opn | — |
 | `JOY_BTN7` | Flaps - | — |
 | `JOY_BTN5` | Flaps + | — |
 | `JOY_BTN29` | Wings hold | — |
@@ -399,16 +384,16 @@ No module-specific assignments are present. The profile remains available for sh
 | `JOY_BTN10` | Probe extend | — |
 | `JOY_BTN9` | Landing gear lower auxiliary input | — |
 | `JOY_BTN8` | Landing gear upper auxiliary input | — |
-| `JOY_BTN19` | Drop Tank Lock | — |
-| `JOY_BTN22` | Drop Tank Release | — |
-| `JOY_BTN17` | jettison L FUS / MSL | — |
+| `JOY_BTN19` | LOCK | — |
+| `JOY_BTN22` | REL | — |
+| `JOY_BTN17` | ATTCH | — |
 | `JOY_BTN24` | L Wing Release On | — |
 | `JOY_BTN25` | R Wing Release On | — |
 | `JOY_BTN23` | Pylon Release On | — |
 | `JOY_BTN26` | L Wing E Rel On | — |
 | `JOY_BTN27` | R Wing E Rel On | — |
-| `JOY_BTN4` | Launch bar extend | — |
-| `JOY_BTN3` | Launch bar retract | — |
+| `JOY_BTN4` | LBar Extnd | — |
+| `JOY_BTN3` | LBar Retrct | — |
 | `JOY_BTN39` | EBrake 2 | — |
 | `JOY_BTN38` | EBrake 1 | — |
 
@@ -422,7 +407,7 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN2` | Master caution pushbutton | — |
+| `JOY_BTN7 + JOY_BTN2` | Stall TST | — |
 | `JOY_BTN7 + JOY_BTN24` | OFF | — |
 | `JOY_BTN7 + JOY_BTN25` | OFF | — |
 | `JOY_BTN7 + JOY_BTN23` | OFF | — |
@@ -434,7 +419,7 @@ No module-specific assignments are present. The profile remains available for sh
 - Profile: `WINCTRL ViperAce ICP {3731E2E0-4D98-11f1-8001-444553540000}.diff.lua`
 - Shared hardware: `winctrl-icp`
 - Physical instance: `3731e2e0-4d98-11f1-8001-444553540000`
-- Kneeboard page: `11-WINCTRL-ICP.png`
+- Kneeboard page: `10-WINCTRL-ICP.png`
 
 #### Base layer
 
@@ -443,46 +428,46 @@ No module-specific assignments are present. The profile remains available for sh
 | `JOY_BTN32` | NOSE/TAIL | — |
 | `JOY_BTN33` | SAFE | — |
 | `JOY_BTN34` | TAIL | — |
-| `JOY_BTN28` | Release | — |
-| `JOY_BTN27` | Lock | — |
-| `JOY_BTN26` | Attach | — |
-| `JOY_BTN1` | Scope ON | — |
-| `JOY_BTN2` | Search Mode | — |
-| `JOY_BTN19` | Scope Bright+ | — |
-| `JOY_BTN20` | Scope Bright- | — |
-| `JOY_BTN31` | Scope Gain- | — |
-| `JOY_BTN30` | Scope Gain+ | — |
+| `JOY_BTN28` | REL | — |
+| `JOY_BTN27` | LOCK | — |
+| `JOY_BTN26` | ATTCH | — |
+| `JOY_BTN1` | Scp On | — |
+| `JOY_BTN2` | Search | — |
+| `JOY_BTN19` | Scp Bright+ | — |
+| `JOY_BTN20` | Scp Bright- | — |
+| `JOY_BTN31` | Scp Gain- | — |
+| `JOY_BTN30` | Scp Gain+ | — |
 | `JOY_BTN21` | Autolevel | — |
 | `JOY_BTN24` | Autopilot Off | — |
 | `JOY_BTN23` | Autothrottle | — |
 | `JOY_BTN25` | Hold Attitude | — |
-| `JOY_BTN7` | Kneeboard Jump To Shortcut 1 | — |
-| `JOY_BTN8` | Kneeboard Jump To Shortcut 2 | — |
-| `JOY_BTN9` | Kneeboard Jump To Shortcut 3 | — |
-| `JOY_BTN11` | Kneeboard Jump To Shortcut 4 | — |
-| `JOY_BTN12` | Kneeboard Jump To Shortcut 5 | — |
-| `JOY_BTN13` | Kneeboard Jump To Shortcut 6 | — |
-| `JOY_BTN15` | Kneeboard Jump To Shortcut 7 | — |
-| `JOY_BTN16` | Kneeboard Jump To Shortcut 8 | — |
-| `JOY_BTN17` | Kneeboard Jump To Shortcut 9 | — |
-| `JOY_BTN18` | Kneeboard Jump To Shortcut 10 | — |
-| `JOY_BTN14` | Kneeboard Make Shortcut | — |
-| `JOY_BTN29` | Kneeboard glance view | — |
-| `JOY_Y` | Left Board Int | — |
-| `JOY_X` | Right Board Int | — |
-| `JOY_RY` | Left Pnl Int | — |
-| `JOY_RX` | Right Pnl Int | — |
+| `JOY_BTN7` | KB Shrtct 1 | — |
+| `JOY_BTN8` | KB Shrtct 2 | — |
+| `JOY_BTN9` | KB Shrtct 3 | — |
+| `JOY_BTN11` | KB Shrtct 4 | — |
+| `JOY_BTN12` | KB Shrtct 5 | — |
+| `JOY_BTN13` | KB Shrtct 6 | — |
+| `JOY_BTN15` | KB Shrtct 7 | — |
+| `JOY_BTN16` | KB Shrtct 8 | — |
+| `JOY_BTN17` | KB Shrtct 9 | — |
+| `JOY_BTN18` | KB Shrtct 10 | — |
+| `JOY_BTN14` | KB Mk Shrtct | — |
+| `JOY_BTN29` | KB Glance | — |
+| `JOY_Y` | Brd Int | — |
+| `JOY_X` | Board Int | — |
+| `JOY_RY` | Pnl Int | — |
+| `JOY_RX` | Pnl Int | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN1` | Scope OFF | — |
-| `JOY_BTN7 + JOY_BTN24` | Kneeboard Next Page | — |
-| `JOY_BTN7 + JOY_BTN22` | Kneeboard Previous Page | — |
-| `JOY_BTN7 + JOY_BTN23` | Kneeboard Next Shortcut | — |
-| `JOY_BTN7 + JOY_BTN25` | Kneeboard Previous Shortcut | — |
-| `JOY_BTN7 + JOY_BTN21` | Kneeboard ON/OFF | — |
+| `JOY_BTN7 + JOY_BTN1` | Scp OFF | — |
+| `JOY_BTN7 + JOY_BTN24` | KB Nxt Pg | — |
+| `JOY_BTN7 + JOY_BTN22` | KB Prev Pg | — |
+| `JOY_BTN7 + JOY_BTN23` | KB Nxt Shrtct | — |
+| `JOY_BTN7 + JOY_BTN25` | KB Prev Shrtct | — |
+| `JOY_BTN7 + JOY_BTN21` | KB ON/OFF | — |
 | `JOY_BTN7 + JOY_RX` | Gunsght Lght Int | — |
 | `JOY_BTN7 + JOY_RY` | Gyro hor ptch | — |
 | `JOY_BTN7 + JOY_Y` | Chrtbrd lght int | — |

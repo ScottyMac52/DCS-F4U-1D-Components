@@ -7,7 +7,7 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 - Profile: `WINCTRL ViperAce ICP {3731E2E0-4D98-11f1-8001-444553540000}.diff.lua`
 - Shared hardware: `winctrl-icp`
 - Physical instance: `3731e2e0-4d98-11f1-8001-444553540000`
-- Kneeboard page: `11-WINCTRL-ICP.png`
+- Kneeboard page: `10-WINCTRL-ICP.png`
 
 ## Assignments
 
@@ -18,46 +18,46 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | `JOY_BTN32` | NOSE/TAIL | — |
 | `JOY_BTN33` | SAFE | — |
 | `JOY_BTN34` | TAIL | — |
-| `JOY_BTN28` | Release | — |
-| `JOY_BTN27` | Lock | — |
-| `JOY_BTN26` | Attach | — |
-| `JOY_BTN1` | Scope ON | — |
-| `JOY_BTN2` | Search Mode | — |
-| `JOY_BTN19` | Scope Bright+ | — |
-| `JOY_BTN20` | Scope Bright- | — |
-| `JOY_BTN31` | Scope Gain- | — |
-| `JOY_BTN30` | Scope Gain+ | — |
+| `JOY_BTN28` | REL | — |
+| `JOY_BTN27` | LOCK | — |
+| `JOY_BTN26` | ATTCH | — |
+| `JOY_BTN1` | Scp On | — |
+| `JOY_BTN2` | Search | — |
+| `JOY_BTN19` | Scp Bright+ | — |
+| `JOY_BTN20` | Scp Bright- | — |
+| `JOY_BTN31` | Scp Gain- | — |
+| `JOY_BTN30` | Scp Gain+ | — |
 | `JOY_BTN21` | Autolevel | — |
 | `JOY_BTN24` | Autopilot Off | — |
 | `JOY_BTN23` | Autothrottle | — |
 | `JOY_BTN25` | Hold Attitude | — |
-| `JOY_BTN7` | Kneeboard Jump To Shortcut 1 | — |
-| `JOY_BTN8` | Kneeboard Jump To Shortcut 2 | — |
-| `JOY_BTN9` | Kneeboard Jump To Shortcut 3 | — |
-| `JOY_BTN11` | Kneeboard Jump To Shortcut 4 | — |
-| `JOY_BTN12` | Kneeboard Jump To Shortcut 5 | — |
-| `JOY_BTN13` | Kneeboard Jump To Shortcut 6 | — |
-| `JOY_BTN15` | Kneeboard Jump To Shortcut 7 | — |
-| `JOY_BTN16` | Kneeboard Jump To Shortcut 8 | — |
-| `JOY_BTN17` | Kneeboard Jump To Shortcut 9 | — |
-| `JOY_BTN18` | Kneeboard Jump To Shortcut 10 | — |
-| `JOY_BTN14` | Kneeboard Make Shortcut | — |
-| `JOY_BTN29` | Kneeboard glance view | — |
-| `JOY_Y` | Left Board Int | — |
-| `JOY_X` | Right Board Int | — |
-| `JOY_RY` | Left Pnl Int | — |
-| `JOY_RX` | Right Pnl Int | — |
+| `JOY_BTN7` | KB Shrtct 1 | — |
+| `JOY_BTN8` | KB Shrtct 2 | — |
+| `JOY_BTN9` | KB Shrtct 3 | — |
+| `JOY_BTN11` | KB Shrtct 4 | — |
+| `JOY_BTN12` | KB Shrtct 5 | — |
+| `JOY_BTN13` | KB Shrtct 6 | — |
+| `JOY_BTN15` | KB Shrtct 7 | — |
+| `JOY_BTN16` | KB Shrtct 8 | — |
+| `JOY_BTN17` | KB Shrtct 9 | — |
+| `JOY_BTN18` | KB Shrtct 10 | — |
+| `JOY_BTN14` | KB Mk Shrtct | — |
+| `JOY_BTN29` | KB Glance | — |
+| `JOY_Y` | Brd Int | — |
+| `JOY_X` | Board Int | — |
+| `JOY_RY` | Pnl Int | — |
+| `JOY_RX` | Pnl Int | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN1` | Scope OFF | — |
-| `JOY_BTN7 + JOY_BTN24` | Kneeboard Next Page | — |
-| `JOY_BTN7 + JOY_BTN22` | Kneeboard Previous Page | — |
-| `JOY_BTN7 + JOY_BTN23` | Kneeboard Next Shortcut | — |
-| `JOY_BTN7 + JOY_BTN25` | Kneeboard Previous Shortcut | — |
-| `JOY_BTN7 + JOY_BTN21` | Kneeboard ON/OFF | — |
+| `JOY_BTN7 + JOY_BTN1` | Scp OFF | — |
+| `JOY_BTN7 + JOY_BTN24` | KB Nxt Pg | — |
+| `JOY_BTN7 + JOY_BTN22` | KB Prev Pg | — |
+| `JOY_BTN7 + JOY_BTN23` | KB Nxt Shrtct | — |
+| `JOY_BTN7 + JOY_BTN25` | KB Prev Shrtct | — |
+| `JOY_BTN7 + JOY_BTN21` | KB ON/OFF | — |
 | `JOY_BTN7 + JOY_RX` | Gunsght Lght Int | — |
 | `JOY_BTN7 + JOY_RY` | Gyro hor ptch | — |
 | `JOY_BTN7 + JOY_Y` | Chrtbrd lght int | — |

@@ -17,8 +17,8 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | --- | --- | --- |
 | `JOY_BTN28` | SprChgr- | — |
 | `JOY_BTN27` | SprChgr+ | — |
-| `JOY_BTN22` | Oil Cls | — |
-| `JOY_BTN21` | Oil Opn | — |
+| `JOY_BTN22` | Close | — |
+| `JOY_BTN21` | Oil Cool | — |
 | `JOY_BTN14` | Start Cov  | — |
 | `JOY_BTN15` | Mag- | — |
 | `JOY_BTN13` | Primer | — |
@@ -33,15 +33,16 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | `JOY_BTN3` | Shw cntrls | — |
 | `JOY_BTN4` | pilot body | — |
 | `JOY_BTN5` | Sound | — |
-| `JOY_BTN20` | Left panel light + | — |
-| `JOY_BTN19` | Left panel light - | — |
-| `JOY_BTN17` | Left instr. board light + | — |
-| `JOY_BTN16` | Left instr. board light - | — |
-| `JOY_BTN9` | Right instr. board light + | — |
-| `JOY_BTN10` | Right instr. board light - | — |
-| `JOY_BTN6` | Right panel light + | — |
-| `JOY_BTN7` | Right panel light - | — |
+| `JOY_BTN20` | Pnl lght+ | — |
+| `JOY_BTN19` | Pnl lght- | — |
+| `JOY_BTN17` | Brd lght+ | — |
+| `JOY_BTN16` | Brd lght- | — |
+| `JOY_BTN9` | Brd lght+ | — |
+| `JOY_BTN10` | Brd lght- | — |
+| `JOY_BTN6` | Pnl lght+ | — |
+| `JOY_BTN7` | Pnl lght- | — |
 | `JOY_BTN18` | Torch | — |
+| `JOY_BTN8` | Pmp | — |
 
 #### Modifier layer: `JOY_BTN7`
 
@@ -59,17 +60,17 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | `JOY_BTN7 + JOY_BTN5` | Mouse | — |
 | `JOY_BTN7 + JOY_BTN27` | Cockpit lights ON | — |
 | `JOY_BTN7 + JOY_BTN28` | Cockpit lights OFF | — |
-| `JOY_BTN7 + JOY_BTN21` | Exterior lights On | — |
-| `JOY_BTN7 + JOY_BTN22` | Exterior lights Off | — |
-| `JOY_BTN7 + JOY_BTN25` | Formation Bright | — |
-| `JOY_BTN7 + JOY_BTN26` | Formation Dim | — |
-| `JOY_BTN7 + JOY_BTN24` | Formation Off | — |
-| `JOY_BTN7 + JOY_BTN23` | Formation cycle | — |
-| `JOY_BTN7 + JOY_BTN20` | Recognition lights - amber - cycle | — |
-| `JOY_BTN7 + JOY_BTN19` | Recognition lights - amber - Flash | — |
-| `JOY_BTN7 + JOY_BTN18` | Recognition lights - amber - Off | — |
-| `JOY_BTN7 + JOY_BTN17` | Recognition lights - amber - Steady | — |
-| `JOY_BTN7 + JOY_BTN6` | Recognition lights - green - cycle | — |
-| `JOY_BTN7 + JOY_BTN7` | Recognition lights - green - Flash | — |
-| `JOY_BTN7 + JOY_BTN8` | Recognition lights - green - Off | — |
-| `JOY_BTN7 + JOY_BTN9` | Recognition lights - green - Steady | — |
+| `JOY_BTN7 + JOY_BTN21` | Ext lghts On | — |
+| `JOY_BTN7 + JOY_BTN22` | Ext lghts Off | — |
+| `JOY_BTN7 + JOY_BTN25` | Form Brght | — |
+| `JOY_BTN7 + JOY_BTN26` | Form Dim | — |
+| `JOY_BTN7 + JOY_BTN24` | Form Off | — |
+| `JOY_BTN7 + JOY_BTN23` | Form cyc | — |
+| `JOY_BTN7 + JOY_BTN20` | Recgntn lghts amber cyc | — |
+| `JOY_BTN7 + JOY_BTN19` | Recgntn lghts amber Flsh | — |
+| `JOY_BTN7 + JOY_BTN18` | Recgntn lghts amber Off | — |
+| `JOY_BTN7 + JOY_BTN17` | Recgntn lghts amber Stdy | — |
+| `JOY_BTN7 + JOY_BTN6` | Recgntn lghts grn cyc | — |
+| `JOY_BTN7 + JOY_BTN7` | Recgntn lghts grn Flsh | — |
+| `JOY_BTN7 + JOY_BTN8` | Recgntn lghts grn Off | — |
+| `JOY_BTN7 + JOY_BTN9` | Recgntn lghts grn Stdy | — |

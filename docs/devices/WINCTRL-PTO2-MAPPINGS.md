@@ -7,7 +7,7 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 - Profile: `WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua`
 - Shared hardware: `winctrl-pto2`
 - Physical instance: `19b7d090-6120-11f0-8001-444553540000`
-- Kneeboard page: `10-WINCTRL-PTO2.png`
+- Kneeboard page: `09-WINCTRL-PTO2.png`
 
 ## Assignments
 
@@ -15,9 +15,9 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN1` | Lower-left panel pushbutton | — |
+| `JOY_BTN1` | Starter | — |
 | `JOY_BTN13` | bypass carrier | — |
-| `JOY_BTN12` | bypass field | — |
+| `JOY_BTN12` | Strtr Cov Opn | — |
 | `JOY_BTN7` | Flaps - | — |
 | `JOY_BTN5` | Flaps + | — |
 | `JOY_BTN29` | Wings hold | — |
@@ -33,16 +33,16 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | `JOY_BTN10` | Probe extend | — |
 | `JOY_BTN9` | Landing gear lower auxiliary input | — |
 | `JOY_BTN8` | Landing gear upper auxiliary input | — |
-| `JOY_BTN19` | Drop Tank Lock | — |
-| `JOY_BTN22` | Drop Tank Release | — |
-| `JOY_BTN17` | jettison L FUS / MSL | — |
+| `JOY_BTN19` | LOCK | — |
+| `JOY_BTN22` | REL | — |
+| `JOY_BTN17` | ATTCH | — |
 | `JOY_BTN24` | L Wing Release On | — |
 | `JOY_BTN25` | R Wing Release On | — |
 | `JOY_BTN23` | Pylon Release On | — |
 | `JOY_BTN26` | L Wing E Rel On | — |
 | `JOY_BTN27` | R Wing E Rel On | — |
-| `JOY_BTN4` | Launch bar extend | — |
-| `JOY_BTN3` | Launch bar retract | — |
+| `JOY_BTN4` | LBar Extnd | — |
+| `JOY_BTN3` | LBar Retrct | — |
 | `JOY_BTN39` | EBrake 2 | — |
 | `JOY_BTN38` | EBrake 1 | — |
 
@@ -56,7 +56,7 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN2` | Master caution pushbutton | — |
+| `JOY_BTN7 + JOY_BTN2` | Stall TST | — |
 | `JOY_BTN7 + JOY_BTN24` | OFF | — |
 | `JOY_BTN7 + JOY_BTN25` | OFF | — |
 | `JOY_BTN7 + JOY_BTN23` | OFF | — |
