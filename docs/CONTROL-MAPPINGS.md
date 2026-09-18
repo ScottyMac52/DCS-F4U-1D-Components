@@ -219,25 +219,15 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN6` | Close | — |
-| `JOY_BTN5` | Strtr Cov Opn | — |
-| `JOY_BTN1` | Oil Cool | — |
-| `JOY_BTN2` | Close | — |
-| `JOY_BTN3` | Primer | — |
-| `JOY_BTN4` | Starter | — |
-| `JOY_Z` | Supercharger | — |
-
-#### Modifier layer: `JOY_BTN7`
-
-| Physical input | Assignment | Axis/filter settings |
-| --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN3` | Cowl flaps | — |
-| `JOY_BTN7 + JOY_BTN4` | Close | — |
-| `JOY_BTN7 + JOY_BTN5` | Intercooler: open | — |
-| `JOY_BTN7 + JOY_BTN6` | Close | — |
-| `JOY_BTN7 + JOY_BTN1` | Autostart | — |
-| `JOY_BTN7 + JOY_BTN2` | Autostop | — |
-| `JOY_BTN7 + JOY_Z` | Supercharger | — |
+| `JOY_BTN2` | Off | — |
+| `JOY_BTN1` | Battery | — |
+| `JOY_BTN4` | Off | — |
+| `JOY_BTN3` | Fuel Pmp | — |
+| `JOY_BTN6` | Off | — |
+| `JOY_BTN5` | Water Inj | — |
+| `JOY_Y` | Propeller | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
+| `JOY_X` | Throttle | — |
+| `JOY_Z` | Mixture | — |
 
 ### Logitech Flight Quadrant
 
@@ -260,15 +250,25 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN2` | Off | — |
-| `JOY_BTN1` | Battery | — |
-| `JOY_BTN4` | Off | — |
-| `JOY_BTN3` | Fuel Pmp | — |
-| `JOY_BTN6` | Off | — |
-| `JOY_BTN5` | Water Inj | — |
-| `JOY_Y` | Propeller | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
-| `JOY_X` | Throttle | — |
-| `JOY_Z` | Mixture | — |
+| `JOY_BTN6` | Close | — |
+| `JOY_BTN5` | Strtr Cov Opn | — |
+| `JOY_BTN1` | Oil Cool | — |
+| `JOY_BTN2` | Close | — |
+| `JOY_BTN3` | Primer | — |
+| `JOY_BTN4` | Starter | — |
+| `JOY_Z` | Supercharger | — |
+
+#### Modifier layer: `JOY_BTN7`
+
+| Physical input | Assignment | Axis/filter settings |
+| --- | --- | --- |
+| `JOY_BTN7 + JOY_BTN3` | Cowl flaps | — |
+| `JOY_BTN7 + JOY_BTN4` | Close | — |
+| `JOY_BTN7 + JOY_BTN5` | Intercooler: open | — |
+| `JOY_BTN7 + JOY_BTN6` | Close | — |
+| `JOY_BTN7 + JOY_BTN1` | Autostart | — |
+| `JOY_BTN7 + JOY_BTN2` | Autostop | — |
+| `JOY_BTN7 + JOY_Z` | Supercharger | — |
 
 ### MOZA AB9 FFB Base
 
