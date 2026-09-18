@@ -1,9 +1,10 @@
 # DCS-F4U-1D-Components
 
-OvGME-ready DCS input profiles, shared UI Layer controls, and generated kneeboard references for the **F4U-1D Corsair**.
+OvGME-ready DCS input profiles, shared UI Layer controls, and generated kneeboard references for **F4U-1D**.
 
 | Identity | Value |
 | --- | --- |
+| Display name | F4U-1D |
 | DCS input module | `F4U-1D` |
 | Kneeboard folder | `F4U-1D` |
 | Release package | `DCS-F4U-1D-Components-<version>-OVGME.zip` |
@@ -13,9 +14,9 @@ OvGME-ready DCS input profiles, shared UI Layer controls, and generated kneeboar
 | Guide | Purpose |
 | --- | --- |
 | [Installation](docs/INSTALLATION.md) | Back up, install, verify, and remove the OvGME package. |
-| [Control mappings](docs/CONTROL-MAPPINGS.md) | Device-by-device axes, buttons, modifiers, and unassigned/default profiles. |
-| [OpenKneeboard and VAICOM PRO](docs/OPENKNEEBOARD-VAICOM.md) | Use the generated tab, VAICOM PTT bridge, and optional VoiceAttack navigation. |
-| [Third-party assets](docs/THIRD-PARTY-ASSETS.md) | Hardware-art provenance and redistribution notes. |
+| [Control mappings](docs/CONTROL-MAPPINGS.md) | Device-by-device axes, buttons, modifiers, and empty/default profiles. |
+| [OpenKneeboard and VAICOM PRO](docs/OPENKNEEBOARD-VAICOM.md) | Use the generated tab and optional voice integrations. |
+| [Third-party assets](docs/THIRD-PARTY-ASSETS.md) | Shared-hardware provenance and redistribution notes. |
 
 ## Package contents
 
@@ -23,8 +24,6 @@ OvGME-ready DCS input profiles, shared UI Layer controls, and generated kneeboar
 - `Config/Input/F4U-1D/modifiers.lua` — module modifiers when configured.
 - `Config/Input/UiLayer` — the DCS-Common UI Layer payload filtered for the packaged devices.
 - `KNEEBOARD/F4U-1D` — numbered PNG control references.
-
-The consumer repository owns module bindings, page composition, and labels. DCS-Common supplies the shared hardware definitions, renderer, packaging logic, and canonical UI Layer controls.
 
 ## Local build
 
@@ -36,4 +35,6 @@ npm run test:kneeboard
 pwsh ./scripts/Build-OvGME.ps1 -Version 0.0.0-local
 ```
 
-Review `config/kneeboard.json` and the matching files under `src/Config/Input/F4U-1D` before releasing. See DCS-Common's [consumer repository setup](https://github.com/ScottyMac52/DCS-Common/blob/main/docs/consumer-repository-setup.md) for the shared contract.
+Review `SCAFFOLD-REPORT.md`, `config/kneeboard.json`, and the generated guides before release. IPI refreshes the generated documentation when the repository is re-scaffolded.
+
+See DCS-Common [consumer-repository-setup.md](https://github.com/ScottyMac52/DCS-Common/blob/main/docs/consumer-repository-setup.md).

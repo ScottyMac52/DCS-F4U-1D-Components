@@ -2,10 +2,10 @@
 
 ## Requirements
 
-- DCS World with the F4U-1D Corsair module installed.
-- OvGME configured with the DCS Saved Games directory as its root, normally `C:\Users\<you>\Saved Games\DCS` or `DCS.openbeta`.
-- The hardware represented by the profiles you intend to use.
-- OpenKneeboard, VoiceAttack, VAICOM PRO, and AutoHotkey are optional; see [OpenKneeboard and VAICOM PRO](OPENKNEEBOARD-VAICOM.md).
+- DCS World with the F4U-1D module installed.
+- OvGME configured with the DCS Saved Games directory as its root.
+- The hardware profiles you intend to use.
+- OpenKneeboard, VoiceAttack, VAICOM PRO, and AutoHotkey are optional.
 
 ## Back up existing controls
 
@@ -17,34 +17,20 @@ Saved Games\DCS\Config\Input\UiLayer
 Saved Games\DCS\KNEEBOARD\F4U-1D
 ```
 
-DCS can rewrite input profiles when devices or bindings change. A backup gives you a clean recovery point independent of OvGME.
-
 ## Install with OvGME
 
 1. Download `DCS-F4U-1D-Components-<version>-OVGME.zip` from the repository release.
-2. Add the archive to the OvGME configuration whose root is your DCS Saved Games directory.
+2. Add it to the OvGME configuration rooted at your DCS Saved Games directory.
 3. Enable the package.
-4. Start DCS and open **Options → Controls → F4U-1D Corsair**.
-5. Confirm that the expected device columns contain the assignments listed in [Control mappings](CONTROL-MAPPINGS.md).
-6. Open the in-game kneeboard or OpenKneeboard and confirm that the F4U-1D Corsair pages appear in numeric order.
+4. In DCS, open **Options → Controls → F4U-1D** and verify the expected device columns.
+5. Confirm that the numbered kneeboard pages appear in game or OpenKneeboard.
 
-The archive writes only these package areas:
-
-```text
-Config\Input\F4U-1D\joystick
-Config\Input\F4U-1D\modifiers.lua   (when configured)
-Config\Input\UiLayer
-KNEEBOARD\F4U-1D
-```
+The archive writes `Config/Input/F4U-1D`, the applicable `Config/Input/UiLayer` profiles, and `KNEEBOARD/F4U-1D`.
 
 ## Device GUIDs
 
-DCS embeds a Windows device-instance GUID in each `.diff.lua` filename. If your GUID differs from the packaged filename, DCS may show an empty column even though the profile is installed. In DCS, select the correct device column, choose **Load profile**, and load the matching file manually; DCS will save it under your local GUID. Re-scaffolding is appropriate when you want the repository itself to adopt a new captured device set.
-
-## Verify the UI Layer
-
-The build composes DCS-Common's canonical UI Layer with only the devices used by this module. In **Options → Controls**, select **UI Layer** and confirm that the applicable packaged devices have their shared controls. Module-specific bindings remain under **F4U-1D Corsair**.
+DCS embeds a Windows device-instance GUID in each `.diff.lua` filename. If your GUID differs, use DCS **Load profile** for the matching device or re-scaffold when the repository should adopt a newly captured device set.
 
 ## Remove or restore
 
-Disable the package in OvGME before installing another version. To restore the pre-package state, keep it disabled and copy your backup folders back into Saved Games. If DCS retained generated or locally edited files, compare them with the backup before deleting anything.
+Disable the package in OvGME before installing another version. Restore the backed-up folders to return to the pre-package state.
