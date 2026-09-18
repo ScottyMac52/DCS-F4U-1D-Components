@@ -12,7 +12,7 @@ This reference is generated from the effective DCS `.diff.lua` profiles used by 
 | [F16 MFD 3](devices/TM-MFD-3-MAPPINGS.md) | `F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua` | Base, JOY_BTN3, JOY_BTN7 | 29 |
 | [Logitech Flight Quadrant](devices/LOGITECH-THROTTLE-QUADRANT-1C8A8840-5386-11F1-8001-444553540000-MAPPINGS.md) | `Logitech Flight Quadrant {1C8A8840-5386-11F1-8001-444553540000}.diff.lua` | Base, JOY_BTN7 | 14 |
 | [Logitech Flight Quadrant](devices/LOGITECH-THROTTLE-QUADRANT-840BBBD0-2139-11F1-8001-444553540000-MAPPINGS.md) | `Logitech Flight Quadrant {840BBBD0-2139-11f1-8001-444553540000}.diff.lua` | JOY_BTN7, Base | 14 |
-| [MOZA AB9 FFB Base](devices/MOZA-AB9-MAPPINGS.md) | `MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua` | Base, JOY_BTN3 | 18 |
+| [MOZA AB9 FFB Base](devices/MOZA-AB9-MAPPINGS.md) | `MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua` | Base | 2 |
 | [T-Pendular-Rudder](devices/TM-TPR-MAPPINGS.md) | `T-Pendular-Rudder {14ED3D40-3F58-11f1-8002-444553540000}.diff.lua` | Base | 3 |
 | [VKBSim Gunfighter F14](devices/VKB-F14-GUNFIGHTER-MAPPINGS.md) | `VKBSim Gunfighter F14 {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua` | Base, JOY_BTN7 | 18 |
 | [WINCTRL CarrierAce PTO 2](devices/WINCTRL-PTO2-MAPPINGS.md) | `WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua` | Base, JOY_BTN3, JOY_BTN7 | 37 |
@@ -281,29 +281,8 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN15` | MA On | — |
-| `JOY_BTN17` | MA Off | — |
-| `JOY_BTN6` | Shoot | — |
-| `JOY_BTN2` | Rckts Fire | — |
-| `JOY_BTN1` | Cam | — |
-| `JOY_BTN16` | Rckts Off | — |
-| `JOY_BTN18` | Rckts On | — |
-| `JOY_BTN_POV1_D` | Nose Up | — |
-| `JOY_BTN_POV1_U` | Nose Down | — |
-| `JOY_BTN_POV1_L` | LWD | — |
-| `JOY_BTN_POV1_R` | RWD | — |
 | `JOY_Y` | Pitch | — |
 | `JOY_X` | Roll | — |
-
-#### Modifier layer: `JOY_BTN3`
-
-| Physical input | Assignment | Axis/filter settings |
-| --- | --- | --- |
-| `JOY_BTN3 + JOY_BTN2` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_L` | Left | — |
-| `JOY_BTN3 + JOY_BTN_POV1_R` | Right | — |
-| `JOY_BTN3 + JOY_BTN_POV1_U` | Up | — |
-| `JOY_BTN3 + JOY_BTN_POV1_D` | Down | — |
 
 ### T-Pendular-Rudder
 
