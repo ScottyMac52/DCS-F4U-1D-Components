@@ -1,70 +1,76 @@
 local diff = {
   ["keyDiffs"] = {
-    ["d3365pnilunilcd5vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN2", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Directional gyro uncage",
-    },
-    ["d3365pnilunilcd5vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN1", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Directional gyro cage",
-    },
-    ["d3932pnilunilcd13vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN6", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Droppable tank lock: release",
-    },
-    ["d3003pnilunilcd1vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN2" },
-      },
-      ["name"] = "Battery, off",
-    },
-    ["d3003pnilunilcd1vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN1" },
-      },
-      ["name"] = "Battery, on",
-    },
-    ["d3228pnilunilcd3vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN4" },
-      },
-      ["name"] = "Fuel pump, off",
-    },
-    ["d3228pnilunilcd3vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN3" },
-      },
-      ["name"] = "Fuel pump, on",
-    },
-    ["d3244pnilunilcd3vd0vpnilvunil"] = {
+    ["d3234pnilunilcd3vd0vpnilvunil"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN6" },
       },
-      ["name"] = "Disable water injection",
+      ["name"] = "Starter cover close",
     },
-    ["d3244pnilunilcd3vd1vpnilvunil"] = {
+    ["d3234pnilunilcd3vd1vpnilvunil"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN5" },
       },
-      ["name"] = "Enable water injection",
+      ["name"] = "Starter cover open",
     },
-    ["d3208pnilunilcd3vd0.333vpnilvunil"] = {
+    ["d3227pnilu3227cd3vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN3", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
-      ["name"] = "Ignition switch (magnets) +",
+      ["name"] = "Cowl flaps: open",
     },
-    ["d3208pnilunilcd3vd-0.333vpnilvunil"] = {
+    ["d3227pnilu3227cd3vd-1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN4", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
-      ["name"] = "Ignition switch (magnets) -",
+      ["name"] = "Cowl flaps: close",
+    },
+    ["d3226pnilu3226cd3vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN5", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Intercooler: open",
+    },
+    ["d3226pnilu3226cd3vd-1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN6", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Intercooler: close",
+    },
+    ["d3225pnilu3225cd3vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN1" },
+      },
+      ["name"] = "Oil cooler: open",
+    },
+    ["d3225pnilu3225cd3vd-1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN2" },
+      },
+      ["name"] = "Oil cooler: close",
+    },
+    ["d3229pnilu3229cd3vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN3" },
+      },
+      ["name"] = "Primer",
+    },
+    ["d3232pnilu3232cd3vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN4" },
+      },
+      ["name"] = "Starter",
+    },
+    ["d3242pnilunilcd19vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN1", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Autostart Procedure",
+    },
+    ["d3243pnilunilcd19vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN2", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Autostop Procedure",
     },
   },
   ["axisDiffs"] = {
@@ -87,28 +93,23 @@ local diff = {
       ["name"] = "Rudder",
     },
     ["a3224cd3"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_Y", ["filter"] = { ["curvature"] = { [1] = 0 }, ["deadzone"] = 0, ["hardwareDetent"] = false, ["hardwareDetentAB"] = 0, ["hardwareDetentMax"] = 0, ["invert"] = true, ["saturationX"] = 1, ["saturationY"] = 1, ["slider"] = false } },
-      },
       ["removed"] = {
         [1] = { ["key"] = "JOY_SLIDER1" },
       },
       ["name"] = "Propeller governor handle",
     },
     ["a3236cd3"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_X" },
-      },
       ["removed"] = {
         [1] = { ["key"] = "JOY_Z" },
       },
       ["name"] = "Throttle Lever",
     },
-    ["a3230cd3"] = {
+    ["a3235cd3"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_Z" },
+        [2] = { ["key"] = "JOY_Z", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
-      ["name"] = "Mixture handle",
+      ["name"] = "Supercharger handle",
     },
   },
 }
