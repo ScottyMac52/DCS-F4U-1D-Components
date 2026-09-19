@@ -11,38 +11,33 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 ## Assignments
 
-#### Modifier layer: `JOY_BTN7`
-
-| Physical input | Assignment | Axis/filter settings |
-| --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN5` | Right Rocker (Up) | — |
-| `JOY_BTN7 + JOY_BTN2` | Uncage | — |
-| `JOY_BTN7 + JOY_BTN1` | Gyro Cage | — |
-| `JOY_BTN7 + JOY_BTN6` | Drop Tank Rel | — |
-| `JOY_BTN7 + JOY_BTN3` | Mag+ | — |
-| `JOY_BTN7 + JOY_BTN4` | Mag- | — |
-| `JOY_BTN7 + JOY_Z` | Mixture Axis | — |
-
 #### Base layer
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN6` | Close | — |
-| `JOY_BTN5` | Strtr Cov Opn | — |
-| `JOY_BTN1` | Oil Cool | — |
 | `JOY_BTN2` | Close | — |
+| `JOY_BTN1` | Oil Cool | — |
 | `JOY_BTN3` | Primer | — |
 | `JOY_BTN4` | Starter | — |
+| `JOY_BTN5` | Strtr Cov Opn | — |
+| `JOY_BTN2` | Off | — |
+| `JOY_BTN1` | Battery, on | — |
+| `JOY_BTN4` | Fuel pump, off | — |
+| `JOY_BTN3` | Fuel pump, on | — |
+| `JOY_BTN6` | Starter cover close | — |
 | `JOY_Z` | Supercharger | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN3` | Cowl flaps | — |
-| `JOY_BTN7 + JOY_BTN4` | Close | — |
-| `JOY_BTN7 + JOY_BTN5` | Intercooler: open | — |
 | `JOY_BTN7 + JOY_BTN6` | Close | — |
+| `JOY_BTN7 + JOY_BTN5` | Intercooler: open | — |
+| `JOY_BTN7 + JOY_BTN4` | Close | — |
+| `JOY_BTN7 + JOY_BTN3` | Cowl flaps | — |
 | `JOY_BTN7 + JOY_BTN1` | Autostart | — |
 | `JOY_BTN7 + JOY_BTN2` | Autostop | — |
+| `JOY_BTN7 + JOY_BTN2` | Directional gyro uncage | — |
+| `JOY_BTN7 + JOY_BTN1` | Directional gyro cage | — |
+| `JOY_BTN7 + JOY_BTN6` | Release | — |
 | `JOY_BTN7 + JOY_Z` | Supercharger | — |

@@ -17,7 +17,7 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | --- | --- | --- |
 | `JOY_BTN24` | Mag- | — |
 | `JOY_BTN23` | Mag+ | — |
-| `JOY_BTN8` | MAG+ | — |
+| `JOY_BTN8` | Mag+ | — |
 | `JOY_BTN26` | Fuel- | — |
 | `JOY_BTN25` | Fuel+ | — |
 | `JOY_BTN28` | Cwl Flps- | — |
@@ -46,7 +46,7 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN8` | MAG- | — |
+| `JOY_BTN7 + JOY_BTN8` | Mag- | — |
 | `JOY_BTN7 + JOY_BTN7` | OFF | — |
 | `JOY_BTN7 + JOY_BTN27` | MA On | — |
 | `JOY_BTN7 + JOY_BTN28` | MA Off | — |

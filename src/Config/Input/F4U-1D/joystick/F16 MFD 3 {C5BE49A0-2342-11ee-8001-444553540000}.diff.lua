@@ -13,27 +13,29 @@ local diff = {
       ["name"] = "Directional gyro uncage",
     },
     ["d3715pnilunilcd11vd0vpnilvunil"] = {
-      ["added"] = {
+      ["removed"] = {
         [1] = { ["key"] = "JOY_BTN7", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
       ["name"] = "Recognition lights - red - Off",
     },
     ["d3715pnilunilcd11vd1vpnilvunil"] = {
-      ["added"] = {
+      ["removed"] = {
         [1] = { ["key"] = "JOY_BTN6", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
       ["name"] = "Recognition lights - red - Flash",
     },
     ["d3726pnilunilcd11vd-1vpnilvunil"] = {
-      ["added"] = {
+      ["removed"] = {
         [1] = { ["key"] = "JOY_BTN9", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
       ["name"] = "Exterior lights Flash",
     },
     ["d3734pnilunilcd11vd-1vpnilvunil"] = {
       ["added"] = {
+        [1] = { ["key"] = "JOY_BTN9" },
+      },
+      ["removed"] = {
         [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "JOY_BTN7" } },
-        [2] = { ["key"] = "JOY_BTN9" },
       },
       ["name"] = "Section Dim",
     },

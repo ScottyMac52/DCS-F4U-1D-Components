@@ -15,26 +15,5 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN15` |  | — |
-| `JOY_BTN17` |  | — |
-| `JOY_BTN6` |  | — |
-| `JOY_BTN2` |  | — |
-| `JOY_BTN1` |  | — |
-| `JOY_BTN16` |  | — |
-| `JOY_BTN18` |  | — |
-| `JOY_BTN_POV1_D` |  | — |
-| `JOY_BTN_POV1_U` |  | — |
-| `JOY_BTN_POV1_L` |  | — |
-| `JOY_BTN_POV1_R` |  | — |
 | `JOY_Y` | Pitch | — |
 | `JOY_X` | Roll | — |
-
-#### Modifier layer: `JOY_BTN3`
-
-| Physical input | Assignment | Axis/filter settings |
-| --- | --- | --- |
-| `JOY_BTN3 + JOY_BTN2` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_L` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_R` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_U` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_D` |  | — |

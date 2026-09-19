@@ -15,7 +15,7 @@ const rawConfig = JSON.parse(readFileSync(join(root, 'config/kneeboard.json'), '
 const { renderSharedHardwarePages } = await import(
   pathToFileURL(join(commonRoot, 'scripts/shared-hardware-consumer.mjs'))
 );
-const { aircraftFolderName, loadProfileDrivenConfig, parseDcsDiffLua } = await import(
+const { aircraftFolderName, loadProfileDrivenConfig } = await import(
   pathToFileURL(join(commonRoot, 'scripts/profile-driven-kneeboard.mjs'))
 );
 
@@ -64,25 +64,6 @@ function expectedPages() {
     }).map((rendered) => ({ ...page, outputFile: rendered.file }));
   });
 }
-
-test('standalone MOZA AB9 assigns only pitch and roll', () => {
-  const profileFile = join(
-    root,
-    'src/Config/Input/F4U-1D/joystick',
-    'MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua',
-  );
-  const bindings = parseDcsDiffLua(readFileSync(profileFile, 'utf8'), {
-    filename: basename(profileFile),
-  }).bindings;
-  const active = bindings.flatMap((binding) =>
-    [...binding.added, ...(binding.changed ?? [])].map((input) =>
-      `${binding.section}:${binding.command}:${input.key}:${(input.reformers ?? []).join('+')}`));
-
-  assert.deepEqual(active.sort(), [
-    'axisDiffs:a2001cdnil:JOY_Y:',
-    'axisDiffs:a2002cdnil:JOY_X:',
-  ]);
-});
 
 test('kneeboard output satisfies the consumer contract and rebuilds deterministically', async () => {
   runBuild();

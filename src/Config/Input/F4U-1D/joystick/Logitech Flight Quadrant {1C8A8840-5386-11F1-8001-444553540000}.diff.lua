@@ -1,23 +1,5 @@
 local diff = {
   ["keyDiffs"] = {
-    ["d3365pnilunilcd5vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN2", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Directional gyro uncage",
-    },
-    ["d3365pnilunilcd5vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN1", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Directional gyro cage",
-    },
-    ["d3932pnilunilcd13vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN6", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Droppable tank lock: release",
-    },
     ["d3003pnilunilcd1vd0vpnilvunil"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN2" },
@@ -29,6 +11,18 @@ local diff = {
         [1] = { ["key"] = "JOY_BTN1" },
       },
       ["name"] = "Battery, on",
+    },
+    ["d3208pnilunilcd3vd-0.333vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN4", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Ignition switch (magnets) -",
+    },
+    ["d3208pnilunilcd3vd0.333vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN3", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Ignition switch (magnets) +",
     },
     ["d3228pnilunilcd3vd0vpnilvunil"] = {
       ["added"] = {
@@ -54,17 +48,23 @@ local diff = {
       },
       ["name"] = "Enable water injection",
     },
-    ["d3208pnilunilcd3vd0.333vpnilvunil"] = {
+    ["d3365pnilunilcd5vd0vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN3", ["reformers"] = { [1] = "JOY_BTN7" } },
+        [1] = { ["key"] = "JOY_BTN2", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
-      ["name"] = "Ignition switch (magnets) +",
+      ["name"] = "Directional gyro uncage",
     },
-    ["d3208pnilunilcd3vd-0.333vpnilvunil"] = {
+    ["d3365pnilunilcd5vd1vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN4", ["reformers"] = { [1] = "JOY_BTN7" } },
+        [1] = { ["key"] = "JOY_BTN1", ["reformers"] = { [1] = "JOY_BTN7" } },
       },
-      ["name"] = "Ignition switch (magnets) -",
+      ["name"] = "Directional gyro cage",
+    },
+    ["d3932pnilunilcd13vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN6", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Droppable tank lock: release",
     },
   },
   ["axisDiffs"] = {
@@ -95,6 +95,12 @@ local diff = {
       },
       ["name"] = "Propeller governor handle",
     },
+    ["a3230cd3"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_Z" },
+      },
+      ["name"] = "Mixture handle",
+    },
     ["a3236cd3"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_X" },
@@ -103,12 +109,6 @@ local diff = {
         [1] = { ["key"] = "JOY_Z" },
       },
       ["name"] = "Throttle Lever",
-    },
-    ["a3230cd3"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_Z" },
-      },
-      ["name"] = "Mixture handle",
     },
   },
 }

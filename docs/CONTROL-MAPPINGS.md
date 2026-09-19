@@ -9,10 +9,10 @@ This reference is generated from the effective DCS `.diff.lua` profiles used by 
 | [Ava [R] Viper](devices/AVA-BASE-F16C-MAPPINGS.md) | `Ava [R] Viper {F77212B0-00A8-11f1-8001-444553540000}.diff.lua` | Base | 0 |
 | [F16 MFD 1](devices/TM-MFD-1-MAPPINGS.md) | `F16 MFD 1 {51FA60C0-CB32-11ed-800B-444553540000}.diff.lua` | Base, JOY_BTN7 | 42 |
 | [F16 MFD 2](devices/TM-MFD-2-MAPPINGS.md) | `F16 MFD 2 {51FA39B0-CB32-11ed-8008-444553540000}.diff.lua` | Base, JOY_BTN7 | 48 |
-| [F16 MFD 3](devices/TM-MFD-3-MAPPINGS.md) | `F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua` | Base, JOY_BTN7, JOY_BTN3 | 30 |
+| [F16 MFD 3](devices/TM-MFD-3-MAPPINGS.md) | `F16 MFD 3 {C5BE49A0-2342-11ee-8001-444553540000}.diff.lua` | Base, JOY_BTN7, JOY_BTN3 | 26 |
 | [Logitech Flight Quadrant](devices/LOGITECH-THROTTLE-QUADRANT-1C8A8840-5386-11F1-8001-444553540000-MAPPINGS.md) | `Logitech Flight Quadrant {1C8A8840-5386-11F1-8001-444553540000}.diff.lua` | Base, JOY_BTN7 | 14 |
-| [Logitech Flight Quadrant](devices/LOGITECH-THROTTLE-QUADRANT-840BBBD0-2139-11F1-8001-444553540000-MAPPINGS.md) | `Logitech Flight Quadrant {840BBBD0-2139-11f1-8001-444553540000}.diff.lua` | JOY_BTN7, Base | 16 |
-| [MOZA AB9 FFB Base](devices/MOZA-AB9-MAPPINGS.md) | `MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua` | Base, JOY_BTN3 | 18 |
+| [Logitech Flight Quadrant](devices/LOGITECH-THROTTLE-QUADRANT-840BBBD0-2139-11F1-8001-444553540000-MAPPINGS.md) | `Logitech Flight Quadrant {840BBBD0-2139-11f1-8001-444553540000}.diff.lua` | Base, JOY_BTN7 | 21 |
+| [MOZA AB9 FFB Base](devices/MOZA-AB9-MAPPINGS.md) | `MOZA AB9 FFB Base {71DA6210-432E-11f1-8001-444553540000}.diff.lua` | Base | 2 |
 | [T-Pendular-Rudder](devices/TM-TPR-MAPPINGS.md) | `T-Pendular-Rudder {14ED3D40-3F58-11f1-8002-444553540000}.diff.lua` | Base | 3 |
 | [VKBSim Gunfighter F14](devices/VKB-F14-GUNFIGHTER-MAPPINGS.md) | `VKBSim Gunfighter F14 {2D5CEC70-5189-11f1-8001-444553540000}.diff.lua` | Base, JOY_BTN7 | 18 |
 | [WINCTRL CarrierAce PTO 2](devices/WINCTRL-PTO2-MAPPINGS.md) | `WINCTRL CarrierAce PTO 2 {19B7D090-6120-11F0-8001-444553540000}.diff.lua` | Base, JOY_BTN7, JOY_BTN3 | 38 |
@@ -51,7 +51,7 @@ No module-specific assignments are present. The profile remains available for sh
 | --- | --- | --- |
 | `JOY_BTN24` | Mag- | — |
 | `JOY_BTN23` | Mag+ | — |
-| `JOY_BTN8` | MAG+ | — |
+| `JOY_BTN8` | Mag+ | — |
 | `JOY_BTN26` | Fuel- | — |
 | `JOY_BTN25` | Fuel+ | — |
 | `JOY_BTN28` | Cwl Flps- | — |
@@ -80,7 +80,7 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN8` | MAG- | — |
+| `JOY_BTN7 + JOY_BTN8` | Mag- | — |
 | `JOY_BTN7 + JOY_BTN7` | OFF | — |
 | `JOY_BTN7 + JOY_BTN27` | MA On | — |
 | `JOY_BTN7 + JOY_BTN28` | MA Off | — |
@@ -203,10 +203,6 @@ No module-specific assignments are present. The profile remains available for sh
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN7 + JOY_BTN17` | Uncage | — |
-| `JOY_BTN7 + JOY_BTN7` | Recgntn lghts red Off | — |
-| `JOY_BTN7 + JOY_BTN6` | Recgntn lghts red Flsh | — |
-| `JOY_BTN7 + JOY_BTN9` | Ext lghts Fl | — |
-| `JOY_BTN7 + JOY_BTN11` | Sec Dim | — |
 
 #### Modifier layer: `JOY_BTN3`
 
@@ -232,8 +228,18 @@ No module-specific assignments are present. The profile remains available for sh
 | `JOY_BTN6` | Off | — |
 | `JOY_BTN5` | Water Inj | — |
 | `JOY_Y` | Propeller | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
-| `JOY_X` | Throttle | — |
 | `JOY_Z` | Mixture | — |
+| `JOY_X` | Throttle | — |
+
+#### Modifier layer: `JOY_BTN7`
+
+| Physical input | Assignment | Axis/filter settings |
+| --- | --- | --- |
+| `JOY_BTN7 + JOY_BTN4` | Mag- | — |
+| `JOY_BTN7 + JOY_BTN3` | Mag+ | — |
+| `JOY_BTN7 + JOY_BTN2` | Uncage | — |
+| `JOY_BTN7 + JOY_BTN1` | Gyro Cage | — |
+| `JOY_BTN7 + JOY_BTN6` | Release | — |
 
 ### Logitech Flight Quadrant
 
@@ -242,40 +248,35 @@ No module-specific assignments are present. The profile remains available for sh
 - Physical instance: `840bbbd0-2139-11f1-8001-444553540000`
 - Kneeboard page: `05-LOGITECH-THROTTLE-QUADRANT-840BBBD0-2139-11F1-8001-444553540000.png`
 
-#### Modifier layer: `JOY_BTN7`
-
-| Physical input | Assignment | Axis/filter settings |
-| --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN5` | Right Rocker (Up) | — |
-| `JOY_BTN7 + JOY_BTN2` | Uncage | — |
-| `JOY_BTN7 + JOY_BTN1` | Gyro Cage | — |
-| `JOY_BTN7 + JOY_BTN6` | Drop Tank Rel | — |
-| `JOY_BTN7 + JOY_BTN3` | Mag+ | — |
-| `JOY_BTN7 + JOY_BTN4` | Mag- | — |
-| `JOY_BTN7 + JOY_Z` | Mixture Axis | — |
-
 #### Base layer
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN6` | Close | — |
-| `JOY_BTN5` | Strtr Cov Opn | — |
-| `JOY_BTN1` | Oil Cool | — |
 | `JOY_BTN2` | Close | — |
+| `JOY_BTN1` | Oil Cool | — |
 | `JOY_BTN3` | Primer | — |
 | `JOY_BTN4` | Starter | — |
+| `JOY_BTN5` | Strtr Cov Opn | — |
+| `JOY_BTN2` | Off | — |
+| `JOY_BTN1` | Battery, on | — |
+| `JOY_BTN4` | Fuel pump, off | — |
+| `JOY_BTN3` | Fuel pump, on | — |
+| `JOY_BTN6` | Starter cover close | — |
 | `JOY_Z` | Supercharger | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN3` | Cowl flaps | — |
-| `JOY_BTN7 + JOY_BTN4` | Close | — |
-| `JOY_BTN7 + JOY_BTN5` | Intercooler: open | — |
 | `JOY_BTN7 + JOY_BTN6` | Close | — |
+| `JOY_BTN7 + JOY_BTN5` | Intercooler: open | — |
+| `JOY_BTN7 + JOY_BTN4` | Close | — |
+| `JOY_BTN7 + JOY_BTN3` | Cowl flaps | — |
 | `JOY_BTN7 + JOY_BTN1` | Autostart | — |
 | `JOY_BTN7 + JOY_BTN2` | Autostop | — |
+| `JOY_BTN7 + JOY_BTN2` | Directional gyro uncage | — |
+| `JOY_BTN7 + JOY_BTN1` | Directional gyro cage | — |
+| `JOY_BTN7 + JOY_BTN6` | Release | — |
 | `JOY_BTN7 + JOY_Z` | Supercharger | — |
 
 ### MOZA AB9 FFB Base
@@ -289,29 +290,8 @@ No module-specific assignments are present. The profile remains available for sh
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN15` |  | — |
-| `JOY_BTN17` |  | — |
-| `JOY_BTN6` |  | — |
-| `JOY_BTN2` |  | — |
-| `JOY_BTN1` |  | — |
-| `JOY_BTN16` |  | — |
-| `JOY_BTN18` |  | — |
-| `JOY_BTN_POV1_D` |  | — |
-| `JOY_BTN_POV1_U` |  | — |
-| `JOY_BTN_POV1_L` |  | — |
-| `JOY_BTN_POV1_R` |  | — |
 | `JOY_Y` | Pitch | — |
 | `JOY_X` | Roll | — |
-
-#### Modifier layer: `JOY_BTN3`
-
-| Physical input | Assignment | Axis/filter settings |
-| --- | --- | --- |
-| `JOY_BTN3 + JOY_BTN2` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_L` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_R` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_U` |  | — |
-| `JOY_BTN3 + JOY_BTN_POV1_D` |  | — |
 
 ### T-Pendular-Rudder
 

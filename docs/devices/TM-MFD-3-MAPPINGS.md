@@ -45,10 +45,6 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
 | `JOY_BTN7 + JOY_BTN17` | Uncage | — |
-| `JOY_BTN7 + JOY_BTN7` | Recgntn lghts red Off | — |
-| `JOY_BTN7 + JOY_BTN6` | Recgntn lghts red Flsh | — |
-| `JOY_BTN7 + JOY_BTN9` | Ext lghts Fl | — |
-| `JOY_BTN7 + JOY_BTN11` | Sec Dim | — |
 
 #### Modifier layer: `JOY_BTN3`
 

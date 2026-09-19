@@ -11,16 +11,6 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 ## Assignments
 
-#### Modifier layer: `JOY_BTN7`
-
-| Physical input | Assignment | Axis/filter settings |
-| --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN2` | Uncage | — |
-| `JOY_BTN7 + JOY_BTN1` | Gyro Cage | — |
-| `JOY_BTN7 + JOY_BTN6` | Drop Tank Rel | — |
-| `JOY_BTN7 + JOY_BTN3` | Mag+ | — |
-| `JOY_BTN7 + JOY_BTN4` | Mag- | — |
-
 #### Base layer
 
 | Physical input | Assignment | Axis/filter settings |
@@ -32,5 +22,15 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | `JOY_BTN6` | Off | — |
 | `JOY_BTN5` | Water Inj | — |
 | `JOY_Y` | Propeller | deadzone=0; hardwareDetentAB=0; hardwareDetentMax=0; saturationX=1; saturationY=1; curvature=[0]; hardwareDetent=false; invert=true; slider=false |
-| `JOY_X` | Throttle | — |
 | `JOY_Z` | Mixture | — |
+| `JOY_X` | Throttle | — |
+
+#### Modifier layer: `JOY_BTN7`
+
+| Physical input | Assignment | Axis/filter settings |
+| --- | --- | --- |
+| `JOY_BTN7 + JOY_BTN4` | Mag- | — |
+| `JOY_BTN7 + JOY_BTN3` | Mag+ | — |
+| `JOY_BTN7 + JOY_BTN2` | Uncage | — |
+| `JOY_BTN7 + JOY_BTN1` | Gyro Cage | — |
+| `JOY_BTN7 + JOY_BTN6` | Release | — |
