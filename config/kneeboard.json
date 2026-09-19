@@ -1006,47 +1006,59 @@
         {
           "id": "base",
           "controls": {
-            "t6": {
+            "t2": {
               "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
-              "key": "JOY_BTN6",
-              "command": "d3234pnilunilcd3vd0vpnilvunil",
-              "labelId": "binding-5b63bf94cdfb9c2d"
-            },
-            "t5": {
-              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
-              "key": "JOY_BTN5",
-              "command": "d3234pnilunilcd3vd1vpnilvunil",
-              "labelId": "binding-cf12bd3bcfc6cc0d"
+              "key": "JOY_BTN2",
+              "command": "d3003pnilunilcd1vd0vpnilvunil",
+              "labelId": "binding-a8b870d661e15291"
             },
             "t1": {
               "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
               "key": "JOY_BTN1",
-              "command": "d3225pnilu3225cd3vd1vpnilvu0",
-              "labelId": "binding-87eef5a01a689232"
-            },
-            "t2": {
-              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
-              "key": "JOY_BTN2",
-              "command": "d3225pnilu3225cd3vd-1vpnilvu0",
-              "labelId": "binding-3fe1efeb08f603cd"
-            },
-            "t3": {
-              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
-              "key": "JOY_BTN3",
-              "command": "d3229pnilu3229cd3vd1vpnilvu0",
-              "labelId": "binding-0a957eb67bf88536"
+              "command": "d3003pnilunilcd1vd1vpnilvunil",
+              "labelId": "binding-51e459b99e3fa1f7"
             },
             "t4": {
               "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
               "key": "JOY_BTN4",
-              "command": "d3232pnilu3232cd3vd1vpnilvu0",
-              "labelId": "binding-57e60f85b0d77464"
+              "command": "d3228pnilunilcd3vd0vpnilvunil",
+              "labelId": "binding-50990a5f855bbec8"
+            },
+            "t3": {
+              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
+              "key": "JOY_BTN3",
+              "command": "d3228pnilunilcd3vd1vpnilvunil",
+              "labelId": "binding-abd79f034b20b7ff"
+            },
+            "t6": {
+              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
+              "key": "JOY_BTN6",
+              "command": "d3244pnilunilcd3vd0vpnilvunil",
+              "labelId": "binding-b62785de04e718e0"
+            },
+            "t5": {
+              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
+              "key": "JOY_BTN5",
+              "command": "d3244pnilunilcd3vd1vpnilvunil",
+              "labelId": "binding-0812a31cb91174b3"
+            },
+            "lev2": {
+              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
+              "key": "JOY_Y",
+              "command": "a3224cd3",
+              "labelId": "binding-70df5ca36fa55cb0"
+            },
+            "lev1": {
+              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
+              "key": "JOY_X",
+              "command": "a3236cd3",
+              "labelId": "binding-793a6052fc3c7c39"
             },
             "lev3": {
               "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
               "key": "JOY_Z",
-              "command": "a3235cd3",
-              "labelId": "binding-d2ecb467cde6ca6f"
+              "command": "a3230cd3",
+              "labelId": "binding-6c6757c6248f7fe6"
             }
           }
         },
@@ -1058,38 +1070,11 @@
             "JOY_BTN7"
           ],
           "controls": {
-            "t3": {
+            "t2": {
               "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
-              "key": "JOY_BTN3",
-              "command": "d3227pnilu3227cd3vd1vpnilvu0",
-              "labelId": "binding-1cb4711c9ba29e01",
-              "modifiers": [
-                "JOY_BTN7"
-              ]
-            },
-            "t4": {
-              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
-              "key": "JOY_BTN4",
-              "command": "d3227pnilu3227cd3vd-1vpnilvu0",
-              "labelId": "binding-7701381499ed698f",
-              "modifiers": [
-                "JOY_BTN7"
-              ]
-            },
-            "t5": {
-              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
-              "key": "JOY_BTN5",
-              "command": "d3226pnilu3226cd3vd1vpnilvu0",
-              "labelId": "binding-d9368ffcd339855d",
-              "modifiers": [
-                "JOY_BTN7"
-              ]
-            },
-            "t6": {
-              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
-              "key": "JOY_BTN6",
-              "command": "d3226pnilu3226cd3vd-1vpnilvu0",
-              "labelId": "binding-dbcfe3a851dfd0c1",
+              "key": "JOY_BTN2",
+              "command": "d3365pnilunilcd5vd0vpnilvunil",
+              "labelId": "binding-2aea9d71ad3db1ed",
               "modifiers": [
                 "JOY_BTN7"
               ]
@@ -1097,26 +1082,35 @@
             "t1": {
               "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
               "key": "JOY_BTN1",
-              "command": "d3242pnilunilcd19vd1vpnilvunil",
-              "labelId": "binding-64205db64691dfb6",
+              "command": "d3365pnilunilcd5vd1vpnilvunil",
+              "labelId": "binding-8ff7d8886c303f47",
               "modifiers": [
                 "JOY_BTN7"
               ]
             },
-            "t2": {
+            "t6": {
               "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
-              "key": "JOY_BTN2",
-              "command": "d3243pnilunilcd19vd1vpnilvunil",
-              "labelId": "binding-5811a5b1fbcb898c",
+              "key": "JOY_BTN6",
+              "command": "d3932pnilunilcd13vd0vpnilvunil",
+              "labelId": "binding-bdffb34c4f50bc1b",
               "modifiers": [
                 "JOY_BTN7"
               ]
             },
-            "lev3": {
+            "t3": {
               "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
-              "key": "JOY_Z",
-              "command": "a3235cd3",
-              "labelId": "binding-85efac2915710163",
+              "key": "JOY_BTN3",
+              "command": "d3208pnilunilcd3vd0.333vpnilvunil",
+              "labelId": "binding-e5c0cf07385bbf34",
+              "modifiers": [
+                "JOY_BTN7"
+              ]
+            },
+            "t4": {
+              "profile": "logitech-throttle-quadrant-1c8a8840-5386-11f1-8001-444553540000",
+              "key": "JOY_BTN4",
+              "command": "d3208pnilunilcd3vd-0.333vpnilvunil",
+              "labelId": "binding-4481cefbd33e965f",
               "modifiers": [
                 "JOY_BTN7"
               ]
@@ -1139,59 +1133,47 @@
         {
           "id": "base",
           "controls": {
-            "t2": {
-              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
-              "key": "JOY_BTN2",
-              "command": "d3003pnilunilcd1vd0vpnilvunil",
-              "labelId": "binding-a8b870d661e15291"
-            },
-            "t1": {
-              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
-              "key": "JOY_BTN1",
-              "command": "d3003pnilunilcd1vd1vpnilvunil",
-              "labelId": "binding-51e459b99e3fa1f7"
-            },
-            "t4": {
-              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
-              "key": "JOY_BTN4",
-              "command": "d3228pnilunilcd3vd0vpnilvunil",
-              "labelId": "binding-50990a5f855bbec8"
-            },
-            "t3": {
-              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
-              "key": "JOY_BTN3",
-              "command": "d3228pnilunilcd3vd1vpnilvunil",
-              "labelId": "binding-abd79f034b20b7ff"
-            },
             "t6": {
               "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
               "key": "JOY_BTN6",
-              "command": "d3244pnilunilcd3vd0vpnilvunil",
-              "labelId": "binding-b62785de04e718e0"
+              "command": "d3234pnilunilcd3vd0vpnilvunil",
+              "labelId": "binding-5b63bf94cdfb9c2d"
             },
             "t5": {
               "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
               "key": "JOY_BTN5",
-              "command": "d3244pnilunilcd3vd1vpnilvunil",
-              "labelId": "binding-0812a31cb91174b3"
+              "command": "d3234pnilunilcd3vd1vpnilvunil",
+              "labelId": "binding-cf12bd3bcfc6cc0d"
             },
-            "lev2": {
+            "t1": {
               "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
-              "key": "JOY_Y",
-              "command": "a3224cd3",
-              "labelId": "binding-70df5ca36fa55cb0"
+              "key": "JOY_BTN1",
+              "command": "d3225pnilu3225cd3vd1vpnilvu0",
+              "labelId": "binding-87eef5a01a689232"
             },
-            "lev1": {
+            "t2": {
               "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
-              "key": "JOY_X",
-              "command": "a3236cd3",
-              "labelId": "binding-793a6052fc3c7c39"
+              "key": "JOY_BTN2",
+              "command": "d3225pnilu3225cd3vd-1vpnilvu0",
+              "labelId": "binding-3fe1efeb08f603cd"
+            },
+            "t3": {
+              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
+              "key": "JOY_BTN3",
+              "command": "d3229pnilu3229cd3vd1vpnilvu0",
+              "labelId": "binding-0a957eb67bf88536"
+            },
+            "t4": {
+              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
+              "key": "JOY_BTN4",
+              "command": "d3232pnilu3232cd3vd1vpnilvu0",
+              "labelId": "binding-57e60f85b0d77464"
             },
             "lev3": {
               "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
               "key": "JOY_Z",
-              "command": "a3230cd3",
-              "labelId": "binding-6c6757c6248f7fe6"
+              "command": "a3235cd3",
+              "labelId": "binding-d2ecb467cde6ca6f"
             }
           }
         },
@@ -1203,47 +1185,11 @@
             "JOY_BTN7"
           ],
           "controls": {
-            "t5": {
-              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
-              "key": "JOY_BTN5",
-              "command": "d3226pnilu3226cd3vd1vpnilvu0",
-              "labelId": "binding-917d636bf7ff3ef4",
-              "modifiers": [
-                "JOY_BTN7"
-              ]
-            },
-            "t2": {
-              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
-              "key": "JOY_BTN2",
-              "command": "d3365pnilunilcd5vd0vpnilvunil",
-              "labelId": "binding-2aea9d71ad3db1ed",
-              "modifiers": [
-                "JOY_BTN7"
-              ]
-            },
-            "t1": {
-              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
-              "key": "JOY_BTN1",
-              "command": "d3365pnilunilcd5vd1vpnilvunil",
-              "labelId": "binding-8ff7d8886c303f47",
-              "modifiers": [
-                "JOY_BTN7"
-              ]
-            },
-            "t6": {
-              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
-              "key": "JOY_BTN6",
-              "command": "d3932pnilunilcd13vd0vpnilvunil",
-              "labelId": "binding-bdffb34c4f50bc1b",
-              "modifiers": [
-                "JOY_BTN7"
-              ]
-            },
             "t3": {
               "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
               "key": "JOY_BTN3",
-              "command": "d3208pnilunilcd3vd0.333vpnilvunil",
-              "labelId": "binding-e5c0cf07385bbf34",
+              "command": "d3227pnilu3227cd3vd1vpnilvu0",
+              "labelId": "binding-1cb4711c9ba29e01",
               "modifiers": [
                 "JOY_BTN7"
               ]
@@ -1251,8 +1197,44 @@
             "t4": {
               "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
               "key": "JOY_BTN4",
-              "command": "d3208pnilunilcd3vd-0.333vpnilvunil",
-              "labelId": "binding-4481cefbd33e965f",
+              "command": "d3227pnilu3227cd3vd-1vpnilvu0",
+              "labelId": "binding-7701381499ed698f",
+              "modifiers": [
+                "JOY_BTN7"
+              ]
+            },
+            "t5": {
+              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
+              "key": "JOY_BTN5",
+              "command": "d3226pnilu3226cd3vd1vpnilvu0",
+              "labelId": "binding-d9368ffcd339855d",
+              "modifiers": [
+                "JOY_BTN7"
+              ]
+            },
+            "t6": {
+              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
+              "key": "JOY_BTN6",
+              "command": "d3226pnilu3226cd3vd-1vpnilvu0",
+              "labelId": "binding-dbcfe3a851dfd0c1",
+              "modifiers": [
+                "JOY_BTN7"
+              ]
+            },
+            "t1": {
+              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
+              "key": "JOY_BTN1",
+              "command": "d3242pnilunilcd19vd1vpnilvunil",
+              "labelId": "binding-64205db64691dfb6",
+              "modifiers": [
+                "JOY_BTN7"
+              ]
+            },
+            "t2": {
+              "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
+              "key": "JOY_BTN2",
+              "command": "d3243pnilunilcd19vd1vpnilvunil",
+              "labelId": "binding-5811a5b1fbcb898c",
               "modifiers": [
                 "JOY_BTN7"
               ]
@@ -1261,7 +1243,7 @@
               "profile": "logitech-throttle-quadrant-840bbbd0-2139-11f1-8001-444553540000",
               "key": "JOY_Z",
               "command": "a3235cd3",
-              "labelId": "binding-67be8833cfd729a5",
+              "labelId": "binding-85efac2915710163",
               "modifiers": [
                 "JOY_BTN7"
               ]
