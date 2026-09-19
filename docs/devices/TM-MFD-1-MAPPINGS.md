@@ -17,37 +17,48 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | --- | --- | --- |
 | `JOY_BTN24` | Mag- | — |
 | `JOY_BTN23` | Mag+ | — |
+| `JOY_BTN8` | MAG+ | — |
 | `JOY_BTN26` | Fuel- | — |
 | `JOY_BTN25` | Fuel+ | — |
 | `JOY_BTN28` | Cwl Flps- | — |
 | `JOY_BTN27` | Cwl Flps+ | — |
 | `JOY_BTN22` | Off | — |
 | `JOY_BTN21` | Fuel Pmp | — |
+| `JOY_BTN7` | FUEL | — |
 | `JOY_BTN3` | Canopy | — |
 | `JOY_BTN11` | R Chrg | — |
 | `JOY_BTN15` | L Chrg | — |
+| `JOY_BTN16` | Light | — |
+| `JOY_BTN17` | Outboard | — |
 | `JOY_BTN18` | Center | — |
 | `JOY_BTN19` | Inboard | — |
+| `JOY_BTN12` | In- | — |
+| `JOY_BTN13` | Ctr- | — |
+| `JOY_BTN14` | Out- | — |
 | `JOY_BTN1` | Chrt Brd- | — |
 | `JOY_BTN2` | Chrt Brd+ | — |
-| `JOY_BTN14` | Out- | — |
-| `JOY_BTN12` | In- | — |
-| `JOY_BTN17` | Outboard | — |
-| `JOY_BTN13` | Ctr- | — |
+| `JOY_BTN6` | BATT | — |
+| `JOY_BTN9` | Cover | — |
+| `JOY_BTN10` | Primer | — |
+| `JOY_BTN20` | Cam | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
+| `JOY_BTN7 + JOY_BTN8` | MAG- | — |
+| `JOY_BTN7 + JOY_BTN7` | OFF | — |
 | `JOY_BTN7 + JOY_BTN27` | MA On | — |
 | `JOY_BTN7 + JOY_BTN28` | MA Off | — |
 | `JOY_BTN7 + JOY_BTN11` | OFF | — |
 | `JOY_BTN7 + JOY_BTN15` | OFF | — |
 | `JOY_BTN7 + JOY_BTN23` | Gun Sght On | — |
 | `JOY_BTN7 + JOY_BTN24` | Gun Sght Off | — |
-| `JOY_BTN7 + JOY_BTN26` | Gun Sght- | — |
-| `JOY_BTN7 + JOY_BTN25` | Gun Sght+ | — |
-| `JOY_BTN7 + JOY_BTN14` | Out+ | — |
 | `JOY_BTN7 + JOY_BTN12` | In+ | — |
 | `JOY_BTN7 + JOY_BTN13` | Ctr+ | — |
-| `JOY_BTN7 + JOY_BTN18` | Gnsght lght | — |
+| `JOY_BTN7 + JOY_BTN14` | Out+ | — |
+| `JOY_BTN7 + JOY_BTN26` | Gun Sght- | — |
+| `JOY_BTN7 + JOY_BTN25` | Gun Sght+ | — |
+| `JOY_BTN7 + JOY_BTN6` | OFF | — |
+| `JOY_BTN7 + JOY_BTN9` | Close | — |
+| `JOY_BTN7 + JOY_BTN10` | Starter | — |

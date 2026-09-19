@@ -18,8 +18,8 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | `JOY_BTN1` | Starter | — |
 | `JOY_BTN13` | bypass carrier | — |
 | `JOY_BTN12` | Strtr Cov Opn | — |
-| `JOY_BTN7` | Flaps - | — |
-| `JOY_BTN5` | Flaps + | — |
+| `JOY_BTN5` | Flaps - | — |
+| `JOY_BTN7` | Flaps + | — |
 | `JOY_BTN29` | Wings hold | — |
 | `JOY_BTN30` | Wings spread | — |
 | `JOY_BTN28` | Wings fold | — |
@@ -46,19 +46,20 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | `JOY_BTN39` | EBrake 2 | — |
 | `JOY_BTN38` | EBrake 1 | — |
 
-#### Modifier layer: `JOY_BTN3`
-
-| Physical input | Assignment | Axis/filter settings |
-| --- | --- | --- |
-| `JOY_BTN3 + JOY_BTN31` | Wings lock/unlock | — |
-
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
+| `JOY_BTN7 + JOY_BTN31` | Wings lock/unlock | — |
 | `JOY_BTN7 + JOY_BTN2` | Stall TST | — |
 | `JOY_BTN7 + JOY_BTN24` | OFF | — |
 | `JOY_BTN7 + JOY_BTN25` | OFF | — |
 | `JOY_BTN7 + JOY_BTN23` | OFF | — |
 | `JOY_BTN7 + JOY_BTN26` | OFF | — |
 | `JOY_BTN7 + JOY_BTN27` | OFF | — |
+
+#### Modifier layer: `JOY_BTN3`
+
+| Physical input | Assignment | Axis/filter settings |
+| --- | --- | --- |
+| `JOY_BTN3 + JOY_BTN31` | Wings lock/unlock | — |

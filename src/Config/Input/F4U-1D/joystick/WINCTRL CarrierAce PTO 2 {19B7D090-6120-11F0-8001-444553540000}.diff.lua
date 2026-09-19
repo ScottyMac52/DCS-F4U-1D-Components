@@ -20,13 +20,13 @@ local diff = {
     },
     ["d3512pnilunilcd7vd-0.2vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN7" },
+        [1] = { ["key"] = "JOY_BTN5" },
       },
       ["name"] = "Flaps -",
     },
     ["d3512pnilunilcd7vd0.2vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN5" },
+        [1] = { ["key"] = "JOY_BTN7" },
       },
       ["name"] = "Flaps +",
     },
@@ -50,7 +50,8 @@ local diff = {
     },
     ["d3531pnilunilcd7vd0vpnilvunil"] = {
       ["added"] = {
-        [1] = { ["key"] = "JOY_BTN31", ["reformers"] = { [1] = "JOY_BTN3" } },
+        [1] = { ["key"] = "JOY_BTN31", ["reformers"] = { [1] = "JOY_BTN7" } },
+        [2] = { ["key"] = "JOY_BTN31", ["reformers"] = { [1] = "JOY_BTN3" } },
       },
       ["name"] = "Wings, unlock",
     },

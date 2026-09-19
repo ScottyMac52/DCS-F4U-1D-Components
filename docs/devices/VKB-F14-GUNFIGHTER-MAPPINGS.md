@@ -15,6 +15,8 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
+| `JOY_BTN5` | Tail wheel lock | — |
+| `JOY_BTN6` | Airbrake | — |
 | `JOY_BTN2` | Shoot | — |
 | `JOY_BTN1` | Cam | — |
 | `JOY_BTN16` | Rckts Off | — |
@@ -28,13 +30,11 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | `JOY_BTN10` | Nose Down | — |
 | `JOY_BTN12` | LWD | — |
 | `JOY_BTN9` | RWD | — |
-| `JOY_BTN5` | Tail wheel lock | — |
-| `JOY_BTN6` | Airbrake | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
+| `JOY_BTN7 + JOY_BTN5` | Unlocked | — |
 | `JOY_BTN7 + JOY_BTN3` | Rckts Fire | — |
 | `JOY_BTN7 + JOY_BTN4` | Single | — |
-| `JOY_BTN7 + JOY_BTN5` | Unlocked | — |

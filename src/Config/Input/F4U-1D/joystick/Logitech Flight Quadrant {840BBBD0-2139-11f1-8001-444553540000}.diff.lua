@@ -1,5 +1,11 @@
 local diff = {
   ["keyDiffs"] = {
+    ["d3226pnilu3226cd3vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN5", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Intercooler: open",
+    },
     ["d3365pnilunilcd5vd0vpnilvunil"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN2", ["reformers"] = { [1] = "JOY_BTN7" } },
@@ -94,6 +100,12 @@ local diff = {
         [1] = { ["key"] = "JOY_SLIDER1" },
       },
       ["name"] = "Propeller governor handle",
+    },
+    ["a3235cd3"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_Z", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Supercharger handle",
     },
     ["a3236cd3"] = {
       ["added"] = {

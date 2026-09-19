@@ -15,62 +15,56 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
+| `JOY_BTN5` | Sound | — |
+| `JOY_BTN1` | ReArm | — |
+| `JOY_BTN8` | Pmp | — |
 | `JOY_BTN28` | SprChgr- | — |
 | `JOY_BTN27` | SprChgr+ | — |
 | `JOY_BTN22` | Close | — |
 | `JOY_BTN21` | Oil Cool | — |
-| `JOY_BTN14` | Start Cov  | — |
-| `JOY_BTN15` | Mag- | — |
-| `JOY_BTN13` | Primer | — |
-| `JOY_BTN12` | Cowl Flps | — |
-| `JOY_BTN11` | Fuel- | — |
-| `JOY_BTN25` | Tnk Pres Opn | — |
 | `JOY_BTN26` | CLOSE | — |
+| `JOY_BTN25` | Tnk Pres Opn | — |
+| `JOY_BTN18` | Torch | — |
 | `JOY_BTN23` | Whl Lck | — |
 | `JOY_BTN24` | Unlckd | — |
-| `JOY_BTN1` | ReArm | — |
 | `JOY_BTN2` | Score | — |
-| `JOY_BTN3` | Shw cntrls | — |
+| `JOY_BTN7` | Cycle | — |
+| `JOY_BTN19` | Cycle | — |
 | `JOY_BTN4` | pilot body | — |
-| `JOY_BTN5` | Sound | — |
+| `JOY_BTN3` | Shw cntrls | — |
 | `JOY_BTN20` | Pnl lght+ | — |
-| `JOY_BTN19` | Pnl lght- | — |
-| `JOY_BTN17` | Brd lght+ | — |
-| `JOY_BTN16` | Brd lght- | — |
-| `JOY_BTN9` | Brd lght+ | — |
-| `JOY_BTN10` | Brd lght- | — |
 | `JOY_BTN6` | Pnl lght+ | — |
-| `JOY_BTN7` | Pnl lght- | — |
-| `JOY_BTN18` | Torch | — |
-| `JOY_BTN8` | Pmp | — |
+| `JOY_BTN16` | Inst Lght+ | — |
+| `JOY_BTN10` | Inst Lght+ | — |
+| `JOY_BTN14` | Cycle | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN14` | Close | — |
-| `JOY_BTN7 + JOY_BTN15` | Mag+ | — |
-| `JOY_BTN7 + JOY_BTN12` | Close | — |
-| `JOY_BTN7 + JOY_BTN11` | Fuel+ | — |
-| `JOY_BTN7 + JOY_BTN13` | Starter | — |
-| `JOY_BTN7 + JOY_BTN3` | Brief | — |
-| `JOY_BTN7 + JOY_BTN1` | New | — |
 | `JOY_BTN7 + JOY_BTN2` | Info Bar | — |
+| `JOY_BTN7 + JOY_BTN3` | Brief | — |
 | `JOY_BTN7 + JOY_BTN4` | Jump | — |
+| `JOY_BTN7 + JOY_BTN1` | New | — |
 | `JOY_BTN7 + JOY_BTN5` | Mouse | — |
-| `JOY_BTN7 + JOY_BTN27` | Cockpit lights ON | — |
-| `JOY_BTN7 + JOY_BTN28` | Cockpit lights OFF | — |
-| `JOY_BTN7 + JOY_BTN21` | Ext lghts On | — |
+| `JOY_BTN7 + JOY_BTN9` | Steady | — |
+| `JOY_BTN7 + JOY_BTN8` | Off | — |
+| `JOY_BTN7 + JOY_BTN7` | Flash | — |
+| `JOY_BTN7 + JOY_BTN17` | Steady | — |
+| `JOY_BTN7 + JOY_BTN18` | Off | — |
+| `JOY_BTN7 + JOY_BTN19` | Flash | — |
 | `JOY_BTN7 + JOY_BTN22` | Ext lghts Off | — |
-| `JOY_BTN7 + JOY_BTN25` | Form Brght | — |
+| `JOY_BTN7 + JOY_BTN21` | Ext lghts On | — |
+| `JOY_BTN7 + JOY_BTN28` | Cockpit lights OFF | — |
+| `JOY_BTN7 + JOY_BTN27` | Cockpit lights ON | — |
 | `JOY_BTN7 + JOY_BTN26` | Form Dim | — |
-| `JOY_BTN7 + JOY_BTN24` | Form Off | — |
 | `JOY_BTN7 + JOY_BTN23` | Form cyc | — |
-| `JOY_BTN7 + JOY_BTN20` | Recgntn lghts amber cyc | — |
-| `JOY_BTN7 + JOY_BTN19` | Recgntn lghts amber Flsh | — |
-| `JOY_BTN7 + JOY_BTN18` | Recgntn lghts amber Off | — |
-| `JOY_BTN7 + JOY_BTN17` | Recgntn lghts amber Stdy | — |
-| `JOY_BTN7 + JOY_BTN6` | Recgntn lghts grn cyc | — |
-| `JOY_BTN7 + JOY_BTN7` | Recgntn lghts grn Flsh | — |
-| `JOY_BTN7 + JOY_BTN8` | Recgntn lghts grn Off | — |
-| `JOY_BTN7 + JOY_BTN9` | Recgntn lghts grn Stdy | — |
+| `JOY_BTN7 + JOY_BTN24` | Form Off | — |
+| `JOY_BTN7 + JOY_BTN25` | Form Brght | — |
+| `JOY_BTN7 + JOY_BTN20` | Pnl Lght- | — |
+| `JOY_BTN7 + JOY_BTN6` | Pnl lght- | — |
+| `JOY_BTN7 + JOY_BTN16` | Inst Lght- | — |
+| `JOY_BTN7 + JOY_BTN10` | Inst Lght- | — |
+| `JOY_BTN7 + JOY_BTN14` | Flash | — |
+| `JOY_BTN7 + JOY_BTN13` | Off | — |
+| `JOY_BTN7 + JOY_BTN12` | Steady | — |

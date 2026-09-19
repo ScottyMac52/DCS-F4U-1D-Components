@@ -15,22 +15,7 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN32` | NOSE/TAIL | — |
-| `JOY_BTN33` | SAFE | — |
-| `JOY_BTN34` | TAIL | — |
-| `JOY_BTN28` | REL | — |
-| `JOY_BTN27` | LOCK | — |
-| `JOY_BTN26` | ATTCH | — |
-| `JOY_BTN1` | Scp On | — |
-| `JOY_BTN2` | Search | — |
-| `JOY_BTN19` | Scp Bright+ | — |
-| `JOY_BTN20` | Scp Bright- | — |
-| `JOY_BTN31` | Scp Gain- | — |
-| `JOY_BTN30` | Scp Gain+ | — |
-| `JOY_BTN21` | Autolevel | — |
-| `JOY_BTN24` | Autopilot Off | — |
-| `JOY_BTN23` | Autothrottle | — |
-| `JOY_BTN25` | Hold Attitude | — |
+| `JOY_BTN29` | KB Glance | — |
 | `JOY_BTN7` | KB Shrtct 1 | — |
 | `JOY_BTN8` | KB Shrtct 2 | — |
 | `JOY_BTN9` | KB Shrtct 3 | — |
@@ -42,23 +27,38 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 | `JOY_BTN17` | KB Shrtct 9 | — |
 | `JOY_BTN18` | KB Shrtct 10 | — |
 | `JOY_BTN14` | KB Mk Shrtct | — |
-| `JOY_BTN29` | KB Glance | — |
-| `JOY_Y` | Brd Int | — |
-| `JOY_X` | Board Int | — |
+| `JOY_BTN2` | Search | — |
+| `JOY_BTN1` | Scp On | — |
+| `JOY_BTN27` | LOCK | — |
+| `JOY_BTN28` | REL | — |
+| `JOY_BTN26` | ATTCH | — |
+| `JOY_BTN32` | NOSE/TAIL | — |
+| `JOY_BTN33` | SAFE | — |
+| `JOY_BTN34` | TAIL | — |
+| `JOY_BTN24` | Autopilot Off | — |
+| `JOY_BTN21` | Autolevel | — |
+| `JOY_BTN25` | Hold Attitude | — |
+| `JOY_BTN23` | Autothrottle | — |
+| `JOY_BTN30` | Scp Gain+ | — |
+| `JOY_BTN31` | Scp Gain- | — |
+| `JOY_BTN19` | Scp Bright+ | — |
+| `JOY_BTN20` | Scp Bright- | — |
 | `JOY_RY` | Pnl Int | — |
 | `JOY_RX` | Pnl Int | — |
+| `JOY_Y` | Brd Int | — |
+| `JOY_X` | Board Int | — |
 
 #### Modifier layer: `JOY_BTN7`
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
-| `JOY_BTN7 + JOY_BTN1` | Scp OFF | — |
+| `JOY_BTN7 + JOY_BTN21` | KB ON/OFF | — |
 | `JOY_BTN7 + JOY_BTN24` | KB Nxt Pg | — |
 | `JOY_BTN7 + JOY_BTN22` | KB Prev Pg | — |
-| `JOY_BTN7 + JOY_BTN23` | KB Nxt Shrtct | — |
 | `JOY_BTN7 + JOY_BTN25` | KB Prev Shrtct | — |
-| `JOY_BTN7 + JOY_BTN21` | KB ON/OFF | — |
-| `JOY_BTN7 + JOY_RX` | Gunsght Lght Int | — |
+| `JOY_BTN7 + JOY_BTN23` | KB Nxt Shrtct | — |
+| `JOY_BTN7 + JOY_BTN1` | Scp OFF | — |
 | `JOY_BTN7 + JOY_RY` | Gyro hor ptch | — |
-| `JOY_BTN7 + JOY_Y` | Chrtbrd lght int | — |
 | `JOY_BTN7 + JOY_X` | Trim yaw | — |
+| `JOY_BTN7 + JOY_Y` | Chrtbrd lght int | — |
+| `JOY_BTN7 + JOY_RX` | Gunsght Lght Int | — |

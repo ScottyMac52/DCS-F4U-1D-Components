@@ -1,5 +1,61 @@
 local diff = {
   ["keyDiffs"] = {
+    ["d3356pnilu3356cd5vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN17" },
+      },
+      ["name"] = "Gyro horizon cage",
+    },
+    ["d3365pnilunilcd5vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN17", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Directional gyro uncage",
+    },
+    ["d3715pnilunilcd11vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN7", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Recognition lights - red - Off",
+    },
+    ["d3715pnilunilcd11vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN6", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Recognition lights - red - Flash",
+    },
+    ["d3726pnilunilcd11vd-1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN9", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Exterior lights Flash",
+    },
+    ["d3734pnilunilcd11vd-1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "JOY_BTN7" } },
+        [2] = { ["key"] = "JOY_BTN9" },
+      },
+      ["name"] = "Section Dim",
+    },
+    ["d3734pnilunilcd11vd0.5vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN7" },
+      },
+      ["name"] = "Section cycle",
+    },
+    ["d3734pnilunilcd11vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN11" },
+        [2] = { ["key"] = "JOY_BTN8" },
+      },
+      ["name"] = "Section Bright",
+    },
+    ["d3881pnilu3881cd21vd1vpnilvu0"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN1" },
+      },
+      ["name"] = "BAT Bomb Lock",
+    },
     ["d3882pnilu3881cd21vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN3" },
@@ -19,6 +75,48 @@ local diff = {
         [2] = { ["key"] = "JOY_BTN5" },
       },
       ["name"] = "BAT Bomb Scope OFF",
+    },
+    ["d3932pnilunilcd13vd0.5vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN12" },
+      },
+      ["name"] = "Droppable tank lock: lock",
+    },
+    ["d3932pnilunilcd13vd0vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN13" },
+      },
+      ["name"] = "Droppable tank lock: release",
+    },
+    ["d3932pnilunilcd13vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN14" },
+      },
+      ["name"] = "Droppable tank lock: attach",
+    },
+    ["dnilp3357unilcd5vdnilvp-0.01vunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN16" },
+      },
+      ["name"] = "Gyro horizon pitch down",
+    },
+    ["dnilp3357unilcd5vdnilvp0.01vunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN18" },
+      },
+      ["name"] = "Gyro horizon pitch up",
+    },
+    ["dnilp3358unilcd5vdnilvp-0.005vunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN19" },
+      },
+      ["name"] = "Radio course set -",
+    },
+    ["dnilp3358unilcd5vdnilvp0.005vunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN20" },
+      },
+      ["name"] = "Radio course set +",
     },
     ["dnilp3884unilcd21vdnilvp0.01vunil"] = {
       ["added"] = {
@@ -44,131 +142,29 @@ local diff = {
       },
       ["name"] = "BAT Bomb Scope Brightness Decrease",
     },
-    ["dnilp37u291cdnilvdnilvpnilvunil"] = {
-      ["removed"] = {
-        [1] = { ["key"] = "JOY_BTN23" },
-      },
-      ["name"] = "Zoom in",
-    },
     ["dnilp38u292cdnilvdnilvpnilvunil"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN24", ["reformers"] = { [1] = "JOY_BTN3" } },
       },
       ["name"] = "Zoom out",
     },
-    ["d3881pnilu3881cd21vd1vpnilvu0"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN1" },
+    ["dnilp37u291cdnilvdnilvpnilvunil"] = {
+      ["removed"] = {
+        [1] = { ["key"] = "JOY_BTN23" },
       },
-      ["name"] = "BAT Bomb Lock",
+      ["name"] = "Zoom in",
     },
-    ["d3932pnilunilcd13vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN13" },
-      },
-      ["name"] = "Droppable tank lock: release",
-    },
-    ["d3932pnilunilcd13vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN14" },
-      },
-      ["name"] = "Droppable tank lock: attach",
-    },
-    ["d3932pnilunilcd13vd0.5vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN12" },
-      },
-      ["name"] = "Droppable tank lock: lock",
-    },
-    ["dnilp3358unilcd5vdnilvp0.005vunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN20" },
-      },
-      ["name"] = "Radio course set +",
-    },
-    ["dnilp3358unilcd5vdnilvp-0.005vunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN19" },
-      },
-      ["name"] = "Radio course set -",
-    },
-    ["d3356pnilu3356cd5vd1vpnilvu0"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN17" },
-      },
-      ["name"] = "Gyro horizon cage",
-    },
-    ["dnilp3357unilcd5vdnilvp0.01vunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN18" },
-      },
-      ["name"] = "Gyro horizon pitch up",
-    },
-    ["dnilp3357unilcd5vdnilvp-0.01vunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN16" },
-      },
-      ["name"] = "Gyro horizon pitch down",
-    },
-    ["d3365pnilunilcd5vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN17", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Directional gyro uncage",
-    },
-    ["d3715pnilunilcd11vd0.5vpnilvunil"] = {
+    ["dnilpnilunilcd11vd0.5vpnilvunil"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN6" },
       },
-      ["name"] = "Recognition lights - red - cycle",
+      ["name"] = "Sec Sel",
     },
-    ["d3715pnilunilcd11vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN6", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Recognition lights - red - Flash",
-    },
-    ["d3715pnilunilcd11vd0vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN7", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Recognition lights - red - Off",
-    },
-    ["d3715pnilunilcd11vd-1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN7" },
-      },
-      ["name"] = "Recognition lights - red - Steady",
-    },
-    ["d3726pnilunilcd11vd-1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN9", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Exterior lights Flash",
-    },
-    ["d3726pnilunilcd11vd0.5vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN9" },
-      },
-      ["name"] = "Exterior lights cycle",
-    },
-    ["d3734pnilunilcd11vd0.5vpnilvunil"] = {
+    ["d3734pnilunilcd11vd0vpnilvunil"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN10" },
       },
-      ["name"] = "Section cycle",
-    },
-    ["d3734pnilunilcd11vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN11" },
-      },
-      ["name"] = "Section Bright",
-    },
-    ["d3734pnilunilcd11vd-1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN11", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Section Dim",
+      ["name"] = "Section Off",
     },
   },
 }

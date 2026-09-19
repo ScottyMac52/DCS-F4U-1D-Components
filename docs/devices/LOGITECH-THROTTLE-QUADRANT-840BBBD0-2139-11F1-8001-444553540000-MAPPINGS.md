@@ -15,11 +15,13 @@ This guide is generated from the effective DCS profile used by F4U-1D.
 
 | Physical input | Assignment | Axis/filter settings |
 | --- | --- | --- |
+| `JOY_BTN7 + JOY_BTN5` | Right Rocker (Up) | — |
 | `JOY_BTN7 + JOY_BTN2` | Uncage | — |
 | `JOY_BTN7 + JOY_BTN1` | Gyro Cage | — |
 | `JOY_BTN7 + JOY_BTN6` | Drop Tank Rel | — |
 | `JOY_BTN7 + JOY_BTN3` | Mag+ | — |
 | `JOY_BTN7 + JOY_BTN4` | Mag- | — |
+| `JOY_BTN7 + JOY_Z` | Mixture Axis | — |
 
 #### Base layer
 

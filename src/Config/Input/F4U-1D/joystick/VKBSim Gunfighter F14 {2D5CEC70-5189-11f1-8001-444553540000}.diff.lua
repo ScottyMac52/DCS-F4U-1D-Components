@@ -1,5 +1,23 @@
 local diff = {
   ["keyDiffs"] = {
+    ["d3514pnilunilcd7vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN5" },
+      },
+      ["name"] = "Tail wheel lock",
+    },
+    ["d3529pnilunilcd7vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN5", ["reformers"] = { [1] = "JOY_BTN7" } },
+      },
+      ["name"] = "Tail wheel, unlocked",
+    },
+    ["d3538pnilunilcd7vd1vpnilvunil"] = {
+      ["added"] = {
+        [1] = { ["key"] = "JOY_BTN6" },
+      },
+      ["name"] = "Airbrake, toggle",
+    },
     ["d3918pnilu3918cd13vd1vpnilvu0"] = {
       ["added"] = {
         [1] = { ["key"] = "JOY_BTN2" },
@@ -89,24 +107,6 @@ local diff = {
         [1] = { ["key"] = "JOY_BTN9" },
       },
       ["name"] = "Trim, right bank",
-    },
-    ["d3514pnilunilcd7vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN5" },
-      },
-      ["name"] = "Tail wheel lock",
-    },
-    ["d3529pnilunilcd7vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN5", ["reformers"] = { [1] = "JOY_BTN7" } },
-      },
-      ["name"] = "Tail wheel, unlocked",
-    },
-    ["d3538pnilunilcd7vd1vpnilvunil"] = {
-      ["added"] = {
-        [1] = { ["key"] = "JOY_BTN6" },
-      },
-      ["name"] = "Airbrake, toggle",
     },
   },
   ["axisDiffs"] = {
